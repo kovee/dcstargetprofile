@@ -1,0 +1,122 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains global variables used by the rest of the script.
+
+define      YES                     1 	// Represents a true boolean value
+define      NO                      0   // Represents a false boolean value
+
+// Game mode
+define      DCS_MODE_FLAT           0   // Standard game mode
+define      DCS_MODE_VR             1   // VR game mode
+
+// Rudder types
+define      RUDDER_TFLIGHT          0   // Represents the standard Thrustmaster
+										// T.Flight Rudder
+define      RUDDER_PENDULAR         1   // Represents the Thrustmaster Pendular
+										// Rudder
+
+// LED cosntants
+define      LED_INTENSITY_1         85  // Intensity level 1 - lowest
+define      LED_INTENSITY_2         123 // Intensity level 2
+define      LED_INTENSITY_3         171 // Intensity level 3
+define      LED_INTENSITY_4         214 // Intensity level 4
+define      LED_INTENSITY_5         255 // Intensity level 5 - highest
+
+// Throttle types
+define		THROTTLE_TYPE_WARTHOG	1	// Represents the Warthog throttle
+define		THROTTLE_TYPE_COUGAR	2	// Represents the Cougar throttle
+define		THROTTLE_TYPE_TWCS		3	// Represents the TWCS throttle
+
+// Throttle presets
+define      THROTTLE_PRESET_SINGLE  1   // Represents a single throttle axis
+										// (merges the engine throttle control
+										// on twin-engine aircraft)
+define      THROTTLE_PRESET_DUAL    2   // Represents dual throttle axes (allows
+                                        // individula control of two engines)
+
+// Throttle axis usage
+define 		THROTTLE_AXIS_LEFT		1	// Use the left throttle axis
+define		THROTTLE_AXIS_RIGHT		2	// Use the right throttle axis
+define		THROTTLE_AXIS_BOTH		3	// Use both throttle axes
+
+// Joystick types
+define		JOYSTICK_TYPE_WARTHOG	1	// Represents the Warthog joystick
+
+// Joystick grips
+define      JOYSTICK_GRIP_A10       1   // Represents the default Warthog A-10 grip
+define      JOYSTICK_GRIP_FA18      2   // Represents the F/A-18C grip
+define		JOYSTICK_GRIP_COUGAR	3	// Represents the Cougar grip
+
+// Timing defaults
+define      PULSE_TIME              100 // PULSE+Delay time in milliseconds
+define      DELAY_TIME              150 // D() delay time in milliseconds
+
+// DCS planes
+define      DCS_PLANE_A10A          1   // A-10A Warthog
+define      DCS_PLANE_A10C          2   // A-10C Warthog
+define      DCS_PLANE_A4E           3   // A-4E Skyhawk
+define      DCS_PLANE_AJS37         4   // AJS 37 Viggen
+define      DCS_PLANE_AV8B          5   // AV-8B Night Attack V/STOL
+define      DCS_PLANE_BF109         6   // Bf 109 K-4 Kurfürst
+define      DCS_PLANE_C101          7   // C-101 Aviojet
+define      DCS_PLANE_CE            8   // Christen Eagle II
+define      DCS_PLANE_F4E           9   // F-4E Phantom II
+define      DCS_PLANE_F4U           10  // F4U-4 Corsair
+define      DCS_PLANE_F5E           11  // F-5E Tiger II
+define      DCS_PLANE_F8J           12  // F-8J Crusader
+define      DCS_PLANE_F14B          13  // F-14B Tomcat
+define      DCS_PLANE_F15C          14  // F-15C Eagle
+define      DCS_PLANE_F15E          15  // F-15E Strike Eagle
+define      DCS_PLANE_F16CM         16  // F-16CM Fighting Falcon/Viper (Blk.50)
+define      DCS_PLANE_F86F          17  // F-86F Sabre
+define      DCS_PLANE_FA18C         18  // F/A-18C Hornet
+define      DCS_PLANE_FW190A        19  // Fw 190 A-8 Anton
+define      DCS_PLANE_FW190D        20  // Fw 190 D-9 Dora
+define      DCS_PLANE_HAWK          21  // Hawk T.1A
+define      DCS_PLANE_I16           22  // I-16
+define      DCS_PLANE_JF17          23  // JF-17 Thunder
+define      DCS_PLANE_KA50          24  // Ka-50 Black Shark 2
+define      DCS_PLANE_L39           25  // L-39 Albatros
+define      DCS_PLANE_MB339         26  // MB.339
+define      DCS_PLANE_MI8MTV2       27  // Mi-8MTV2 Magnificent Eight
+define      DCS_PLANE_MIG15         28  // MiG-15bis
+define      DCS_PLANE_MIG19         29  // MiG-19P Farmer
+define      DCS_PLANE_MIG21         30  // Mig-21bis
+define      DCS_PLANE_MIG23MLA      31  // Mig-23 MLA Flogger
+define      DCS_PLANE_MIG29         32  // MiG-29
+define      DCS_PLANE_M2000C        33  // Mirage M-2000C
+define      DCS_PLANE_P51D          34  // P-51D Mustang
+define      DCS_PLANE_SA342         35  // SA342 Gazelle
+define      DCS_PLANE_SPITFIRE      36  // Spitfire LF Mk IX
+define      DCS_PLANE_SU25          37  // Su-25
+define      DCS_PLANE_SU27          38  // Su-27
+define      DCS_PLANE_SU33          39  // Su-33
+define		DCS_PLANE_T45			40	// T-45 Goshawk
+define      DCS_PLANE_UH1H          41  // UH-1H Huey
+define      DCS_PLANE_YAK52         42  // Yak-52
+
+// Keyboard presets
+define KEYBOARD_LAYOUT				KB_ENG

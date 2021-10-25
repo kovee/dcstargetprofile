@@ -1,0 +1,87 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains high level device configuration.
+
+int InitDevices()
+{
+	debug("Initializing devices...");
+
+	// Exclude non-used joysticks from the configuration.
+	if(JOYSTICK_GRIP != JOYSTICK_GRIP_COUGAR)
+	{
+		debug("Excluding Cougar joystick from the configuration.");
+		Configure(&HCougar, MODE_EXCLUDED);
+	}
+
+	if(JOYSTICK_GRIP != JOYSTICK_GRIP_A10)
+	{
+		debug("Excluding the A-10 grip from the configuration.");
+		Configure(&Joystick, MODE_EXCLUDED);
+	}
+
+	if (JOYSTICK_GRIP != JOYSTICK_GRIP_FA18)
+	{
+		debug("Excluding the F/A-18C grip from the configuration.");
+		Configure(&Joystick, MODE_EXCLUDED);
+	}
+
+	debug("Excluding T.16000 joysticks from the configuration...");
+    Configure(&T16000, MODE_EXCLUDED);
+    Configure(&T16000L, MODE_EXCLUDED);
+
+    // Rudder device selection
+    if(USE_RUDDER == YES)
+    {
+    	if(RUDDER_TYPE == RUDDER_TFLIGHT)
+    	{
+    		debug("Configuring to use the T.Flight rudder...");
+            Configure(&TFRPRudder, MODE_FILTERED);
+            Configure(&TFRPHARudder, MODE_EXCLUDED);
+    	}
+    	else if(RUDDER_TYPE == RUDDER_PENDULAR)
+    	{
+    		debug("Configuring to use the Pendular rudder...");
+            Configure(&TFRPRudder, MODE_EXCLUDED);
+            Configure(&TFRPHARudder, MODE_FILTERED);
+    	}
+    	else
+    	{
+    		error("Unsupported rudder type configured.");
+    	}
+    }
+    else
+    {
+    	debug("Excluding all rudders from the configuration.");
+    }
+
+    // MFD device selection
+    if(USE_MFD == NO)
+    {
+    	debug("Excluding MFDs from the configuration...");
+    	Configure(&LMFD, MODE_EXCLUDED);
+        Configure(&RMFD, MODE_EXCLUDED);
+    }
+}

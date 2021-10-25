@@ -1,0 +1,182 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains the configuration of the various controller axes.
+
+int InitJoystickAxes()
+{
+	// Initializes the joystick axes based on the configured HOTAS grip.
+	// The following axes are always reserved by this function:
+	//		DX_X_AXIS
+	//		DX_X_AXIS
+
+	if(JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
+	{
+		debug("Mapping joystick axes for the A-10 grip...");
+		MapAxis(&Joystick, JOYX, DX_X_AXIS);
+        MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+	}
+	else if(JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
+	{
+		debug("Mapping joystick axes for the F/A-18C grip...");
+		MapAxis(&JoystickF18, JOYX, DX_X_AXIS);
+        MapAxis(&JoystickF18, JOYY, DX_Y_AXIS);
+	}
+	else if (JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
+	{
+		debug("Mapping joystick axes for the Cougar grip...");
+		MapAxis(&HCougar, JOYX, DX_X_AXIS);
+        MapAxis(&HCougar, JOYY, DX_Y_AXIS);
+	}
+	else
+	{
+		error("Unknown grip type configured.");
+	}
+}
+
+int InitThrottleAxes()
+{
+	// Initializes the throttle axes.
+	// The following axes are always reserved by this function:
+	//		- DX_THROTTLE_AXIS
+	//		- DX_XROT_AXIS
+	//		- DX_YROT_AXIS
+	// The following axes are optionally reserved by this
+	// function:
+	//		- DX_Z_AXIS - reserved when both throttles are enabled
+	//		- DX_SLIDER_AXIS - reserved when the friction slider
+	//		  				   is enabled
+
+	if(THROTTLE_TYPE == THROTTLE_TYPE_WARTHOG)
+	{
+		// Confiure throttle axes
+		if(THROTTLE_PRESET == THROTTLE_PRESET_SINGLE)
+		{
+			debug("Mapping a single throttle axis only.");
+			if(THROTTLE_AXIS == THROTTLE_AXIS_RIGHT)
+			{
+				debug("Only the right throttle axis will be used.");
+				MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+			}
+			else if(THROTTLE_AXIS == THROTTLE_AXIS_LEFT)
+			{
+				debug("Only the left throttle axis will be used.");
+				MapAxis(&Throttle, THR_LEFT, DX_THROTTLE_AXIS);
+			}
+			else
+			{
+				error("Invalid throttle axis configuration.");
+			}
+		}
+		else if(THROTTLE_PRESET == THROTTLE_PRESET_DUAL)
+		{
+			debug("Mapping throttle axes as two separate axes.");
+			MapAxis(&Throttle, THR_LEFT, DX_Z_AXIS);
+	        MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+		}
+		else
+		{
+			error("Invalid throttle preset configured.");
+		}
+
+		// Configure friction slider
+		if(ENABLE_FRICTION_SLIDER == YES)
+		{
+			debug("Mapping friction slider.");
+			MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS);
+		}
+
+		// Mapping slew axes
+		debug("Mapping slew axes.");
+		MapAxis(&Throttle, SCX, DX_XROT_AXIS);
+    	MapAxis(&Throttle, SCY, DX_YROT_AXIS);
+
+    	if(MOUSE_AS_SECONDARY_SLEW == YES)
+    	{
+    		debug("Mapping mouse as secondary function for slew axes.");
+    		MapKey(&Joystick,
+    				S4,
+    				EXEC( 	"MapAxis(&Throttle, SCX, MOUSE_X_AXIS, AXIS_NORMAL, MAP_RELATIVE);"
+	                	    "SetSCurve(&Throttle, SCX, 0, 10, 0, 0, -5);"
+	                    	"MapAxis(&Throttle, SCY, MOUSE_Y_AXIS, AXIS_NORMAL, MAP_RELATIVE);"
+	                    	"SetSCurve(&Throttle, SCY, 0, 10, 0, 0, -5);"));
+
+
+		    MapKeyR(&Joystick,
+		    		S4,
+		    		EXEC(	"MapAxis(&Throttle, SCX, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);"
+		                    "SetSCurve(&Throttle, SCX, 0, 0, 0, 0, 0);"
+		                    "MapAxis(&Throttle, SCY, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);"
+		                    "SetSCurve(&Throttle, SCY, 0, 0, 0, 0, 0);"));
+    	}
+	}
+	else
+	{
+		error("Unsupported throttle type configured.");
+	}
+}
+
+int InitRudderAxes()
+{
+	// Initializes the rudder axes.
+	// The following axes are always reserved by this function:
+	//		- DX_ZROT_AXIS
+	// The following axes are optonally reserved by this function:
+	//		- DX_Z_AXIS - reserved when toebrake axes are enabled
+	//		- DX_SLIDER_AXIS - reserved when toebrake axes are enabled
+
+	if(USE_RUDDER == NO)
+	{
+		debug("Rudders are not used, skipping configuration.");
+		return 0;
+	}
+
+	if(RUDDER_TYPE == RUDDER_TFLIGHT)
+	{
+		debug("Configuring the T.Flight rudder axes.");
+		MapAxis(&TFRPRudder, TRUDDER, DX_ZROT_AXIS);
+
+		if(ENABLE_TOEBRAKE_AXES == YES)
+		{
+			debug("Configuring toebrake axes as normal axes.");
+			MapAxis(&TFRPRudder, TRPRIGHT, DX_Z_AXIS);
+			MapAxis(&TFRPRudder, TRPLEFT, DX_SLIDER_AXIS);
+		}
+		else if(CONVERT_TOEBRAKE_AXES == YES)
+		{
+			debug("Converting rudder toebrake axes to keystrokes.");
+			KeyAxis(&TFRPRudder, TRPRIGHT, 0, AXMAP2(2, BTN_WHEELBRAKE_RIGHT, 0));
+        	KeyAxis(&TFRPRudder, TRPLEFT, 0, AXMAP2(2, BTN_WHEELBRAKE_LEFT, 0));
+		}
+		else
+		{
+			warning("Toebrake axes are not configured.");
+		}
+	}
+	else
+	{
+		error("Unknown rudder model has been configured.");
+	}
+}

@@ -1,0 +1,75 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains the configuration of the LEDs.
+
+int ConfigureWarthogLEDs()
+{
+	// Configures the LEDs of the Warthog throttle base.
+
+	debug("Configuring LEDs on the Warthog throttle base...");
+
+	// Turn off all LED status lights
+	ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED1));
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED2));
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED3));
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED4));
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED5));
+
+    if(THROTTLE_USE_LED_BACKLIGHT == YES)
+    {
+    	// Set LED intensity level according to configured value
+    	ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, THROTTLE_LED_INTENSITY));
+
+    	// Turn on the LED backlight
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED0));
+    }
+    else
+    {
+    	// Set LED intensity level to 0
+    	ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0));
+
+    	// Turn off the LED backlight
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED0));
+    }
+
+    if(THROTTLE_ENABLE_REAL_BACKLIGHT == YES)
+    {
+    	// Turn off backlight LEDs
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED0));
+    }
+}
+
+int InitLEDs()
+{
+	// Configures the LEDs of the various controllers.
+
+	debug("Configuring LEDs...");
+
+	if(THROTTLE_TYPE == THROTTLE_TYPE_WARTHOG)
+	{
+		ConfigureWarthogLEDs();
+	}
+}

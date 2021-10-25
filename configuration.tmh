@@ -1,0 +1,183 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// **** SCRIPT CONFIGURATION *************************************************
+
+// Allows enabling additional logging for the profile script.
+// Possible values: YES, NO
+define  VERBOSE_LOGGING         YES
+
+// **** GAME CONFIGURATION ***************************************************
+
+// The main game mode DCS is running in. It allows enabling VR specific
+// options inthe profile.
+// Possible values:
+//		DCS_MODE_FLAT for playing on monitor
+//		DCS_MODE_VR for playing in VR
+define  DCS_MODE                DCS_MODE_FLAT
+
+// The plane configuration to load with the profile.
+// Possible values:
+//		DCS_PLANE_FA18C for F/A-18C Hornet
+define DCS_PLANE				DCS_PLANE_FA18C
+
+
+// **** VR CONFIGURATION *****************************************************
+
+// **** JOYSTICK CONFIGURATION ***********************************************
+
+// The X and Y axis deadzone to configure for the joystick.
+define  JOYSTICK_DEADZONE       3
+
+// The X and Y axis sensitivity curve to configure for the joystick.
+define JOYSTICK_CURVE			25
+
+// The joystick type to use.
+// Possible values:
+//		JOYSTICK_TYPE_WARTHOG for the Thrustmaster Warthog joystick
+define JOYSTICK_TYPE			JOYSTICK_TYPE_WARTHOG
+
+// The joystick grip to use.
+// Possible values:
+//		JOYSTICK_GRIP_A10 for the default A-10 grip
+//		JOYSTICK_GRIP_FA18C for the F/A-18C grip
+//		JOYSTICK_GRIP_COUGAR for the Cougar grip
+define JOYSTICK_GRIP			JOYSTICK_GRIP_A10
+
+// **** THROTTLE CONFIGURATION ***********************************************
+
+// The deadzone to set on the throttle axes.
+define THROTTLE_DEADZONE		1
+
+// The type of throttle to use.
+// Possible values:
+//		THROTTLE_TYPE_WARTHOG for the Warthog throttle
+//		THROTTLE_TYPE_COUGAR for the Cougar throttle
+//		THROTTLE_TYPE_TWCS for the TWCS throttle
+define THROTTLE_TYPE			THROTTLE_TYPE_WARTHOG
+
+// The throttle preset to configure. This could either be single or dual
+// throttle. When a single throttle is configured then only one of the
+// throttle axes will be configured depending on the value set in the
+// THROTTLE_AXIS variable, the other axis will not be used. This could be
+// useful to overcome the maximum axis limit set by DirectX.
+// Possible values:
+//		THROTTLE_PRESET_DUAL for configuring both throttle axes
+//		THROTTLE_PRESET_SINGLE for configuring only a single throttle axis
+define THROTTLE_PRESET			THROTTLE_PRESET_DUAL
+
+// Defines which axis on the throttle is going to be configured if a single
+// axis throttle preset is configured.
+// Possible values:
+//		THROTTLE_AXIS_LEFT for configuring the right throttle axis
+//		THROTTLE_AXIS_RIGHT for configuring the left throttle axis
+define THROTTLE_AXIS			THROTTLE_AXIS_RIGHT
+
+// Whether or not the friction slider axis on the throttle base should be
+// enabled. Disabling this could be useful to overcome the maximum axis
+// limit set by DirectX.
+// Possible values: YES, NO
+define ENABLE_FRICTION_SLIDER	YES
+
+// Whether or not the friction slider axis should be converted to
+// keystrokes. This is only useful if the friction slider axis is
+// disabled.
+define CONVERT_FRICTION_SLIDER	NO
+
+// Whether or not mouse movement should be mapped as secondary function for
+// the slew axes.
+// Possible values: YES, NO
+define MOUSE_AS_SECONDARY_SLEW	YES
+
+// Whether or not status LEDs on the base of the Warthog throttle should
+// be used.
+// Possible values: YES, NO
+define USE_STATUS_LEDS 			YES
+
+// Whether or not the LED backlight of the Warthog throttle base should
+// be used.
+// Possible values: YES, NO
+define THROTTLE_USE_LED_BACKLIGHT 	YES
+
+// The intensity of the LEDs.
+// Possible values:
+// 		LED_INTENSITY_1 - Intensity level 1 - lowest
+// 		LED_INTENSITY_2 - Intensity level 2
+// 		LED_INTENSITY_3 - Intensity level 3
+// 		LED_INTENSITY_4 - Intensity level 4
+// 		LED_INTENSITY_5 - Intensity level 5 - highest
+define THROTTLE_LED_INTENSITY	LED_INTESITY_3
+
+// Enables realistic backlight where the LED intensity on the Warthog
+// throttle base follows the level set in the game.
+// Possible values: YES, NO
+define THROTTLE_ENABLE_REAL_BACKLIGHT 	YES
+
+// **** RUDDER CONFIGURATION *************************************************
+
+// Defines whether or not the rudder should be configured. Not configuring the
+// throttle through T.A.R.G.E.T. could be useful to overcome the maximum axis
+// limit set by DirectX.
+// Possible values: YES, NO
+define USE_RUDDER				YES
+
+// The deadzone to set for the rudder axis
+define RUDDER_DEADZONE			5
+
+// The curve to set for the rudder axis
+define RUDDER_CURVE				25
+
+// The deadzone to set for the toebrake axes
+define TOEBRAKE_DEADZONE		10
+
+// The curve to set for the toebrake axes
+define TOEBRAKE_CURVE			20
+
+// The type of rudder to configure
+// Possible values:
+//		RUDDER_TFLIGHT for the Thrustmaster T.Flight rudder
+//		RUDDER_PENDULAR for the Thrustmaster Pendular rudder
+define RUDDER_TYPE				RUDDER_TFLIGHT
+
+// Whether or not toebrake axes should be enabled. Disabling the toebrake
+// axes could be useful to overcome the maximum axis limit set by DirectX.
+// Possible values: YES, NO
+define ENABLE_TOEBRAKE_AXES		NO
+
+// Whether or not toebrake axes should be converted to regular keystorkes.
+// This is only useful if toebrake axes are disabled.
+define CONVERT_TOEBRAKE_AXES	YES
+
+// **** MFD CONFIGURATION ****************************************************
+
+// Whether or not Cougar MFDs should be configured
+// Possible values: YES, NO
+define USE_MFD					YES
+
+// The number of MFDs to configure. Only used when MFDs are enabled.
+// Possible values: 1,2,3
+define NUM_MFDS					2
+
+// **** TOOLS CONFIGURATION **************************************************

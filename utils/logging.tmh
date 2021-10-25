@@ -1,0 +1,85 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains common utility functions for logging.
+
+int debug(alias message)
+{
+	// Writes a log message to the T.A.R.G.E.T. window if verbose logging is enabled.
+	//
+	// Args:
+	//	message: The message to write.
+
+	if (VERBOSE_LOGGING == YES)
+	{
+		printf("[DEBUG] >> %s\xa", &message);
+	}
+}
+
+int warning(alias message)
+{
+	// Writes a warning log message to the T.A.R.G.E.T. console.
+	//
+	// Args:
+	//	message: The message to write.
+
+	printf("[WARNING] >> %s\xa", &message);
+}
+
+int error(alias message)
+{
+	// Writes an error log message to the T.A.R.G.E.T. console.
+	//
+	// Args:
+	//	message: The message to write.
+
+	printf("[ERROR] >> %s\xa", &message);
+}
+
+int show_mapping(
+	alias button,
+	alias primary,
+	alias primary_long,
+	alias secondary,
+	alias secondary_long)
+{
+	// Writes the configured mapping for the given button to the T.A.R.G.E.T. console.
+	//
+	// Args:
+	//	button: The button that is displayed.
+	//	primary: The primary mapping for short press.
+	//	primary_long: The primary mapping for long press.
+	//	secondary: The secondary mapping for short press.
+	//	secondary_long: The secondary mapping for long press.
+	if (VERBOSE_LOGGING == YES)
+	{
+		printf(">> %s <<\xa", &button);
+		printf(" 	--->> PRIMARY: 			%s\xa", &primary);
+		printf(" 	--->> PRIMARY LONG: 	%s\xa", &primary_long);
+		printf(" 	--->> SECONDARY:		%s\xa", &secondary);
+		printf(" 	--->> SECONDARY LONG:	%s\xa", &secondary_long);
+		printf("\xa");
+	}
+}
