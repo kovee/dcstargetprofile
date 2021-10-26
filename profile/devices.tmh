@@ -80,8 +80,23 @@ int InitDevices()
     // MFD device selection
     if(USE_MFD == NO)
     {
-    	debug("Excluding MFDs from the configuration...");
+    	debug("Excluding all MFDs from the configuration...");
     	Configure(&LMFD, MODE_EXCLUDED);
         Configure(&RMFD, MODE_EXCLUDED);
+        Configure(&MMFD, MODE_EXCLUDED);
+    }
+    else
+    {
+        if(NUM_MFDS == 1)
+        {
+            debug("Excluding the left and middle MFDs from the configuration.");
+            Configure(&LMFD, MODE_EXCLUDED);
+            Configure(&MMFD, MODE_EXCLUDED);
+        }
+        else if(NUM_MFDS == 2)
+        {
+            debug("Excluding the middle MFD from the configuration.");
+            Configure(&MMFD, MODE_EXCLUDED);
+        }
     }
 }

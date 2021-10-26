@@ -23,50 +23,18 @@
 // DEALINGS IN THE SOFTWARE.
 // ===========================================================================
 
-// Runtime Includes
-include "runtime/target.tmh"
+// Contains the control mapping logic for the throttle grip and base.
 
-// User Configuration
-include "utils/globals.ttm"
-include "configuration.tmh"
-
-// Utilities
-include "utils/usb_mappings.ttm"
-include "utils/logging.tmh"
-
-
-// Bindings
-include "bindings/general.ttm"
-include "bindings/view.ttm"
-include "bindings/defaultcontrolmap.tmh"
-
-// Planes
-include "planes/fa18c.tmh"
-
-// Profile
-include "profile/eventhandler.tmh"
-include "profile/axes.tmh"
-include "profile/leds.tmh"
-include "profile/mfds.tmh"
-include "profile/devices.tmh"
-include "profile/controlmapping.tmh"
-
-int main()
+int MapWarthogThrottleGrip()
 {
-	InitDevices();
+	// Maps the controls on the Warthog throttle grip.
 
-	if(Init(&EventHandle))
-	{
-		return 1;
-	}
+	debug("Mapping controls on the Warthog throttle grip.");
+}
 
-	SetShiftButton(&Joystick, S4, &Throttle, PSF, PSB, UDTOGGLE);
-    SetKBRate(PULSE_TIME, DELAY_TIME);
-    SetKBLayout(KEYBOARD_LAYOUT);
+int MapWarthogThrottleBase()
+{
+	// Maps the controls on the Warthog throttle base.
 
-    InitAxes();
-    InitMFDs();
-    InitLEDs();
-
-    MapControls();
+	debug("Mapping controls on the Warthog throttle base.");
 }

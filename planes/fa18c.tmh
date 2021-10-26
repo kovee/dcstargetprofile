@@ -23,50 +23,10 @@
 // DEALINGS IN THE SOFTWARE.
 // ===========================================================================
 
-// Runtime Includes
-include "runtime/target.tmh"
-
-// User Configuration
-include "utils/globals.ttm"
-include "configuration.tmh"
-
-// Utilities
-include "utils/usb_mappings.ttm"
-include "utils/logging.tmh"
+// Contains control mapping definitions for the F/A-18C.
 
 
-// Bindings
-include "bindings/general.ttm"
-include "bindings/view.ttm"
-include "bindings/defaultcontrolmap.tmh"
-
-// Planes
-include "planes/fa18c.tmh"
-
-// Profile
-include "profile/eventhandler.tmh"
-include "profile/axes.tmh"
-include "profile/leds.tmh"
-include "profile/mfds.tmh"
-include "profile/devices.tmh"
-include "profile/controlmapping.tmh"
-
-int main()
+int SpecifyFA18ControlMap()
 {
-	InitDevices();
-
-	if(Init(&EventHandle))
-	{
-		return 1;
-	}
-
-	SetShiftButton(&Joystick, S4, &Throttle, PSF, PSB, UDTOGGLE);
-    SetKBRate(PULSE_TIME, DELAY_TIME);
-    SetKBLayout(KEYBOARD_LAYOUT);
-
-    InitAxes();
-    InitMFDs();
-    InitLEDs();
-
-    MapControls();
+	debug("Setting control map for the F/A-18C Hornet.");
 }

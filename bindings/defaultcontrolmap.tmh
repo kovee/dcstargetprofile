@@ -1,0 +1,1204 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Specifies the default control map used for controller mapping.
+
+// ===========================================================================
+//		Warthog Joystick A-10 Grip
+// ===========================================================================
+
+// **** TRIGGER - STAGE 1 ****************************************************
+
+int BTN_TG1_MIDDLE_IN			= 0;
+int BTN_TG1_MIDDLE_OUT			= 0;
+int BTN_TG1_UP_IN				= 0;
+int BTN_TG1_UP_OUT				= 0;
+int BTN_TG1_DOWN_IN				= 0;
+int BTN_TG1_DOWN_OUT			= 0;
+
+// **** TRIGGER - STAGE 2 ****************************************************
+
+int BTN_TG2_MIDDLE_IN			= 0;
+int BTN_TG2_MIDDLE_OUT			= 0;
+int BTN_TG2_UP_IN				= 0;
+int BTN_TG2_UP_OUT				= 0;
+int BTN_TG2_DOWN_IN				= 0;
+int BTN_TG2_DOWN_OUT			= 0;
+
+// **** S1 *******************************************************************
+
+int BTN_S1_MIDDLE_IN			= 0;
+int BTN_S1_MIDDLE_OUT			= 0;
+int BTN_S1_UP_IN				= 0;
+int BTN_S1_UP_OUT				= 0;
+int BTN_S1_DOWN_IN				= 0;
+int BTN_S1_DOWN_OUT				= 0;
+
+// **** S2 *******************************************************************
+
+int BTN_S2_MIDDLE_IN			= 0;
+int BTN_S2_MIDDLE_OUT			= 0;
+int BTN_S2_UP_IN				= 0;
+int BTN_S2_UP_OUT				= 0;
+int BTN_S2_DOWN_IN				= 0;
+int BTN_S2_DOWN_OUT				= 0;
+
+// **** S3 *******************************************************************
+
+int BTN_S3_MIDDLE_IN			= 0;
+int BTN_S3_MIDDLE_OUT			= 0;
+int BTN_S3_UP_IN				= 0;
+int BTN_S3_UP_OUT				= 0;
+int BTN_S3_DOWN_IN				= 0;
+int BTN_S3_DOWN_OUT				= 0;
+
+// **** TRIM HAT *************************************************************
+
+int BTN_H1U_UP_IN				= 0;
+int BTN_H1U_UP_OUT				= 0;
+int BTN_H1U_MIDDLE_IN			= 0;
+int BTN_H1U_MIDDLE_OUT			= 0;
+int BTN_H1U_DOWN_IN				= 0;
+int BTN_H1U_DOWN_OUT			= 0;
+
+int BTN_H1D_UP_IN				= 0;
+int BTN_H1D_UP_OUT				= 0;
+int BTN_H1D_MIDDLE_IN			= 0;
+int BTN_H1D_MIDDLE_OUT			= 0;
+int BTN_H1D_DOWN_IN				= 0;
+int BTN_H1D_DOWN_OUT			= 0;
+
+int BTN_H1L_UP_IN				= 0;
+int BTN_H1L_UP_OUT				= 0;
+int BTN_H1L_MIDDLE_IN			= 0;
+int BTN_H1L_MIDDLE_OUT			= 0;
+int BTN_H1L_DOWN_IN				= 0;
+int BTN_H1L_DOWN_OUT			= 0;
+
+int BTN_H1R_UP_IN				= 0;
+int BTN_H1R_UP_OUT				= 0;
+int BTN_H1R_MIDDLE_IN			= 0;
+int BTN_H1R_MIDDLE_OUT			= 0;
+int BTN_H1R_DOWN_IN				= 0;
+int BTN_H1R_DOWN_OUT			= 0;
+
+// **** TMS HAT **********************************************************
+
+int BTN_H2U_UP_IN				= 0;
+int BTN_H2U_UP_OUT				= 0;
+int BTN_H2U_MIDDLE_IN			= 0;
+int BTN_H2U_MIDDLE_OUT			= 0;
+int BTN_H2U_DOWN_IN				= 0;
+int BTN_H2U_DOWN_OUT			= 0;
+
+int BTN_H2D_UP_IN				= 0;
+int BTN_H2D_UP_OUT				= 0;
+int BTN_H2D_MIDDLE_IN			= 0;
+int BTN_H2D_MIDDLE_OUT			= 0;
+int BTN_H2D_DOWN_IN				= 0;
+int BTN_H2D_DOWN_OUT			= 0;
+
+int BTN_H2L_UP_IN				= 0;
+int BTN_H2L_UP_OUT				= 0;
+int BTN_H2L_MIDDLE_IN			= 0;
+int BTN_H2L_MIDDLE_OUT			= 0;
+int BTN_H2L_DOWN_IN				= 0;
+int BTN_H2L_DOWN_OUT			= 0;
+
+int BTN_H2R_UP_IN				= 0;
+int BTN_H2R_UP_OUT				= 0;
+int BTN_H2R_MIDDLE_IN			= 0;
+int BTN_H2R_MIDDLE_OUT			= 0;
+int BTN_H2R_DOWN_IN				= 0;
+int BTN_H2R_DOWN_OUT			= 0;
+
+// **** DMS HAT **********************************************************
+
+int BTN_H3U_UP_IN				= 0;
+int BTN_H3U_UP_OUT				= 0;
+int BTN_H3U_MIDDLE_IN			= 0;
+int BTN_H3U_MIDDLE_OUT			= 0;
+int BTN_H3U_DOWN_IN				= 0;
+int BTN_H3U_DOWN_OUT			= 0;
+
+int BTN_H3D_UP_IN				= 0;
+int BTN_H3D_UP_OUT				= 0;
+int BTN_H3D_MIDDLE_IN			= 0;
+int BTN_H3D_MIDDLE_OUT			= 0;
+int BTN_H3D_DOWN_IN				= 0;
+int BTN_H3D_DOWN_OUT			= 0;
+
+int BTN_H3L_UP_IN				= 0;
+int BTN_H3L_UP_OUT				= 0;
+int BTN_H3L_MIDDLE_IN			= 0;
+int BTN_H3L_MIDDLE_OUT			= 0;
+int BTN_H3L_DOWN_IN				= 0;
+int BTN_H3L_DOWN_OUT			= 0;
+
+int BTN_H3R_UP_IN				= 0;
+int BTN_H3R_UP_OUT				= 0;
+int BTN_H3R_MIDDLE_IN			= 0;
+int BTN_H3R_MIDDLE_OUT			= 0;
+int BTN_H3R_DOWN_IN				= 0;
+int BTN_H3R_DOWN_OUT			= 0;
+
+// **** CMS HAT **********************************************************
+
+int BTN_H4U_UP_IN				= 0;
+int BTN_H4U_UP_OUT				= 0;
+int BTN_H4U_MIDDLE_IN			= 0;
+int BTN_H4U_MIDDLE_OUT			= 0;
+int BTN_H4U_DOWN_IN				= 0;
+int BTN_H4U_DOWN_OUT			= 0;
+
+int BTN_H4D_UP_IN				= 0;
+int BTN_H4D_UP_OUT				= 0;
+int BTN_H4D_MIDDLE_IN			= 0;
+int BTN_H4D_MIDDLE_OUT			= 0;
+int BTN_H4D_DOWN_IN				= 0;
+int BTN_H4D_DOWN_OUT			= 0;
+
+int BTN_H4L_UP_IN				= 0;
+int BTN_H4L_UP_OUT				= 0;
+int BTN_H4L_MIDDLE_IN			= 0;
+int BTN_H4L_MIDDLE_OUT			= 0;
+int BTN_H4L_DOWN_IN				= 0;
+int BTN_H4L_DOWN_OUT			= 0;
+
+int BTN_H4R_UP_IN				= 0;
+int BTN_H4R_UP_OUT				= 0;
+int BTN_H4R_MIDDLE_IN			= 0;
+int BTN_H4R_MIDDLE_OUT			= 0;
+int BTN_H4R_DOWN_IN				= 0;
+int BTN_H4R_DOWN_OUT			= 0;
+
+int BTN_H4P_UP_IN				= 0;
+int BTN_H4P_UP_OUT				= 0;
+int BTN_H4P_MIDDLE_IN			= 0;
+int BTN_H4P_MIDDLE_OUT			= 0;
+int BTN_H4P_DOWN_IN				= 0;
+int BTN_H4P_DOWN_OUT			= 0;
+
+// ===========================================================================
+//		Warthog Joystick F/A-18 Grip
+// ===========================================================================
+
+// ===========================================================================
+//		Cougar Joystick Grip
+// ===========================================================================
+
+// ===========================================================================
+//		Warthog Throttle Grip
+// ===========================================================================
+
+// **** MIC SWITCH ***********************************************************
+
+int BTN_MSU_UP_IN				= 0;
+int BTN_MSU_UP_OUT				= 0;
+int BTN_MSU_MIDDLE_IN			= 0;
+int BTN_MSU_MIDDLE_OUT			= 0;
+int BTN_MSU_DOWN_IN				= 0;
+int BTN_MSU_DOWN_OUT			= 0;
+
+int BTN_MSD_UP_IN				= 0;
+int BTN_MSD_UP_OUT				= 0;
+int BTN_MSD_MIDDLE_IN			= 0;
+int BTN_MSD_MIDDLE_OUT			= 0;
+int BTN_MSD_DOWN_IN				= 0;
+int BTN_MSD_DOWN_OUT			= 0;
+
+int BTN_MSL_UP_IN				= 0;
+int BTN_MSL_UP_OUT				= 0;
+int BTN_MSL_MIDDLE_IN			= 0;
+int BTN_MSL_MIDDLE_OUT			= 0;
+int BTN_MSL_DOWN_IN				= 0;
+int BTN_MSL_DOWN_OUT			= 0;
+
+int BTN_MSR_UP_IN				= 0;
+int BTN_MSR_UP_OUT				= 0;
+int BTN_MSR_MIDDLE_IN			= 0;
+int BTN_MSR_MIDDLE_OUT			= 0;
+int BTN_MSR_DOWN_IN				= 0;
+int BTN_MSR_DOWN_OUT			= 0;
+
+int BTN_MSP_UP_IN				= 0;
+int BTN_MSP_UP_OUT				= 0;
+int BTN_MSP_MIDDLE_IN			= 0;
+int BTN_MSP_MIDDLE_OUT			= 0;
+int BTN_MSP_DOWN_IN				= 0;
+int BTN_MSP_DOWN_OUT			= 0;
+
+// **** SPEEDBRAKE SWITCH ****************************************************
+
+int BTN_SPDB_UP_IN				= 0;
+int BTN_SPDB_UP_OUT				= 0;
+int BTN_SPDB_MIDDLE_IN			= 0;
+int BTN_SPDB_MIDDLE_OUT			= 0;
+int BTN_SPDB_DOWN_IN			= 0;
+int BTN_SPDB_DOWN_OUT			= 0;
+
+int BTN_SPDM_UP_IN				= 0;
+int BTN_SPDM_UP_OUT				= 0;
+int BTN_SPDM_MIDDLE_IN			= 0;
+int BTN_SPDM_MIDDLE_OUT			= 0;
+int BTN_SPDM_DOWN_IN			= 0;
+int BTN_SPDM_DOWN_OUT			= 0;
+
+int BTN_SPDF_UP_IN				= 0;
+int BTN_SPDF_UP_OUT				= 0;
+int BTN_SPDF_MIDDLE_IN			= 0;
+int BTN_SPDF_MIDDLE_OUT			= 0;
+int BTN_SPDF_DOWN_IN			= 0;
+int BTN_SPDF_DOWN_OUT			= 0;
+
+// **** BOAT SWITCH **********************************************************
+
+int BTN_BSB_UP_IN				= 0;
+int BTN_BSB_UP_OUT				= 0;
+int BTN_BSB_MIDDLE_IN			= 0;
+int BTN_BSB_MIDDLE_OUT			= 0;
+int BTN_BSB_DOWN_IN				= 0;
+int BTN_BSB_DOWN_OUT			= 0;
+
+int BTN_BSM_UP_IN				= 0;
+int BTN_BSM_UP_OUT				= 0;
+int BTN_BSM_MIDDLE_IN			= 0;
+int BTN_BSM_MIDDLE_OUT			= 0;
+int BTN_BSM_DOWN_IN				= 0;
+int BTN_BSM_DOWN_OUT			= 0;
+
+int BTN_BSF_UP_IN				= 0;
+int BTN_BSF_UP_OUT				= 0;
+int BTN_BSF_MIDDLE_IN			= 0;
+int BTN_BSF_MIDDLE_OUT			= 0;
+int BTN_BSF_DOWN_IN				= 0;
+int BTN_BSF_DOWN_OUT			= 0;
+
+// **** CHINA HAT ************************************************************
+
+int BTN_CHB_UP_IN				= 0;
+int BTN_CHB_UP_OUT				= 0;
+int BTN_CHB_MIDDLE_IN			= 0;
+int BTN_CHB_MIDDLE_OUT			= 0;
+int BTN_CHB_DOWN_IN				= 0;
+int BTN_CHB_DOWN_OUT			= 0;
+
+int BTN_CHM_UP_IN				= 0;
+int BTN_CHM_UP_OUT				= 0;
+int BTN_CHM_MIDDLE_IN			= 0;
+int BTN_CHM_MIDDLE_OUT			= 0;
+int BTN_CHM_DOWN_IN				= 0;
+int BTN_CHM_DOWN_OUT			= 0;
+
+int BTN_CHF_UP_IN				= 0;
+int BTN_CHF_UP_OUT				= 0;
+int BTN_CHF_MIDDLE_IN			= 0;
+int BTN_CHF_MIDDLE_OUT			= 0;
+int BTN_CHF_DOWN_IN				= 0;
+int BTN_CHF_DOWN_OUT			= 0;
+
+// **** LEFT THROTTLE BUTTON *************************************************
+
+int BTN_LTB_UP_IN				= 0;
+int BTN_LTB_UP_OUT				= 0;
+int BTN_LTB_MIDDLE_IN			= 0;
+int BTN_LTB_MIDDLE_OUT			= 0;
+int BTN_LTB_DOWN_IN				= 0;
+int BTN_LTB_DOWN_OUT			= 0;
+
+// **** COOLIE HAT ***********************************************************
+
+int BTN_CSU_UP_IN				= 0;
+int BTN_CSU_UP_OUT				= 0;
+int BTN_CSU_MIDDLE_IN			= 0;
+int BTN_CSU_MIDDLE_OUT			= 0;
+int BTN_CSU_DOWN_IN				= 0;
+int BTN_CSU_DOWN_OUT			= 0;
+
+int BTN_CSD_UP_IN				= 0;
+int BTN_CSD_UP_OUT				= 0;
+int BTN_CSD_MIDDLE_IN			= 0;
+int BTN_CSD_MIDDLE_OUT			= 0;
+int BTN_CSD_DOWN_IN				= 0;
+int BTN_CSD_DOWN_OUT			= 0;
+
+int BTN_CSL_UP_IN				= 0;
+int BTN_CSL_UP_OUT				= 0;
+int BTN_CSL_MIDDLE_IN			= 0;
+int BTN_CSL_MIDDLE_OUT			= 0;
+int BTN_CSL_DOWN_IN				= 0;
+int BTN_CSL_DOWN_OUT			= 0;
+
+int BTN_CSR_UP_IN				= 0;
+int BTN_CSR_UP_OUT				= 0;
+int BTN_CSR_MIDDLE_IN			= 0;
+int BTN_CSR_MIDDLE_OUT			= 0;
+int BTN_CSR_DOWN_IN				= 0;
+int BTN_CSR_DOWN_OUT			= 0;
+
+// ===========================================================================
+//		Warthog Throttle Base
+// ===========================================================================
+
+// **** ENGINE FUEL FLOW SWITCHES ********************************************
+
+int BTN_EFLNORM_UP_IN			= 0;
+int BTN_EFLNORM_UP_OUT			= 0;
+int BTN_EFLNORM_MIDDLE_IN		= 0;
+int BTN_EFLNORM_MIDDLE_OUT		= 0;
+int BTN_EFLNORM_DOWN_IN			= 0;
+int BTN_EFLNORM_DOWN_OUT		= 0;
+
+int BTN_EFLOVER_UP_IN			= 0;
+int BTN_EFLOVER_UP_OUT			= 0;
+int BTN_EFLOVER_MIDDLE_IN		= 0;
+int BTN_EFLOVER_MIDDLE_OUT		= 0;
+int BTN_EFLOVER_DOWN_IN			= 0;
+int BTN_EFLOVER_DOWN_OUT		= 0;
+
+int BTN_EFRNORM_UP_IN			= 0;
+int BTN_EFRNORM_UP_OUT			= 0;
+int BTN_EFRNORM_MIDDLE_IN		= 0;
+int BTN_EFRNORM_MIDDLE_OUT		= 0;
+int BTN_EFRNORM_DOWN_IN			= 0;
+int BTN_EFRNORM_DOWN_OUT		= 0;
+
+int BTN_EFROVER_UP_IN			= 0;
+int BTN_EFROVER_UP_OUT			= 0;
+int BTN_EFROVER_MIDDLE_IN		= 0;
+int BTN_EFROVER_MIDDLE_OUT		= 0;
+int BTN_EFROVER_DOWN_IN			= 0;
+int BTN_EFROVER_DOWN_OUT		= 0;
+
+// **** ENGINE OPERATE SWITCHES **********************************************
+
+int BTN_EOLIGN_UP_IN			= 0;
+int BTN_EOLIGN_UP_OUT			= 0;
+int BTN_EOLIGN_MIDDLE_IN		= 0;
+int BTN_EOLIGN_MIDDLE_OUT		= 0;
+int BTN_EOLIGN_DOWN_IN			= 0;
+int BTN_EOLIGN_DOWN_OUT			= 0;
+
+int BTN_EOLNORM_UP_IN			= 0;
+int BTN_EOLNORM_UP_OUT			= 0;
+int BTN_EOLNORM_MIDDLE_IN		= 0;
+int BTN_EOLNORM_MIDDLE_OUT		= 0;
+int BTN_EOLNORM_DOWN_IN			= 0;
+int BTN_EOLNORM_DOWN_OUT		= 0;
+
+int BTN_EOLMOTOR_UP_IN			= 0;
+int BTN_EOLMOTOR_UP_OUT			= 0;
+int BTN_EOLMOTOR_MIDDLE_IN		= 0;
+int BTN_EOLMOTOR_MIDDLE_OUT		= 0;
+int BTN_EOLMOTOR_DOWN_IN		= 0;
+int BTN_EOLMOTOR_DOWN_OUT		= 0;
+
+int BTN_EORIGN_UP_IN			= 0;
+int BTN_EORIGN_UP_OUT			= 0;
+int BTN_EORIGN_MIDDLE_IN		= 0;
+int BTN_EORIGN_MIDDLE_OUT		= 0;
+int BTN_EORIGN_DOWN_IN			= 0;
+int BTN_EORIGN_DOWN_OUT			= 0;
+
+int BTN_EORNORM_UP_IN			= 0;
+int BTN_EORNORM_UP_OUT			= 0;
+int BTN_EORNORM_MIDDLE_IN		= 0;
+int BTN_EORNORM_MIDDLE_OUT		= 0;
+int BTN_EORNORM_DOWN_IN			= 0;
+int BTN_EORNORM_DOWN_OUT		= 0;
+
+int BTN_EORMOTOR_UP_IN			= 0;
+int BTN_EORMOTOR_UP_OUT			= 0;
+int BTN_EORMOTOR_MIDDLE_IN		= 0;
+int BTN_EORMOTOR_MIDDLE_OUT		= 0;
+int BTN_EORMOTOR_DOWN_IN		= 0;
+int BTN_EORMOTOR_DOWN_OUT		= 0;
+
+// **** APU SWITCH ***********************************************************
+
+int BTN_APUON_UP_IN				= 0;
+int BTN_APUON_UP_OUT			= 0;
+int BTN_APUON_MIDDLE_IN			= 0;
+int BTN_APUON_MIDDLE_OUT		= 0;
+int BTN_APUON_DOWN_IN			= 0;
+int BTN_APUON_DOWN_OUT			= 0;
+
+int BTN_APUOFF_UP_IN			= 0;
+int BTN_APUOFF_UP_OUT			= 0;
+int BTN_APUOFF_MIDDLE_IN		= 0;
+int BTN_APUOFF_MIDDLE_OUT		= 0;
+int BTN_APUOFF_DOWN_IN			= 0;
+int BTN_APUOFF_DOWN_OUT			= 0;
+
+// **** FLAPS SWITCH *********************************************************
+
+int BTN_FLAPU_UP_IN				= 0;
+int BTN_FLAPU_UP_OUT			= 0;
+int BTN_FLAPU_MIDDLE_IN			= 0;
+int BTN_FLAPU_MIDDLE_OUT		= 0;
+int BTN_FLAPU_DOWN_IN			= 0;
+int BTN_FLAPU_DOWN_OUT			= 0;
+
+int BTN_FLAPM_UP_IN				= 0;
+int BTN_FLAPM_UP_OUT			= 0;
+int BTN_FLAPM_MIDDLE_IN			= 0;
+int BTN_FLAPM_MIDDLE_OUT		= 0;
+int BTN_FLAPM_DOWN_IN			= 0;
+int BTN_FLAPM_DOWN_OUT			= 0;
+
+int BTN_FLAPD_UP_IN				= 0;
+int BTN_FLAPD_UP_OUT			= 0;
+int BTN_FLAPD_MIDDLE_IN			= 0;
+int BTN_FLAPD_MIDDLE_OUT		= 0;
+int BTN_FLAPD_DOWN_IN			= 0;
+int BTN_FLAPD_DOWN_OUT			= 0;
+
+// **** LANDING GEAR HORN BUTTON *********************************************
+
+int BTN_LDGH_UP_IN				= 0;
+int BTN_LDGH_UP_OUT				= 0;
+int BTN_LDGH_MIDDLE_IN			= 0;
+int BTN_LDGH_MIDDLE_OUT			= 0;
+int BTN_LDGH_DOWN_IN			= 0;
+int BTN_LDGH_DOWN_OUT			= 0;
+
+// **** EAC SWITCH ***********************************************************
+
+int BTN_EACON_UP_IN				= 0;
+int BTN_EACON_UP_OUT			= 0;
+int BTN_EACON_MIDDLE_IN			= 0;
+int BTN_EACON_MIDDLE_OUT		= 0;
+int BTN_EACON_DOWN_IN			= 0;
+int BTN_EACON_DOWN_OUT			= 0;
+
+int BTN_EACOFF_UP_IN			= 0;
+int BTN_EACOFF_UP_OUT			= 0;
+int BTN_EACOFF_MIDDLE_IN		= 0;
+int BTN_EACOFF_MIDDLE_OUT		= 0;
+int BTN_EACOFF_DOWN_IN			= 0;
+int BTN_EACOFF_DOWN_OUT			= 0;
+
+// **** RDR SWITCH ***********************************************************
+
+int BTN_RDRNRM_UP_IN			= 0;
+int BTN_RDRNRM_UP_OUT			= 0;
+int BTN_RDRNRM_MIDDLE_IN		= 0;
+int BTN_RDRNRM_MIDDLE_OUT		= 0;
+int BTN_RDRNRM_DOWN_IN			= 0;
+int BTN_RDRNRM_DOWN_OUT			= 0;
+
+int BTN_RDRDIS_UP_IN			= 0;
+int BTN_RDRDIS_UP_OUT			= 0;
+int BTN_RDRDIS_MIDDLE_IN		= 0;
+int BTN_RDRDIS_MIDDLE_OUT		= 0;
+int BTN_RDRDIS_DOWN_IN			= 0;
+int BTN_RDRDIS_DOWN_OUT			= 0;
+
+// **** AUTOPILOT BUTTON *****************************************************
+
+int BTN_APENG_UP_IN				= 0;
+int BTN_APENG_UP_OUT			= 0;
+int BTN_APENG_MIDDLE_IN			= 0;
+int BTN_APENG_MIDDLE_OUT		= 0;
+int BTN_APENG_DOWN_IN			= 0;
+int BTN_APENG_DOWN_OUT			= 0;
+
+int BTN_APDIS_UP_IN				= 0;
+int BTN_APDIS_UP_OUT			= 0;
+int BTN_APDIS_MIDDLE_IN			= 0;
+int BTN_APDIS_MIDDLE_OUT		= 0;
+int BTN_APDIS_DOWN_IN			= 0;
+int BTN_APDIS_DOWN_OUT			= 0;
+
+// **** AUTOPILOT SWITCH *****************************************************
+
+int BTN_APPAT_UP_IN				= 0;
+int BTN_APPAT_UP_OUT			= 0;
+int BTN_APPAT_MIDDLE_IN			= 0;
+int BTN_APPAT_MIDDLE_OUT		= 0;
+int BTN_APPAT_DOWN_IN			= 0;
+int BTN_APPAT_DOWN_OUT			= 0;
+
+int BTN_APAH_UP_IN				= 0;
+int BTN_APAH_UP_OUT				= 0;
+int BTN_APAH_MIDDLE_IN			= 0;
+int BTN_APAH_MIDDLE_OUT			= 0;
+int BTN_APAH_DOWN_IN			= 0;
+int BTN_APAH_DOWN_OUT			= 0;
+
+int BTN_APALT_UP_IN				= 0;
+int BTN_APALT_UP_OUT			= 0;
+int BTN_APALT_MIDDLE_IN			= 0;
+int BTN_APALT_MIDDLE_OUT		= 0;
+int BTN_APALT_DOWN_IN			= 0;
+int BTN_APALT_DOWN_OUT			= 0;
+
+// ===========================================================================
+//		Right MFD
+// ===========================================================================
+
+// **** TOP BUTTONS **********************************************************
+
+int BTN_RMFD_OSB01_UP_IN			= 0;
+int BTN_RMFD_OSB01_UP_OUT			= 0;
+int BTN_RMFD_OSB01_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB01_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB01_DOWN_IN			= 0;
+int BTN_RMFD_OSB01_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB02_UP_IN			= 0;
+int BTN_RMFD_OSB02_UP_OUT			= 0;
+int BTN_RMFD_OSB02_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB02_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB02_DOWN_IN			= 0;
+int BTN_RMFD_OSB02_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB03_UP_IN			= 0;
+int BTN_RMFD_OSB03_UP_OUT			= 0;
+int BTN_RMFD_OSB03_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB03_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB03_DOWN_IN			= 0;
+int BTN_RMFD_OSB03_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB04_UP_IN			= 0;
+int BTN_RMFD_OSB04_UP_OUT			= 0;
+int BTN_RMFD_OSB04_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB04_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB04_DOWN_IN			= 0;
+int BTN_RMFD_OSB04_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB05_UP_IN			= 0;
+int BTN_RMFD_OSB05_UP_OUT			= 0;
+int BTN_RMFD_OSB05_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB05_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB05_DOWN_IN			= 0;
+int BTN_RMFD_OSB05_DOWN_OUT			= 0;
+
+// **** RIGHT SIDE BUTTONS ***************************************************
+
+int BTN_RMFD_OSB06_UP_IN			= 0;
+int BTN_RMFD_OSB06_UP_OUT			= 0;
+int BTN_RMFD_OSB06_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB06_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB06_DOWN_IN			= 0;
+int BTN_RMFD_OSB06_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB07_UP_IN			= 0;
+int BTN_RMFD_OSB07_UP_OUT			= 0;
+int BTN_RMFD_OSB07_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB07_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB07_DOWN_IN			= 0;
+int BTN_RMFD_OSB07_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB08_UP_IN			= 0;
+int BTN_RMFD_OSB08_UP_OUT			= 0;
+int BTN_RMFD_OSB08_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB08_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB08_DOWN_IN			= 0;
+int BTN_RMFD_OSB08_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB09_UP_IN			= 0;
+int BTN_RMFD_OSB09_UP_OUT			= 0;
+int BTN_RMFD_OSB09_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB09_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB09_DOWN_IN			= 0;
+int BTN_RMFD_OSB09_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB10_UP_IN			= 0;
+int BTN_RMFD_OSB10_UP_OUT			= 0;
+int BTN_RMFD_OSB10_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB10_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB10_DOWN_IN			= 0;
+int BTN_RMFD_OSB10_DOWN_OUT			= 0;
+
+// **** BOTTOM BUTTONS *******************************************************
+
+int BTN_RMFD_OSB11_UP_IN			= 0;
+int BTN_RMFD_OSB11_UP_OUT			= 0;
+int BTN_RMFD_OSB11_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB11_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB11_DOWN_IN			= 0;
+int BTN_RMFD_OSB11_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB12_UP_IN			= 0;
+int BTN_RMFD_OSB12_UP_OUT			= 0;
+int BTN_RMFD_OSB12_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB12_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB12_DOWN_IN			= 0;
+int BTN_RMFD_OSB12_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB13_UP_IN			= 0;
+int BTN_RMFD_OSB13_UP_OUT			= 0;
+int BTN_RMFD_OSB13_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB13_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB13_DOWN_IN			= 0;
+int BTN_RMFD_OSB13_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB14_UP_IN			= 0;
+int BTN_RMFD_OSB14_UP_OUT			= 0;
+int BTN_RMFD_OSB14_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB14_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB14_DOWN_IN			= 0;
+int BTN_RMFD_OSB14_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB15_UP_IN			= 0;
+int BTN_RMFD_OSB15_UP_OUT			= 0;
+int BTN_RMFD_OSB15_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB15_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB15_DOWN_IN			= 0;
+int BTN_RMFD_OSB15_DOWN_OUT			= 0;
+
+// **** LEFT SIDE BUTTONS ****************************************************
+
+int BTN_RMFD_OSB16_UP_IN			= 0;
+int BTN_RMFD_OSB16_UP_OUT			= 0;
+int BTN_RMFD_OSB16_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB16_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB16_DOWN_IN			= 0;
+int BTN_RMFD_OSB16_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB17_UP_IN			= 0;
+int BTN_RMFD_OSB17_UP_OUT			= 0;
+int BTN_RMFD_OSB17_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB17_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB17_DOWN_IN			= 0;
+int BTN_RMFD_OSB17_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB18_UP_IN			= 0;
+int BTN_RMFD_OSB18_UP_OUT			= 0;
+int BTN_RMFD_OSB18_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB18_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB18_DOWN_IN			= 0;
+int BTN_RMFD_OSB18_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB19_UP_IN			= 0;
+int BTN_RMFD_OSB19_UP_OUT			= 0;
+int BTN_RMFD_OSB19_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB19_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB19_DOWN_IN			= 0;
+int BTN_RMFD_OSB19_DOWN_OUT			= 0;
+
+int BTN_RMFD_OSB20_UP_IN			= 0;
+int BTN_RMFD_OSB20_UP_OUT			= 0;
+int BTN_RMFD_OSB20_MIDDLE_IN		= 0;
+int BTN_RMFD_OSB20_MIDDLE_OUT		= 0;
+int BTN_RMFD_OSB20_DOWN_IN			= 0;
+int BTN_RMFD_OSB20_DOWN_OUT			= 0;
+
+// **** SYM SWITCH ***********************************************************
+
+int BTN_RMFD_SYMU_UP_IN				= 0;
+int BTN_RMFD_SYMU_UP_OUT			= 0;
+int BTN_RMFD_SYMU_MIDDLE_IN			= 0;
+int BTN_RMFD_SYMU_MIDDLE_OUT		= 0;
+int BTN_RMFD_SYMU_DOWN_IN			= 0;
+int BTN_RMFD_SYMU_DOWN_OUT			= 0;
+
+int BTN_RMFD_SYMD_UP_IN				= 0;
+int BTN_RMFD_SYMD_UP_OUT			= 0;
+int BTN_RMFD_SYMD_MIDDLE_IN			= 0;
+int BTN_RMFD_SYMD_MIDDLE_OUT		= 0;
+int BTN_RMFD_SYMD_DOWN_IN			= 0;
+int BTN_RMFD_SYMD_DOWN_OUT			= 0;
+
+// **** CON SWITCH ***********************************************************
+
+int BTN_RMFD_CONU_UP_IN				= 0;
+int BTN_RMFD_CONU_UP_OUT			= 0;
+int BTN_RMFD_CONU_MIDDLE_IN			= 0;
+int BTN_RMFD_CONU_MIDDLE_OUT		= 0;
+int BTN_RMFD_CONU_DOWN_IN			= 0;
+int BTN_RMFD_CONU_DOWN_OUT			= 0;
+
+int BTN_RMFD_COND_UP_IN				= 0;
+int BTN_RMFD_COND_UP_OUT			= 0;
+int BTN_RMFD_COND_MIDDLE_IN			= 0;
+int BTN_RMFD_COND_MIDDLE_OUT		= 0;
+int BTN_RMFD_COND_DOWN_IN			= 0;
+int BTN_RMFD_COND_DOWN_OUT			= 0;
+
+// **** BRT SWITCH ***********************************************************
+
+int BTN_RMFD_BRTU_UP_IN				= 0;
+int BTN_RMFD_BRTU_UP_OUT			= 0;
+int BTN_RMFD_BRTU_MIDDLE_IN			= 0;
+int BTN_RMFD_BRTU_MIDDLE_OUT		= 0;
+int BTN_RMFD_BRTU_DOWN_IN			= 0;
+int BTN_RMFD_BRTU_DOWN_OUT			= 0;
+
+int BTN_RMFD_BRTD_UP_IN				= 0;
+int BTN_RMFD_BRTD_UP_OUT			= 0;
+int BTN_RMFD_BRTD_MIDDLE_IN			= 0;
+int BTN_RMFD_BRTD_MIDDLE_OUT		= 0;
+int BTN_RMFD_BRTD_DOWN_IN			= 0;
+int BTN_RMFD_BRTD_DOWN_OUT			= 0;
+
+// **** GAIN SWITCH **********************************************************
+
+int BTN_RMFD_GAINU_UP_IN			= 0;
+int BTN_RMFD_GAINU_UP_OUT			= 0;
+int BTN_RMFD_GAINU_MIDDLE_IN		= 0;
+int BTN_RMFD_GAINU_MIDDLE_OUT		= 0;
+int BTN_RMFD_GAINU_DOWN_IN			= 0;
+int BTN_RMFD_GAINU_DOWN_OUT			= 0;
+
+int BTN_RMFD_GAIND_UP_IN			= 0;
+int BTN_RMFD_GAIND_UP_OUT			= 0;
+int BTN_RMFD_GAIND_MIDDLE_IN		= 0;
+int BTN_RMFD_GAIND_MIDDLE_OUT		= 0;
+int BTN_RMFD_GAIND_DOWN_IN			= 0;
+int BTN_RMFD_GAIND_DOWN_OUT			= 0;
+
+// ===========================================================================
+//		Left MFD
+// ===========================================================================
+
+// **** TOP BUTTONS **********************************************************
+
+int BTN_LMFD_OSB01_UP_IN			= 0;
+int BTN_LMFD_OSB01_UP_OUT			= 0;
+int BTN_LMFD_OSB01_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB01_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB01_DOWN_IN			= 0;
+int BTN_LMFD_OSB01_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB02_UP_IN			= 0;
+int BTN_LMFD_OSB02_UP_OUT			= 0;
+int BTN_LMFD_OSB02_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB02_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB02_DOWN_IN			= 0;
+int BTN_LMFD_OSB02_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB03_UP_IN			= 0;
+int BTN_LMFD_OSB03_UP_OUT			= 0;
+int BTN_LMFD_OSB03_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB03_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB03_DOWN_IN			= 0;
+int BTN_LMFD_OSB03_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB04_UP_IN			= 0;
+int BTN_LMFD_OSB04_UP_OUT			= 0;
+int BTN_LMFD_OSB04_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB04_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB04_DOWN_IN			= 0;
+int BTN_LMFD_OSB04_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB05_UP_IN			= 0;
+int BTN_LMFD_OSB05_UP_OUT			= 0;
+int BTN_LMFD_OSB05_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB05_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB05_DOWN_IN			= 0;
+int BTN_LMFD_OSB05_DOWN_OUT			= 0;
+
+// **** RIGHT SIDE BUTTONS ***************************************************
+
+int BTN_LMFD_OSB06_UP_IN			= 0;
+int BTN_LMFD_OSB06_UP_OUT			= 0;
+int BTN_LMFD_OSB06_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB06_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB06_DOWN_IN			= 0;
+int BTN_LMFD_OSB06_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB07_UP_IN			= 0;
+int BTN_LMFD_OSB07_UP_OUT			= 0;
+int BTN_LMFD_OSB07_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB07_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB07_DOWN_IN			= 0;
+int BTN_LMFD_OSB07_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB08_UP_IN			= 0;
+int BTN_LMFD_OSB08_UP_OUT			= 0;
+int BTN_LMFD_OSB08_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB08_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB08_DOWN_IN			= 0;
+int BTN_LMFD_OSB08_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB09_UP_IN			= 0;
+int BTN_LMFD_OSB09_UP_OUT			= 0;
+int BTN_LMFD_OSB09_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB09_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB09_DOWN_IN			= 0;
+int BTN_LMFD_OSB09_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB10_UP_IN			= 0;
+int BTN_LMFD_OSB10_UP_OUT			= 0;
+int BTN_LMFD_OSB10_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB10_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB10_DOWN_IN			= 0;
+int BTN_LMFD_OSB10_DOWN_OUT			= 0;
+
+// **** BOTTOM BUTTONS *******************************************************
+
+int BTN_LMFD_OSB11_UP_IN			= 0;
+int BTN_LMFD_OSB11_UP_OUT			= 0;
+int BTN_LMFD_OSB11_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB11_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB11_DOWN_IN			= 0;
+int BTN_LMFD_OSB11_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB12_UP_IN			= 0;
+int BTN_LMFD_OSB12_UP_OUT			= 0;
+int BTN_LMFD_OSB12_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB12_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB12_DOWN_IN			= 0;
+int BTN_LMFD_OSB12_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB13_UP_IN			= 0;
+int BTN_LMFD_OSB13_UP_OUT			= 0;
+int BTN_LMFD_OSB13_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB13_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB13_DOWN_IN			= 0;
+int BTN_LMFD_OSB13_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB14_UP_IN			= 0;
+int BTN_LMFD_OSB14_UP_OUT			= 0;
+int BTN_LMFD_OSB14_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB14_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB14_DOWN_IN			= 0;
+int BTN_LMFD_OSB14_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB15_UP_IN			= 0;
+int BTN_LMFD_OSB15_UP_OUT			= 0;
+int BTN_LMFD_OSB15_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB15_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB15_DOWN_IN			= 0;
+int BTN_LMFD_OSB15_DOWN_OUT			= 0;
+
+// **** LEFT SIDE BUTTONS ****************************************************
+
+int BTN_LMFD_OSB16_UP_IN			= 0;
+int BTN_LMFD_OSB16_UP_OUT			= 0;
+int BTN_LMFD_OSB16_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB16_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB16_DOWN_IN			= 0;
+int BTN_LMFD_OSB16_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB17_UP_IN			= 0;
+int BTN_LMFD_OSB17_UP_OUT			= 0;
+int BTN_LMFD_OSB17_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB17_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB17_DOWN_IN			= 0;
+int BTN_LMFD_OSB17_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB18_UP_IN			= 0;
+int BTN_LMFD_OSB18_UP_OUT			= 0;
+int BTN_LMFD_OSB18_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB18_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB18_DOWN_IN			= 0;
+int BTN_LMFD_OSB18_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB19_UP_IN			= 0;
+int BTN_LMFD_OSB19_UP_OUT			= 0;
+int BTN_LMFD_OSB19_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB19_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB19_DOWN_IN			= 0;
+int BTN_LMFD_OSB19_DOWN_OUT			= 0;
+
+int BTN_LMFD_OSB20_UP_IN			= 0;
+int BTN_LMFD_OSB20_UP_OUT			= 0;
+int BTN_LMFD_OSB20_MIDDLE_IN		= 0;
+int BTN_LMFD_OSB20_MIDDLE_OUT		= 0;
+int BTN_LMFD_OSB20_DOWN_IN			= 0;
+int BTN_LMFD_OSB20_DOWN_OUT			= 0;
+
+// **** SYM SWITCH ***********************************************************
+
+int BTN_LMFD_SYMU_UP_IN				= 0;
+int BTN_LMFD_SYMU_UP_OUT			= 0;
+int BTN_LMFD_SYMU_MIDDLE_IN			= 0;
+int BTN_LMFD_SYMU_MIDDLE_OUT		= 0;
+int BTN_LMFD_SYMU_DOWN_IN			= 0;
+int BTN_LMFD_SYMU_DOWN_OUT			= 0;
+
+int BTN_LMFD_SYMD_UP_IN				= 0;
+int BTN_LMFD_SYMD_UP_OUT			= 0;
+int BTN_LMFD_SYMD_MIDDLE_IN			= 0;
+int BTN_LMFD_SYMD_MIDDLE_OUT		= 0;
+int BTN_LMFD_SYMD_DOWN_IN			= 0;
+int BTN_LMFD_SYMD_DOWN_OUT			= 0;
+
+// **** CON SWITCH ***********************************************************
+
+int BTN_LMFD_CONU_UP_IN				= 0;
+int BTN_LMFD_CONU_UP_OUT			= 0;
+int BTN_LMFD_CONU_MIDDLE_IN			= 0;
+int BTN_LMFD_CONU_MIDDLE_OUT		= 0;
+int BTN_LMFD_CONU_DOWN_IN			= 0;
+int BTN_LMFD_CONU_DOWN_OUT			= 0;
+
+int BTN_LMFD_COND_UP_IN				= 0;
+int BTN_LMFD_COND_UP_OUT			= 0;
+int BTN_LMFD_COND_MIDDLE_IN			= 0;
+int BTN_LMFD_COND_MIDDLE_OUT		= 0;
+int BTN_LMFD_COND_DOWN_IN			= 0;
+int BTN_LMFD_COND_DOWN_OUT			= 0;
+
+// **** BRT SWITCH ***********************************************************
+
+int BTN_LMFD_BRTU_UP_IN				= 0;
+int BTN_LMFD_BRTU_UP_OUT			= 0;
+int BTN_LMFD_BRTU_MIDDLE_IN			= 0;
+int BTN_LMFD_BRTU_MIDDLE_OUT		= 0;
+int BTN_LMFD_BRTU_DOWN_IN			= 0;
+int BTN_LMFD_BRTU_DOWN_OUT			= 0;
+
+int BTN_LMFD_BRTD_UP_IN				= 0;
+int BTN_LMFD_BRTD_UP_OUT			= 0;
+int BTN_LMFD_BRTD_MIDDLE_IN			= 0;
+int BTN_LMFD_BRTD_MIDDLE_OUT		= 0;
+int BTN_LMFD_BRTD_DOWN_IN			= 0;
+int BTN_LMFD_BRTD_DOWN_OUT			= 0;
+
+// **** GAIN SWITCH **********************************************************
+
+int BTN_LMFD_GAINU_UP_IN			= 0;
+int BTN_LMFD_GAINU_UP_OUT			= 0;
+int BTN_LMFD_GAINU_MIDDLE_IN		= 0;
+int BTN_LMFD_GAINU_MIDDLE_OUT		= 0;
+int BTN_LMFD_GAINU_DOWN_IN			= 0;
+int BTN_LMFD_GAINU_DOWN_OUT			= 0;
+
+int BTN_LMFD_GAIND_UP_IN			= 0;
+int BTN_LMFD_GAIND_UP_OUT			= 0;
+int BTN_LMFD_GAIND_MIDDLE_IN		= 0;
+int BTN_LMFD_GAIND_MIDDLE_OUT		= 0;
+int BTN_LMFD_GAIND_DOWN_IN			= 0;
+int BTN_LMFD_GAIND_DOWN_OUT			= 0;
+
+// ===========================================================================
+//		Middle MFD
+// ===========================================================================
+
+// **** TOP BUTTONS **********************************************************
+
+int BTN_MMFD_OSB01_UP_IN			= 0;
+int BTN_MMFD_OSB01_UP_OUT			= 0;
+int BTN_MMFD_OSB01_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB01_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB01_DOWN_IN			= 0;
+int BTN_MMFD_OSB01_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB02_UP_IN			= 0;
+int BTN_MMFD_OSB02_UP_OUT			= 0;
+int BTN_MMFD_OSB02_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB02_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB02_DOWN_IN			= 0;
+int BTN_MMFD_OSB02_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB03_UP_IN			= 0;
+int BTN_MMFD_OSB03_UP_OUT			= 0;
+int BTN_MMFD_OSB03_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB03_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB03_DOWN_IN			= 0;
+int BTN_MMFD_OSB03_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB04_UP_IN			= 0;
+int BTN_MMFD_OSB04_UP_OUT			= 0;
+int BTN_MMFD_OSB04_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB04_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB04_DOWN_IN			= 0;
+int BTN_MMFD_OSB04_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB05_UP_IN			= 0;
+int BTN_MMFD_OSB05_UP_OUT			= 0;
+int BTN_MMFD_OSB05_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB05_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB05_DOWN_IN			= 0;
+int BTN_MMFD_OSB05_DOWN_OUT			= 0;
+
+// **** RIGHT SIDE BUTTONS ***************************************************
+
+int BTN_MMFD_OSB06_UP_IN			= 0;
+int BTN_MMFD_OSB06_UP_OUT			= 0;
+int BTN_MMFD_OSB06_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB06_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB06_DOWN_IN			= 0;
+int BTN_MMFD_OSB06_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB07_UP_IN			= 0;
+int BTN_MMFD_OSB07_UP_OUT			= 0;
+int BTN_MMFD_OSB07_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB07_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB07_DOWN_IN			= 0;
+int BTN_MMFD_OSB07_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB08_UP_IN			= 0;
+int BTN_MMFD_OSB08_UP_OUT			= 0;
+int BTN_MMFD_OSB08_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB08_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB08_DOWN_IN			= 0;
+int BTN_MMFD_OSB08_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB09_UP_IN			= 0;
+int BTN_MMFD_OSB09_UP_OUT			= 0;
+int BTN_MMFD_OSB09_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB09_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB09_DOWN_IN			= 0;
+int BTN_MMFD_OSB09_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB10_UP_IN			= 0;
+int BTN_MMFD_OSB10_UP_OUT			= 0;
+int BTN_MMFD_OSB10_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB10_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB10_DOWN_IN			= 0;
+int BTN_MMFD_OSB10_DOWN_OUT			= 0;
+
+// **** BOTTOM BUTTONS *******************************************************
+
+int BTN_MMFD_OSB11_UP_IN			= 0;
+int BTN_MMFD_OSB11_UP_OUT			= 0;
+int BTN_MMFD_OSB11_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB11_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB11_DOWN_IN			= 0;
+int BTN_MMFD_OSB11_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB12_UP_IN			= 0;
+int BTN_MMFD_OSB12_UP_OUT			= 0;
+int BTN_MMFD_OSB12_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB12_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB12_DOWN_IN			= 0;
+int BTN_MMFD_OSB12_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB13_UP_IN			= 0;
+int BTN_MMFD_OSB13_UP_OUT			= 0;
+int BTN_MMFD_OSB13_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB13_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB13_DOWN_IN			= 0;
+int BTN_MMFD_OSB13_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB14_UP_IN			= 0;
+int BTN_MMFD_OSB14_UP_OUT			= 0;
+int BTN_MMFD_OSB14_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB14_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB14_DOWN_IN			= 0;
+int BTN_MMFD_OSB14_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB15_UP_IN			= 0;
+int BTN_MMFD_OSB15_UP_OUT			= 0;
+int BTN_MMFD_OSB15_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB15_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB15_DOWN_IN			= 0;
+int BTN_MMFD_OSB15_DOWN_OUT			= 0;
+
+// **** LEFT SIDE BUTTONS ****************************************************
+
+int BTN_MMFD_OSB16_UP_IN			= 0;
+int BTN_MMFD_OSB16_UP_OUT			= 0;
+int BTN_MMFD_OSB16_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB16_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB16_DOWN_IN			= 0;
+int BTN_MMFD_OSB16_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB17_UP_IN			= 0;
+int BTN_MMFD_OSB17_UP_OUT			= 0;
+int BTN_MMFD_OSB17_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB17_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB17_DOWN_IN			= 0;
+int BTN_MMFD_OSB17_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB18_UP_IN			= 0;
+int BTN_MMFD_OSB18_UP_OUT			= 0;
+int BTN_MMFD_OSB18_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB18_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB18_DOWN_IN			= 0;
+int BTN_MMFD_OSB18_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB19_UP_IN			= 0;
+int BTN_MMFD_OSB19_UP_OUT			= 0;
+int BTN_MMFD_OSB19_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB19_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB19_DOWN_IN			= 0;
+int BTN_MMFD_OSB19_DOWN_OUT			= 0;
+
+int BTN_MMFD_OSB20_UP_IN			= 0;
+int BTN_MMFD_OSB20_UP_OUT			= 0;
+int BTN_MMFD_OSB20_MIDDLE_IN		= 0;
+int BTN_MMFD_OSB20_MIDDLE_OUT		= 0;
+int BTN_MMFD_OSB20_DOWN_IN			= 0;
+int BTN_MMFD_OSB20_DOWN_OUT			= 0;
+
+// **** SYM SWITCH ***********************************************************
+
+int BTN_MMFD_SYMU_UP_IN				= 0;
+int BTN_MMFD_SYMU_UP_OUT			= 0;
+int BTN_MMFD_SYMU_MIDDLE_IN			= 0;
+int BTN_MMFD_SYMU_MIDDLE_OUT		= 0;
+int BTN_MMFD_SYMU_DOWN_IN			= 0;
+int BTN_MMFD_SYMU_DOWN_OUT			= 0;
+
+int BTN_MMFD_SYMD_UP_IN				= 0;
+int BTN_MMFD_SYMD_UP_OUT			= 0;
+int BTN_MMFD_SYMD_MIDDLE_IN			= 0;
+int BTN_MMFD_SYMD_MIDDLE_OUT		= 0;
+int BTN_MMFD_SYMD_DOWN_IN			= 0;
+int BTN_MMFD_SYMD_DOWN_OUT			= 0;
+
+// **** CON SWITCH ***********************************************************
+
+int BTN_MMFD_CONU_UP_IN				= 0;
+int BTN_MMFD_CONU_UP_OUT			= 0;
+int BTN_MMFD_CONU_MIDDLE_IN			= 0;
+int BTN_MMFD_CONU_MIDDLE_OUT		= 0;
+int BTN_MMFD_CONU_DOWN_IN			= 0;
+int BTN_MMFD_CONU_DOWN_OUT			= 0;
+
+int BTN_MMFD_COND_UP_IN				= 0;
+int BTN_MMFD_COND_UP_OUT			= 0;
+int BTN_MMFD_COND_MIDDLE_IN			= 0;
+int BTN_MMFD_COND_MIDDLE_OUT		= 0;
+int BTN_MMFD_COND_DOWN_IN			= 0;
+int BTN_MMFD_COND_DOWN_OUT			= 0;
+
+// **** BRT SWITCH ***********************************************************
+
+int BTN_MMFD_BRTU_UP_IN				= 0;
+int BTN_MMFD_BRTU_UP_OUT			= 0;
+int BTN_MMFD_BRTU_MIDDLE_IN			= 0;
+int BTN_MMFD_BRTU_MIDDLE_OUT		= 0;
+int BTN_MMFD_BRTU_DOWN_IN			= 0;
+int BTN_MMFD_BRTU_DOWN_OUT			= 0;
+
+int BTN_MMFD_BRTD_UP_IN				= 0;
+int BTN_MMFD_BRTD_UP_OUT			= 0;
+int BTN_MMFD_BRTD_MIDDLE_IN			= 0;
+int BTN_MMFD_BRTD_MIDDLE_OUT		= 0;
+int BTN_MMFD_BRTD_DOWN_IN			= 0;
+int BTN_MMFD_BRTD_DOWN_OUT			= 0;
+
+// **** GAIN SWITCH **********************************************************
+
+int BTN_MMFD_GAINU_UP_IN			= 0;
+int BTN_MMFD_GAINU_UP_OUT			= 0;
+int BTN_MMFD_GAINU_MIDDLE_IN		= 0;
+int BTN_MMFD_GAINU_MIDDLE_OUT		= 0;
+int BTN_MMFD_GAINU_DOWN_IN			= 0;
+int BTN_MMFD_GAINU_DOWN_OUT			= 0;
+
+int BTN_MMFD_GAIND_UP_IN			= 0;
+int BTN_MMFD_GAIND_UP_OUT			= 0;
+int BTN_MMFD_GAIND_MIDDLE_IN		= 0;
+int BTN_MMFD_GAIND_MIDDLE_OUT		= 0;
+int BTN_MMFD_GAIND_DOWN_IN			= 0;
+int BTN_MMFD_GAIND_DOWN_OUT			= 0;

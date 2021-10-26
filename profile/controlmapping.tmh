@@ -25,7 +25,119 @@
 
 // Contains the control mapping logic.
 
-int MapControl()
+include "profile/cm_a10grip.tmh"
+include "profile/cm_cougargrip.tmh"
+include "profile/cm_fa18grip.tmh"
+include "profile/cm_mfds.tmh"
+include "profile/cm_rudder.tmh"
+include "profile/cm_throttle.tmh"
+
+int MapJoystick()
 {
+	// Maps joystick controls.
+
+	debug("Mapping joystick controls...");
+
+	if(JOYSTICK_TYPE == JOYSTICK_TYPE_WARTHOG)
+	{
+		if(JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
+		{
+			MapJoystickA10Grip();
+		}
+		else if(JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
+		{
+			MapJoystickFA18Grip();
+		}
+		else if(JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
+		{
+			MapJoystickCougarGrip();
+		}
+		else
+		{
+			error("Unsupported grip type sepcified.");
+		}
+	}
+	else
+	{
+		error("Unsupported joystick type specified.");
+	}
+}
+
+int MapThrottle()
+{
+	// Maps throttle controls.
+
+	debug("Mapping throttle controls...");
+
+	if(THROTTLE_TYPE == THROTTLE_TYPE_WARTHOG)
+	{
+		MapWarthogThrottleGrip();
+		MapWarthogThrottleBase();
+	}
+	else
+	{
+		error("Unsupported throttle type.");
+	}
+}
+
+int MapRudder()
+{
+	// Maps rudder controls.
+
+	debug("Mapping rudder controls...");
+
+	if(RUDDER_TYPE == RUDDER_TFLIGHT)
+	{
+		MapTFlightRudder();
+	}
+	else
+	{
+		error("Unsupported rudder type.");
+	}
+}
+
+int MapMFDs()
+{
+	// Maps MFD controls.
+
+	debug("Mapping MFD controls...");
+
+	if(USE_MFD == YES)
+	{
+		if(NUM_MFDS >= 1)
+		{
+			MapRMFD();
+		}
+
+		if(NUM_MFDS >= 2)
+		{
+			MapLMFD();
+		}
+
+		if(NUM_MFDS == 3)
+		{
+			MapMMFD();
+		}
+	}
+}
+
+int MapControls()
+{
+	// Creates control mapping for the configured plane.
+
 	debug("Mapping controls...");
+
+	if(DCS_PLANE == DCS_PLANE_FA18C)
+	{
+		SpecifyFA18ControlMap();
+	}
+	else
+	{
+		error("Unsupported plane type specified.");
+	}
+
+	MapJoystick();
+	MapThrottle();
+	MapRudder();
+	MapMFDs();
 }

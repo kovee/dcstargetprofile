@@ -73,6 +73,8 @@ define		JOYSTICK_GRIP_COUGAR	3	// Represents the Cougar grip
 // Timing defaults
 define      PULSE_TIME              100 // PULSE+Delay time in milliseconds
 define      DELAY_TIME              150 // D() delay time in milliseconds
+define		LONG_PRESS_DELAY		500 // Delay time in milliseconds for long press
+										// functions to activate
 
 // DCS planes
 define      DCS_PLANE_A10A          1   // A-10A Warthog

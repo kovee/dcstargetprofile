@@ -1,0 +1,126 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains the control mapping logic for the Warthog A-10 grip.
+
+int MapJoystickA10Grip()
+{
+	// Maps the controls on the Warthog A-10 grip.
+	debug("Mapping controls on the A-10 grip.");
+
+	// **** TRIGGER - STAGE 1 ************************************************
+	MapKeyIOUMD(&Joystick,
+		        TG1,
+		        BTN_TG1_UP_IN,
+		        BTN_TG1_UP_OUT,
+		        BTN_TG1_MIDDLE_IN,
+		        BTN_TG1_MIDDLE_OUT,
+		        BTN_TG1_DOWN_IN,
+		        BTN_TG1_DOWN_OUT);
+
+	// **** TRIGGER - STAGE 1 ************************************************
+	MapKeyIOUMD(&Joystick,
+		        TG2,
+		        BTN_TG2_UP_IN,
+		        BTN_TG2_UP_OUT,
+		        BTN_TG2_MIDDLE_IN,
+		        BTN_TG2_MIDDLE_OUT,
+		        BTN_TG2_DOWN_IN,
+		        BTN_TG2_DOWN_OUT);
+
+	// **** S1 ***************************************************************
+	MapKeyIOUMD(&Joystick,
+		        S1,
+		        BTN_S1_UP_IN,
+		        BTN_S1_UP_OUT,
+		        BTN_S1_MIDDLE_IN,
+		        BTN_S1_MIDDLE_OUT,
+		        BTN_S1_DOWN_IN,
+		        BTN_S1_DOWN_OUT);
+
+	// **** S2 ***************************************************************
+	MapKeyIOUMD(&Joystick,
+		        S2,
+		        BTN_S2_UP_IN,
+		        BTN_S2_UP_OUT,
+		        BTN_S2_MIDDLE_IN,
+		        BTN_S2_MIDDLE_OUT,
+		        BTN_S2_DOWN_IN,
+		        BTN_S2_DOWN_OUT);
+
+	// **** S3 ***************************************************************
+	MapKeyIOUMD(&Joystick,
+		        S3,
+		        BTN_S3_UP_IN,
+		        BTN_S3_UP_OUT,
+		        BTN_S3_MIDDLE_IN,
+		        BTN_S3_MIDDLE_OUT,
+		        BTN_S3_DOWN_IN,
+		        BTN_S3_DOWN_OUT);
+
+	// **** TRIM HAT *********************************************************
+
+	MapKeyIOUMD(&Joystick,
+		        H1U,
+		        BTN_H1U_UP_IN,
+		        BTN_H1U_UP_OUT,
+		        BTN_H1U_MIDDLE_IN,
+		        BTN_H1U_MIDDLE_OUT,
+		        BTN_H1U_DOWN_IN,
+		        BTN_H1U_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H1D,
+		        BTN_H1D_UP_IN,
+		        BTN_H1D_UP_OUT,
+		        BTN_H1D_MIDDLE_IN,
+		        BTN_H1D_MIDDLE_OUT,
+		        BTN_H1D_DOWN_IN,
+		        BTN_H1D_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H1L,
+		        BTN_H1L_UP_IN,
+		        BTN_H1L_UP_OUT,
+		        BTN_H1L_MIDDLE_IN,
+		        BTN_H1L_MIDDLE_OUT,
+		        BTN_H1L_DOWN_IN,
+		        BTN_H1L_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H1R,
+		        BTN_H1R_UP_IN,
+		        BTN_H1R_UP_OUT,
+		        BTN_H1R_MIDDLE_IN,
+		        BTN_H1R_MIDDLE_OUT,
+		        BTN_H1R_DOWN_IN,
+		        BTN_H1R_DOWN_OUT);
+
+	// **** TMS HAT **********************************************************
+
+	// **** DMS HAT **********************************************************
+
+	// **** CMS HAT **********************************************************
+}

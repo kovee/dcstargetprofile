@@ -1,0 +1,852 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains the control mapping logic for the MFDs.
+
+int MapRMFD()
+{
+	// Contains the control mapping logic for the right MFD.
+
+	debug("Mapping controls for the right MFD.");
+
+	// **** TOP BUTTONS ******************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        OSB01,
+		        BTN_RMFD_OSB01_UP_IN,
+		        BTN_RMFD_OSB01_UP_OUT,
+		        BTN_RMFD_OSB01_MIDDLE_IN,
+		        BTN_RMFD_OSB01_MIDDLE_OUT,
+		        BTN_RMFD_OSB01_DOWN_IN,
+		        BTN_RMFD_OSB01_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB02,
+		        BTN_RMFD_OSB02_UP_IN,
+		        BTN_RMFD_OSB02_UP_OUT,
+		        BTN_RMFD_OSB02_MIDDLE_IN,
+		        BTN_RMFD_OSB02_MIDDLE_OUT,
+		        BTN_RMFD_OSB02_DOWN_IN,
+		        BTN_RMFD_OSB02_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB03,
+		        BTN_RMFD_OSB03_UP_IN,
+		        BTN_RMFD_OSB03_UP_OUT,
+		        BTN_RMFD_OSB03_MIDDLE_IN,
+		        BTN_RMFD_OSB03_MIDDLE_OUT,
+		        BTN_RMFD_OSB03_DOWN_IN,
+		        BTN_RMFD_OSB03_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB04,
+		        BTN_RMFD_OSB04_UP_IN,
+		        BTN_RMFD_OSB04_UP_OUT,
+		        BTN_RMFD_OSB04_MIDDLE_IN,
+		        BTN_RMFD_OSB04_MIDDLE_OUT,
+		        BTN_RMFD_OSB04_DOWN_IN,
+		        BTN_RMFD_OSB04_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB05,
+		        BTN_RMFD_OSB05_UP_IN,
+		        BTN_RMFD_OSB05_UP_OUT,
+		        BTN_RMFD_OSB05_MIDDLE_IN,
+		        BTN_RMFD_OSB05_MIDDLE_OUT,
+		        BTN_RMFD_OSB05_DOWN_IN,
+		        BTN_RMFD_OSB05_DOWN_OUT);
+
+	// **** RIGHT SIDE BUTTONS ***********************************************
+
+	MapKeyIOUMD(&RMFD,
+		        OSB06,
+		        BTN_RMFD_OSB06_UP_IN,
+		        BTN_RMFD_OSB06_UP_OUT,
+		        BTN_RMFD_OSB06_MIDDLE_IN,
+		        BTN_RMFD_OSB06_MIDDLE_OUT,
+		        BTN_RMFD_OSB06_DOWN_IN,
+		        BTN_RMFD_OSB06_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB07,
+		        BTN_RMFD_OSB07_UP_IN,
+		        BTN_RMFD_OSB07_UP_OUT,
+		        BTN_RMFD_OSB07_MIDDLE_IN,
+		        BTN_RMFD_OSB07_MIDDLE_OUT,
+		        BTN_RMFD_OSB07_DOWN_IN,
+		        BTN_RMFD_OSB07_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB08,
+		        BTN_RMFD_OSB08_UP_IN,
+		        BTN_RMFD_OSB08_UP_OUT,
+		        BTN_RMFD_OSB08_MIDDLE_IN,
+		        BTN_RMFD_OSB08_MIDDLE_OUT,
+		        BTN_RMFD_OSB08_DOWN_IN,
+		        BTN_RMFD_OSB08_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB09,
+		        BTN_RMFD_OSB09_UP_IN,
+		        BTN_RMFD_OSB09_UP_OUT,
+		        BTN_RMFD_OSB09_MIDDLE_IN,
+		        BTN_RMFD_OSB09_MIDDLE_OUT,
+		        BTN_RMFD_OSB09_DOWN_IN,
+		        BTN_RMFD_OSB09_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB10,
+		        BTN_RMFD_OSB10_UP_IN,
+		        BTN_RMFD_OSB10_UP_OUT,
+		        BTN_RMFD_OSB10_MIDDLE_IN,
+		        BTN_RMFD_OSB10_MIDDLE_OUT,
+		        BTN_RMFD_OSB10_DOWN_IN,
+		        BTN_RMFD_OSB10_DOWN_OUT);
+
+	// **** BOTTOM BUTTONS ***************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        OSB11,
+		        BTN_RMFD_OSB11_UP_IN,
+		        BTN_RMFD_OSB11_UP_OUT,
+		        BTN_RMFD_OSB11_MIDDLE_IN,
+		        BTN_RMFD_OSB11_MIDDLE_OUT,
+		        BTN_RMFD_OSB11_DOWN_IN,
+		        BTN_RMFD_OSB11_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB12,
+		        BTN_RMFD_OSB12_UP_IN,
+		        BTN_RMFD_OSB12_UP_OUT,
+		        BTN_RMFD_OSB12_MIDDLE_IN,
+		        BTN_RMFD_OSB12_MIDDLE_OUT,
+		        BTN_RMFD_OSB12_DOWN_IN,
+		        BTN_RMFD_OSB12_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB13,
+		        BTN_RMFD_OSB13_UP_IN,
+		        BTN_RMFD_OSB13_UP_OUT,
+		        BTN_RMFD_OSB13_MIDDLE_IN,
+		        BTN_RMFD_OSB13_MIDDLE_OUT,
+		        BTN_RMFD_OSB13_DOWN_IN,
+		        BTN_RMFD_OSB13_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB14,
+		        BTN_RMFD_OSB14_UP_IN,
+		        BTN_RMFD_OSB14_UP_OUT,
+		        BTN_RMFD_OSB14_MIDDLE_IN,
+		        BTN_RMFD_OSB14_MIDDLE_OUT,
+		        BTN_RMFD_OSB14_DOWN_IN,
+		        BTN_RMFD_OSB14_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB15,
+		        BTN_RMFD_OSB15_UP_IN,
+		        BTN_RMFD_OSB15_UP_OUT,
+		        BTN_RMFD_OSB15_MIDDLE_IN,
+		        BTN_RMFD_OSB15_MIDDLE_OUT,
+		        BTN_RMFD_OSB15_DOWN_IN,
+		        BTN_RMFD_OSB15_DOWN_OUT);
+
+	// **** LEFT SIDE BUTTONS ************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        OSB16,
+		        BTN_RMFD_OSB16_UP_IN,
+		        BTN_RMFD_OSB16_UP_OUT,
+		        BTN_RMFD_OSB16_MIDDLE_IN,
+		        BTN_RMFD_OSB16_MIDDLE_OUT,
+		        BTN_RMFD_OSB16_DOWN_IN,
+		        BTN_RMFD_OSB16_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB17,
+		        BTN_RMFD_OSB17_UP_IN,
+		        BTN_RMFD_OSB17_UP_OUT,
+		        BTN_RMFD_OSB17_MIDDLE_IN,
+		        BTN_RMFD_OSB17_MIDDLE_OUT,
+		        BTN_RMFD_OSB17_DOWN_IN,
+		        BTN_RMFD_OSB17_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB18,
+		        BTN_RMFD_OSB18_UP_IN,
+		        BTN_RMFD_OSB18_UP_OUT,
+		        BTN_RMFD_OSB18_MIDDLE_IN,
+		        BTN_RMFD_OSB18_MIDDLE_OUT,
+		        BTN_RMFD_OSB18_DOWN_IN,
+		        BTN_RMFD_OSB18_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB19,
+		        BTN_RMFD_OSB19_UP_IN,
+		        BTN_RMFD_OSB19_UP_OUT,
+		        BTN_RMFD_OSB19_MIDDLE_IN,
+		        BTN_RMFD_OSB19_MIDDLE_OUT,
+		        BTN_RMFD_OSB19_DOWN_IN,
+		        BTN_RMFD_OSB19_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB20,
+		        BTN_RMFD_OSB20_UP_IN,
+		        BTN_RMFD_OSB20_UP_OUT,
+		        BTN_RMFD_OSB20_MIDDLE_IN,
+		        BTN_RMFD_OSB20_MIDDLE_OUT,
+		        BTN_RMFD_OSB20_DOWN_IN,
+		        BTN_RMFD_OSB20_DOWN_OUT);
+
+	// **** SYM SWITCH *******************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        SYMU,
+		        BTN_RMFD_SYMU_UP_IN,
+		        BTN_RMFD_SYMU_UP_OUT,
+		        BTN_RMFD_SYMU_MIDDLE_IN,
+		        BTN_RMFD_SYMU_MIDDLE_OUT,
+		        BTN_RMFD_SYMU_DOWN_IN,
+		        BTN_RMFD_SYMU_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        SYMD,
+		        BTN_RMFD_SYMD_UP_IN,
+		        BTN_RMFD_SYMD_UP_OUT,
+		        BTN_RMFD_SYMD_MIDDLE_IN,
+		        BTN_RMFD_SYMD_MIDDLE_OUT,
+		        BTN_RMFD_SYMD_DOWN_IN,
+		        BTN_RMFD_SYMD_DOWN_OUT);
+
+	// **** CON SWITCH *******************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        CONU,
+		        BTN_RMFD_CONU_UP_IN,
+		        BTN_RMFD_CONU_UP_OUT,
+		        BTN_RMFD_CONU_MIDDLE_IN,
+		        BTN_RMFD_CONU_MIDDLE_OUT,
+		        BTN_RMFD_CONU_DOWN_IN,
+		        BTN_RMFD_CONU_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        COND,
+		        BTN_RMFD_COND_UP_IN,
+		        BTN_RMFD_COND_UP_OUT,
+		        BTN_RMFD_COND_MIDDLE_IN,
+		        BTN_RMFD_COND_MIDDLE_OUT,
+		        BTN_RMFD_COND_DOWN_IN,
+		        BTN_RMFD_COND_DOWN_OUT);
+
+	// **** BRT SWITCH *******************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        BRTU,
+		        BTN_RMFD_BRTU_UP_IN,
+		        BTN_RMFD_BRTU_UP_OUT,
+		        BTN_RMFD_BRTU_MIDDLE_IN,
+		        BTN_RMFD_BRTU_MIDDLE_OUT,
+		        BTN_RMFD_BRTU_DOWN_IN,
+		        BTN_RMFD_BRTU_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        BRTD,
+		        BTN_RMFD_BRTD_UP_IN,
+		        BTN_RMFD_BRTD_UP_OUT,
+		        BTN_RMFD_BRTD_MIDDLE_IN,
+		        BTN_RMFD_BRTD_MIDDLE_OUT,
+		        BTN_RMFD_BRTD_DOWN_IN,
+		        BTN_RMFD_BRTD_DOWN_OUT);
+
+	// **** GAIN SWITCH ******************************************************
+
+	MapKeyIOUMD(&RMFD,
+		        GAINU,
+		        BTN_RMFD_GAINU_UP_IN,
+		        BTN_RMFD_GAINU_UP_OUT,
+		        BTN_RMFD_GAINU_MIDDLE_IN,
+		        BTN_RMFD_GAINU_MIDDLE_OUT,
+		        BTN_RMFD_GAINU_DOWN_IN,
+		        BTN_RMFD_GAINU_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        GAIND,
+		        BTN_RMFD_GAIND_UP_IN,
+		        BTN_RMFD_GAIND_UP_OUT,
+		        BTN_RMFD_GAIND_MIDDLE_IN,
+		        BTN_RMFD_GAIND_MIDDLE_OUT,
+		        BTN_RMFD_GAIND_DOWN_IN,
+		        BTN_RMFD_GAIND_DOWN_OUT);
+
+}
+
+int MapLMFD()
+{
+	// Contains the control mapping logic for the left MFD.
+
+	debug("Mapping controls for the left MFD.");
+
+	// **** TOP BUTTONS ******************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        OSB01,
+		        BTN_LMFD_OSB01_UP_IN,
+		        BTN_LMFD_OSB01_UP_OUT,
+		        BTN_LMFD_OSB01_MIDDLE_IN,
+		        BTN_LMFD_OSB01_MIDDLE_OUT,
+		        BTN_LMFD_OSB01_DOWN_IN,
+		        BTN_LMFD_OSB01_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB02,
+		        BTN_LMFD_OSB02_UP_IN,
+		        BTN_LMFD_OSB02_UP_OUT,
+		        BTN_LMFD_OSB02_MIDDLE_IN,
+		        BTN_LMFD_OSB02_MIDDLE_OUT,
+		        BTN_LMFD_OSB02_DOWN_IN,
+		        BTN_LMFD_OSB02_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB03,
+		        BTN_LMFD_OSB03_UP_IN,
+		        BTN_LMFD_OSB03_UP_OUT,
+		        BTN_LMFD_OSB03_MIDDLE_IN,
+		        BTN_LMFD_OSB03_MIDDLE_OUT,
+		        BTN_LMFD_OSB03_DOWN_IN,
+		        BTN_LMFD_OSB03_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB04,
+		        BTN_LMFD_OSB04_UP_IN,
+		        BTN_LMFD_OSB04_UP_OUT,
+		        BTN_LMFD_OSB04_MIDDLE_IN,
+		        BTN_LMFD_OSB04_MIDDLE_OUT,
+		        BTN_LMFD_OSB04_DOWN_IN,
+		        BTN_LMFD_OSB04_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB05,
+		        BTN_LMFD_OSB05_UP_IN,
+		        BTN_LMFD_OSB05_UP_OUT,
+		        BTN_LMFD_OSB05_MIDDLE_IN,
+		        BTN_LMFD_OSB05_MIDDLE_OUT,
+		        BTN_LMFD_OSB05_DOWN_IN,
+		        BTN_LMFD_OSB05_DOWN_OUT);
+
+	// **** RIGHT SIDE BUTTONS ***********************************************
+
+	MapKeyIOUMD(&LMFD,
+		        OSB06,
+		        BTN_LMFD_OSB06_UP_IN,
+		        BTN_LMFD_OSB06_UP_OUT,
+		        BTN_LMFD_OSB06_MIDDLE_IN,
+		        BTN_LMFD_OSB06_MIDDLE_OUT,
+		        BTN_LMFD_OSB06_DOWN_IN,
+		        BTN_LMFD_OSB06_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB07,
+		        BTN_LMFD_OSB07_UP_IN,
+		        BTN_LMFD_OSB07_UP_OUT,
+		        BTN_LMFD_OSB07_MIDDLE_IN,
+		        BTN_LMFD_OSB07_MIDDLE_OUT,
+		        BTN_LMFD_OSB07_DOWN_IN,
+		        BTN_LMFD_OSB07_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB08,
+		        BTN_LMFD_OSB08_UP_IN,
+		        BTN_LMFD_OSB08_UP_OUT,
+		        BTN_LMFD_OSB08_MIDDLE_IN,
+		        BTN_LMFD_OSB08_MIDDLE_OUT,
+		        BTN_LMFD_OSB08_DOWN_IN,
+		        BTN_LMFD_OSB08_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB09,
+		        BTN_LMFD_OSB09_UP_IN,
+		        BTN_LMFD_OSB09_UP_OUT,
+		        BTN_LMFD_OSB09_MIDDLE_IN,
+		        BTN_LMFD_OSB09_MIDDLE_OUT,
+		        BTN_LMFD_OSB09_DOWN_IN,
+		        BTN_LMFD_OSB09_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB10,
+		        BTN_LMFD_OSB10_UP_IN,
+		        BTN_LMFD_OSB10_UP_OUT,
+		        BTN_LMFD_OSB10_MIDDLE_IN,
+		        BTN_LMFD_OSB10_MIDDLE_OUT,
+		        BTN_LMFD_OSB10_DOWN_IN,
+		        BTN_LMFD_OSB10_DOWN_OUT);
+
+	// **** BOTTOM BUTTONS ***************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        OSB11,
+		        BTN_LMFD_OSB11_UP_IN,
+		        BTN_LMFD_OSB11_UP_OUT,
+		        BTN_LMFD_OSB11_MIDDLE_IN,
+		        BTN_LMFD_OSB11_MIDDLE_OUT,
+		        BTN_LMFD_OSB11_DOWN_IN,
+		        BTN_LMFD_OSB11_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB12,
+		        BTN_LMFD_OSB12_UP_IN,
+		        BTN_LMFD_OSB12_UP_OUT,
+		        BTN_LMFD_OSB12_MIDDLE_IN,
+		        BTN_LMFD_OSB12_MIDDLE_OUT,
+		        BTN_LMFD_OSB12_DOWN_IN,
+		        BTN_LMFD_OSB12_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB13,
+		        BTN_LMFD_OSB13_UP_IN,
+		        BTN_LMFD_OSB13_UP_OUT,
+		        BTN_LMFD_OSB13_MIDDLE_IN,
+		        BTN_LMFD_OSB13_MIDDLE_OUT,
+		        BTN_LMFD_OSB13_DOWN_IN,
+		        BTN_LMFD_OSB13_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB14,
+		        BTN_LMFD_OSB14_UP_IN,
+		        BTN_LMFD_OSB14_UP_OUT,
+		        BTN_LMFD_OSB14_MIDDLE_IN,
+		        BTN_LMFD_OSB14_MIDDLE_OUT,
+		        BTN_LMFD_OSB14_DOWN_IN,
+		        BTN_LMFD_OSB14_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB15,
+		        BTN_LMFD_OSB15_UP_IN,
+		        BTN_LMFD_OSB15_UP_OUT,
+		        BTN_LMFD_OSB15_MIDDLE_IN,
+		        BTN_LMFD_OSB15_MIDDLE_OUT,
+		        BTN_LMFD_OSB15_DOWN_IN,
+		        BTN_LMFD_OSB15_DOWN_OUT);
+
+	// **** LEFT SIDE BUTTONS ************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        OSB16,
+		        BTN_LMFD_OSB16_UP_IN,
+		        BTN_LMFD_OSB16_UP_OUT,
+		        BTN_LMFD_OSB16_MIDDLE_IN,
+		        BTN_LMFD_OSB16_MIDDLE_OUT,
+		        BTN_LMFD_OSB16_DOWN_IN,
+		        BTN_LMFD_OSB16_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB17,
+		        BTN_LMFD_OSB17_UP_IN,
+		        BTN_LMFD_OSB17_UP_OUT,
+		        BTN_LMFD_OSB17_MIDDLE_IN,
+		        BTN_LMFD_OSB17_MIDDLE_OUT,
+		        BTN_LMFD_OSB17_DOWN_IN,
+		        BTN_LMFD_OSB17_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB18,
+		        BTN_LMFD_OSB18_UP_IN,
+		        BTN_LMFD_OSB18_UP_OUT,
+		        BTN_LMFD_OSB18_MIDDLE_IN,
+		        BTN_LMFD_OSB18_MIDDLE_OUT,
+		        BTN_LMFD_OSB18_DOWN_IN,
+		        BTN_LMFD_OSB18_DOWN_OUT);
+
+	MapKeyIOUMD(&RMFD,
+		        OSB19,
+		        BTN_RMFD_OSB19_UP_IN,
+		        BTN_RMFD_OSB19_UP_OUT,
+		        BTN_RMFD_OSB19_MIDDLE_IN,
+		        BTN_RMFD_OSB19_MIDDLE_OUT,
+		        BTN_RMFD_OSB19_DOWN_IN,
+		        BTN_RMFD_OSB19_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        OSB20,
+		        BTN_LMFD_OSB20_UP_IN,
+		        BTN_LMFD_OSB20_UP_OUT,
+		        BTN_LMFD_OSB20_MIDDLE_IN,
+		        BTN_LMFD_OSB20_MIDDLE_OUT,
+		        BTN_LMFD_OSB20_DOWN_IN,
+		        BTN_LMFD_OSB20_DOWN_OUT);
+
+	// **** SYM SWITCH *******************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        SYMU,
+		        BTN_LMFD_SYMU_UP_IN,
+		        BTN_LMFD_SYMU_UP_OUT,
+		        BTN_LMFD_SYMU_MIDDLE_IN,
+		        BTN_LMFD_SYMU_MIDDLE_OUT,
+		        BTN_LMFD_SYMU_DOWN_IN,
+		        BTN_LMFD_SYMU_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        SYMD,
+		        BTN_LMFD_SYMD_UP_IN,
+		        BTN_LMFD_SYMD_UP_OUT,
+		        BTN_LMFD_SYMD_MIDDLE_IN,
+		        BTN_LMFD_SYMD_MIDDLE_OUT,
+		        BTN_LMFD_SYMD_DOWN_IN,
+		        BTN_LMFD_SYMD_DOWN_OUT);
+
+	// **** CON SWITCH *******************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        CONU,
+		        BTN_LMFD_CONU_UP_IN,
+		        BTN_LMFD_CONU_UP_OUT,
+		        BTN_LMFD_CONU_MIDDLE_IN,
+		        BTN_LMFD_CONU_MIDDLE_OUT,
+		        BTN_LMFD_CONU_DOWN_IN,
+		        BTN_LMFD_CONU_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        COND,
+		        BTN_LMFD_COND_UP_IN,
+		        BTN_LMFD_COND_UP_OUT,
+		        BTN_LMFD_COND_MIDDLE_IN,
+		        BTN_LMFD_COND_MIDDLE_OUT,
+		        BTN_LMFD_COND_DOWN_IN,
+		        BTN_LMFD_COND_DOWN_OUT);
+
+	// **** BRT SWITCH *******************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        BRTU,
+		        BTN_LMFD_BRTU_UP_IN,
+		        BTN_LMFD_BRTU_UP_OUT,
+		        BTN_LMFD_BRTU_MIDDLE_IN,
+		        BTN_LMFD_BRTU_MIDDLE_OUT,
+		        BTN_LMFD_BRTU_DOWN_IN,
+		        BTN_LMFD_BRTU_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        BRTD,
+		        BTN_LMFD_BRTD_UP_IN,
+		        BTN_LMFD_BRTD_UP_OUT,
+		        BTN_LMFD_BRTD_MIDDLE_IN,
+		        BTN_LMFD_BRTD_MIDDLE_OUT,
+		        BTN_LMFD_BRTD_DOWN_IN,
+		        BTN_LMFD_BRTD_DOWN_OUT);
+
+	// **** GAIN SWITCH ******************************************************
+
+	MapKeyIOUMD(&LMFD,
+		        GAINU,
+		        BTN_LMFD_GAINU_UP_IN,
+		        BTN_LMFD_GAINU_UP_OUT,
+		        BTN_LMFD_GAINU_MIDDLE_IN,
+		        BTN_LMFD_GAINU_MIDDLE_OUT,
+		        BTN_LMFD_GAINU_DOWN_IN,
+		        BTN_LMFD_GAINU_DOWN_OUT);
+
+	MapKeyIOUMD(&LMFD,
+		        GAIND,
+		        BTN_LMFD_GAIND_UP_IN,
+		        BTN_LMFD_GAIND_UP_OUT,
+		        BTN_LMFD_GAIND_MIDDLE_IN,
+		        BTN_LMFD_GAIND_MIDDLE_OUT,
+		        BTN_LMFD_GAIND_DOWN_IN,
+		        BTN_LMFD_GAIND_DOWN_OUT);
+}
+
+int MapMMFD()
+{
+	// Contains the control mapping logic for the middle MFD.
+
+	debug("Mapping controls for the middle MFD.");
+
+	// **** TOP BUTTONS ******************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        OSB01,
+		        BTN_MMFD_OSB01_UP_IN,
+		        BTN_MMFD_OSB01_UP_OUT,
+		        BTN_MMFD_OSB01_MIDDLE_IN,
+		        BTN_MMFD_OSB01_MIDDLE_OUT,
+		        BTN_MMFD_OSB01_DOWN_IN,
+		        BTN_MMFD_OSB01_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB02,
+		        BTN_MMFD_OSB02_UP_IN,
+		        BTN_MMFD_OSB02_UP_OUT,
+		        BTN_MMFD_OSB02_MIDDLE_IN,
+		        BTN_MMFD_OSB02_MIDDLE_OUT,
+		        BTN_MMFD_OSB02_DOWN_IN,
+		        BTN_MMFD_OSB02_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB03,
+		        BTN_MMFD_OSB03_UP_IN,
+		        BTN_MMFD_OSB03_UP_OUT,
+		        BTN_MMFD_OSB03_MIDDLE_IN,
+		        BTN_MMFD_OSB03_MIDDLE_OUT,
+		        BTN_MMFD_OSB03_DOWN_IN,
+		        BTN_MMFD_OSB03_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB04,
+		        BTN_MMFD_OSB04_UP_IN,
+		        BTN_MMFD_OSB04_UP_OUT,
+		        BTN_MMFD_OSB04_MIDDLE_IN,
+		        BTN_MMFD_OSB04_MIDDLE_OUT,
+		        BTN_MMFD_OSB04_DOWN_IN,
+		        BTN_MMFD_OSB04_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB05,
+		        BTN_MMFD_OSB05_UP_IN,
+		        BTN_MMFD_OSB05_UP_OUT,
+		        BTN_MMFD_OSB05_MIDDLE_IN,
+		        BTN_MMFD_OSB05_MIDDLE_OUT,
+		        BTN_MMFD_OSB05_DOWN_IN,
+		        BTN_MMFD_OSB05_DOWN_OUT);
+
+	// **** RIGHT SIDE BUTTONS ***********************************************
+
+	MapKeyIOUMD(&MMFD,
+		        OSB06,
+		        BTN_MMFD_OSB06_UP_IN,
+		        BTN_MMFD_OSB06_UP_OUT,
+		        BTN_MMFD_OSB06_MIDDLE_IN,
+		        BTN_MMFD_OSB06_MIDDLE_OUT,
+		        BTN_MMFD_OSB06_DOWN_IN,
+		        BTN_MMFD_OSB06_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB07,
+		        BTN_MMFD_OSB07_UP_IN,
+		        BTN_MMFD_OSB07_UP_OUT,
+		        BTN_MMFD_OSB07_MIDDLE_IN,
+		        BTN_MMFD_OSB07_MIDDLE_OUT,
+		        BTN_MMFD_OSB07_DOWN_IN,
+		        BTN_MMFD_OSB07_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB08,
+		        BTN_MMFD_OSB08_UP_IN,
+		        BTN_MMFD_OSB08_UP_OUT,
+		        BTN_MMFD_OSB08_MIDDLE_IN,
+		        BTN_MMFD_OSB08_MIDDLE_OUT,
+		        BTN_MMFD_OSB08_DOWN_IN,
+		        BTN_MMFD_OSB08_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB09,
+		        BTN_MMFD_OSB09_UP_IN,
+		        BTN_MMFD_OSB09_UP_OUT,
+		        BTN_MMFD_OSB09_MIDDLE_IN,
+		        BTN_MMFD_OSB09_MIDDLE_OUT,
+		        BTN_MMFD_OSB09_DOWN_IN,
+		        BTN_MMFD_OSB09_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB10,
+		        BTN_MMFD_OSB10_UP_IN,
+		        BTN_MMFD_OSB10_UP_OUT,
+		        BTN_MMFD_OSB10_MIDDLE_IN,
+		        BTN_MMFD_OSB10_MIDDLE_OUT,
+		        BTN_MMFD_OSB10_DOWN_IN,
+		        BTN_MMFD_OSB10_DOWN_OUT);
+
+	// **** BOTTOM BUTTONS ***************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        OSB11,
+		        BTN_MMFD_OSB11_UP_IN,
+		        BTN_MMFD_OSB11_UP_OUT,
+		        BTN_MMFD_OSB11_MIDDLE_IN,
+		        BTN_MMFD_OSB11_MIDDLE_OUT,
+		        BTN_MMFD_OSB11_DOWN_IN,
+		        BTN_MMFD_OSB11_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB12,
+		        BTN_MMFD_OSB12_UP_IN,
+		        BTN_MMFD_OSB12_UP_OUT,
+		        BTN_MMFD_OSB12_MIDDLE_IN,
+		        BTN_MMFD_OSB12_MIDDLE_OUT,
+		        BTN_MMFD_OSB12_DOWN_IN,
+		        BTN_MMFD_OSB12_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB13,
+		        BTN_MMFD_OSB13_UP_IN,
+		        BTN_MMFD_OSB13_UP_OUT,
+		        BTN_MMFD_OSB13_MIDDLE_IN,
+		        BTN_MMFD_OSB13_MIDDLE_OUT,
+		        BTN_MMFD_OSB13_DOWN_IN,
+		        BTN_MMFD_OSB13_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB14,
+		        BTN_MMFD_OSB14_UP_IN,
+		        BTN_MMFD_OSB14_UP_OUT,
+		        BTN_MMFD_OSB14_MIDDLE_IN,
+		        BTN_MMFD_OSB14_MIDDLE_OUT,
+		        BTN_MMFD_OSB14_DOWN_IN,
+		        BTN_MMFD_OSB14_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB15,
+		        BTN_MMFD_OSB15_UP_IN,
+		        BTN_MMFD_OSB15_UP_OUT,
+		        BTN_MMFD_OSB15_MIDDLE_IN,
+		        BTN_MMFD_OSB15_MIDDLE_OUT,
+		        BTN_MMFD_OSB15_DOWN_IN,
+		        BTN_MMFD_OSB15_DOWN_OUT);
+
+	// **** LEFT SIDE BUTTONS ***********************************************
+
+	MapKeyIOUMD(&MMFD,
+		        OSB16,
+		        BTN_MMFD_OSB16_UP_IN,
+		        BTN_MMFD_OSB16_UP_OUT,
+		        BTN_MMFD_OSB16_MIDDLE_IN,
+		        BTN_MMFD_OSB16_MIDDLE_OUT,
+		        BTN_MMFD_OSB16_DOWN_IN,
+		        BTN_MMFD_OSB16_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB17,
+		        BTN_MMFD_OSB17_UP_IN,
+		        BTN_MMFD_OSB17_UP_OUT,
+		        BTN_MMFD_OSB17_MIDDLE_IN,
+		        BTN_MMFD_OSB17_MIDDLE_OUT,
+		        BTN_MMFD_OSB17_DOWN_IN,
+		        BTN_MMFD_OSB17_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB18,
+		        BTN_MMFD_OSB18_UP_IN,
+		        BTN_MMFD_OSB18_UP_OUT,
+		        BTN_MMFD_OSB18_MIDDLE_IN,
+		        BTN_MMFD_OSB18_MIDDLE_OUT,
+		        BTN_MMFD_OSB18_DOWN_IN,
+		        BTN_MMFD_OSB18_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB19,
+		        BTN_MMFD_OSB19_UP_IN,
+		        BTN_MMFD_OSB19_UP_OUT,
+		        BTN_MMFD_OSB19_MIDDLE_IN,
+		        BTN_MMFD_OSB19_MIDDLE_OUT,
+		        BTN_MMFD_OSB19_DOWN_IN,
+		        BTN_MMFD_OSB19_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        OSB20,
+		        BTN_MMFD_OSB20_UP_IN,
+		        BTN_MMFD_OSB20_UP_OUT,
+		        BTN_MMFD_OSB20_MIDDLE_IN,
+		        BTN_MMFD_OSB20_MIDDLE_OUT,
+		        BTN_MMFD_OSB20_DOWN_IN,
+		        BTN_MMFD_OSB20_DOWN_OUT);
+
+	// **** SYM SWITCH *******************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        SYMU,
+		        BTN_MMFD_SYMU_UP_IN,
+		        BTN_MMFD_SYMU_UP_OUT,
+		        BTN_MMFD_SYMU_MIDDLE_IN,
+		        BTN_MMFD_SYMU_MIDDLE_OUT,
+		        BTN_MMFD_SYMU_DOWN_IN,
+		        BTN_MMFD_SYMU_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        SYMD,
+		        BTN_MMFD_SYMD_UP_IN,
+		        BTN_MMFD_SYMD_UP_OUT,
+		        BTN_MMFD_SYMD_MIDDLE_IN,
+		        BTN_MMFD_SYMD_MIDDLE_OUT,
+		        BTN_MMFD_SYMD_DOWN_IN,
+		        BTN_MMFD_SYMD_DOWN_OUT);
+
+	// **** CON SWITCH *******************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        CONU,
+		        BTN_MMFD_CONU_UP_IN,
+		        BTN_MMFD_CONU_UP_OUT,
+		        BTN_MMFD_CONU_MIDDLE_IN,
+		        BTN_MMFD_CONU_MIDDLE_OUT,
+		        BTN_MMFD_CONU_DOWN_IN,
+		        BTN_MMFD_CONU_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        COND,
+		        BTN_MMFD_COND_UP_IN,
+		        BTN_MMFD_COND_UP_OUT,
+		        BTN_MMFD_COND_MIDDLE_IN,
+		        BTN_MMFD_COND_MIDDLE_OUT,
+		        BTN_MMFD_COND_DOWN_IN,
+		        BTN_MMFD_COND_DOWN_OUT);
+
+	// **** BRT SWITCH *******************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        BRTU,
+		        BTN_MMFD_BRTU_UP_IN,
+		        BTN_MMFD_BRTU_UP_OUT,
+		        BTN_MMFD_BRTU_MIDDLE_IN,
+		        BTN_MMFD_BRTU_MIDDLE_OUT,
+		        BTN_MMFD_BRTU_DOWN_IN,
+		        BTN_MMFD_BRTU_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        BRTD,
+		        BTN_MMFD_BRTD_UP_IN,
+		        BTN_MMFD_BRTD_UP_OUT,
+		        BTN_MMFD_BRTD_MIDDLE_IN,
+		        BTN_MMFD_BRTD_MIDDLE_OUT,
+		        BTN_MMFD_BRTD_DOWN_IN,
+		        BTN_MMFD_BRTD_DOWN_OUT);
+
+	// **** GAIN SWITCH ******************************************************
+
+	MapKeyIOUMD(&MMFD,
+		        GAINU,
+		        BTN_MMFD_GAINU_UP_IN,
+		        BTN_MMFD_GAINU_UP_OUT,
+		        BTN_MMFD_GAINU_MIDDLE_IN,
+		        BTN_MMFD_GAINU_MIDDLE_OUT,
+		        BTN_MMFD_GAINU_DOWN_IN,
+		        BTN_MMFD_GAINU_DOWN_OUT);
+
+	MapKeyIOUMD(&MMFD,
+		        GAIND,
+		        BTN_MMFD_GAIND_UP_IN,
+		        BTN_MMFD_GAIND_UP_OUT,
+		        BTN_MMFD_GAIND_MIDDLE_IN,
+		        BTN_MMFD_GAIND_MIDDLE_OUT,
+		        BTN_MMFD_GAIND_DOWN_IN,
+		        BTN_MMFD_GAIND_DOWN_OUT);
+}

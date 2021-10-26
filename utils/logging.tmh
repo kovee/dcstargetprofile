@@ -60,26 +60,35 @@ int error(alias message)
 
 int show_mapping(
 	alias button,
-	alias primary,
-	alias primary_long,
-	alias secondary,
-	alias secondary_long)
+	alias up_in,
+	alias up_out,
+	alias middle_in,
+	alias middle_out,
+	alias down_in,
+	alias down_out)
 {
 	// Writes the configured mapping for the given button to the T.A.R.G.E.T. console.
 	//
 	// Args:
 	//	button: The button that is displayed.
-	//	primary: The primary mapping for short press.
-	//	primary_long: The primary mapping for long press.
-	//	secondary: The secondary mapping for short press.
-	//	secondary_long: The secondary mapping for long press.
+	//	up_in: The secondary mapping when the UP layer is active.
+	//  up_out: The primary mapping when the UP layer is active.
+	//  middle_in: The secondary mapping when the MIDDLE layer is active.
+	//  middle_out: The primary mapping when the MIDDLE layer is active.
+	//  down_in: The secondary mapping when the DOWN layer is active.
+	//  down_out: The primary mapping when the DOWN layer is active.
 	if (VERBOSE_LOGGING == YES)
 	{
 		printf(">> %s <<\xa", &button);
-		printf(" 	--->> PRIMARY: 			%s\xa", &primary);
-		printf(" 	--->> PRIMARY LONG: 	%s\xa", &primary_long);
-		printf(" 	--->> SECONDARY:		%s\xa", &secondary);
-		printf(" 	--->> SECONDARY LONG:	%s\xa", &secondary_long);
+		printf("	UP LAYER:\xa");
+		printf(" 	--->> PRIMARY: 			%s\xa", &up_out);
+		printf(" 	--->> SECONDARY: 		%s\xa", &up_in);
+		printf("	MIDDLE LAYER:\xa");
+		printf(" 	--->> PRIMARY:			%s\xa", &middle_out);
+		printf(" 	--->> SECONDARY:		%s\xa", &middle_in);
+		printf("	DOWN LAYER:\xa");
+		printf(" 	--->> PRIMARY:			%s\xa", &down_out);
+		printf(" 	--->> SECONDARY:		%s\xa", &down_in);
 		printf("\xa");
 	}
 }

@@ -26,22 +26,25 @@
 // Contains the configuration of the Cougar MFDs.
 
 
-int ConfigureMFD1()
+int ConfigureRMFD()
 {
-	// Configures the first MFD.
-	debug("Configuring MFD #1...");
+	// Configures the right MFD.
+
+	debug("Configuring the right MFD...");
 }
 
-int ConfigureMFD2()
+int ConfigureLMFD()
 {
-	// Configures the second MFD.
-	debug("Configuring MFD #2...");
+	// Configures the left MFD.
+
+	debug("Configuring the left MFD...");
 }
 
-int ConfigureMFD3()
+int ConfigureMMFD()
 {
-	// Configures the third MFD.
-	debug("Configuring MFD #3...");
+	// Configures the middle MFD.
+
+	debug("Configuring the middle MFD...");
 }
 
 int InitMFDs()
@@ -54,23 +57,18 @@ int InitMFDs()
 
 	debug("Configuring MFDs...");
 
-	if(NUM_MFDS == 1)
+	if(NUM_MFDS >= 1)
 	{
-		ConfigureMFD1();
+		ConfigureRMFD();
 	}
-	else if(NUM_MFDS == 2)
+
+	if(NUM_MFDS >= 2)
 	{
-		ConfigureMFD1();
-		ConfigureMFD2();
+		ConfigureLMFD();
 	}
-	else if(NUM_MFDS == 3)
+
+	if(NUM_MFDS == 3)
 	{
-		ConfigureMFD1();
-		ConfigureMFD2();
-		ConfigureMFD3();
-	}
-	else
-	{
-		error("Unsupported number of MFDs configured.");
+		ConfigureMMFD();
 	}
 }

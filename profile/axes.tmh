@@ -35,20 +35,32 @@ int InitJoystickAxes()
 	if(JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
 	{
 		debug("Mapping joystick axes for the A-10 grip...");
+
 		MapAxis(&Joystick, JOYX, DX_X_AXIS);
+		SetSCurve(&Joystick, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+
         MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+        SetSCurve(&Joystick, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
 	}
 	else if(JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
 	{
 		debug("Mapping joystick axes for the F/A-18C grip...");
+
 		MapAxis(&JoystickF18, JOYX, DX_X_AXIS);
+		SetSCurve(&JoystickF18, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+
         MapAxis(&JoystickF18, JOYY, DX_Y_AXIS);
+        SetSCurve(&JoystickF18, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
 	}
 	else if (JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
 	{
 		debug("Mapping joystick axes for the Cougar grip...");
+
 		MapAxis(&HCougar, JOYX, DX_X_AXIS);
+		SetSCurve(&HCougar, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+
         MapAxis(&HCougar, JOYY, DX_Y_AXIS);
+        SetSCurve(&HCougar, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
 	}
 	else
 	{
@@ -93,6 +105,7 @@ int InitThrottleAxes()
 		else if(THROTTLE_PRESET == THROTTLE_PRESET_DUAL)
 		{
 			debug("Mapping throttle axes as two separate axes.");
+
 			MapAxis(&Throttle, THR_LEFT, DX_Z_AXIS);
 	        MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
 		}
@@ -104,8 +117,17 @@ int InitThrottleAxes()
 		// Configure friction slider
 		if(ENABLE_FRICTION_SLIDER == YES)
 		{
-			debug("Mapping friction slider.");
+			debug("Mapping friction slider axis.");
 			MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS);
+		}
+		else if(CONVERT_FRICTION_SLIDER == YES)
+		{
+			debug("Converting friction slider axis to keystrokes.");
+			KeyAxis(&Throttle, THR_FC, AXMAP2(2, BTN_ZOOM_IN_SLOW, BTN_ZOOM_OUT_SLOW));
+		}
+		else
+		{
+			warning("Friction slider axis is not configured.");
 		}
 
 		// Mapping slew axes
@@ -157,12 +179,17 @@ int InitRudderAxes()
 	{
 		debug("Configuring the T.Flight rudder axes.");
 		MapAxis(&TFRPRudder, TRUDDER, DX_ZROT_AXIS);
+		SetSCurve(&TFRPRudder, TRUDDER, 0, RUDDER_DEADZONE, 0, RUDDER_CURVE, 0);
 
 		if(ENABLE_TOEBRAKE_AXES == YES)
 		{
 			debug("Configuring toebrake axes as normal axes.");
+
 			MapAxis(&TFRPRudder, TRPRIGHT, DX_Z_AXIS);
+			SetSCurve(&TFRPRudder, TRPRIGHT, 0, WHEELBRAKE_DEADZONE, 0, WHEELBRAKE_CURVE, 0);
+
 			MapAxis(&TFRPRudder, TRPLEFT, DX_SLIDER_AXIS);
+			SetSCurve(&TFRPRudder, TRPLEFT, 0, WHEELBRAKE_DEADZONE, 0, WHEELBRAKE_CURVE, 0);
 		}
 		else if(CONVERT_TOEBRAKE_AXES == YES)
 		{
@@ -179,4 +206,13 @@ int InitRudderAxes()
 	{
 		error("Unknown rudder model has been configured.");
 	}
+}
+
+int InitAxes()
+{
+	// Initializes all controller axes.
+
+	InitJoystickAxes();
+    InitThrottleAxes();
+    InitRudderAxes();
 }
