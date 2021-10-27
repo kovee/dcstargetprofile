@@ -120,7 +120,124 @@ int MapJoystickA10Grip()
 
 	// **** TMS HAT **********************************************************
 
+	MapKeyIOUMD(&Joystick,
+		        H2U,
+		        BTN_H2U_UP_IN,
+		        BTN_H2U_UP_OUT,
+		        BTN_H2U_MIDDLE_IN,
+		        BTN_H2U_MIDDLE_OUT,
+		        BTN_H2U_DOWN_IN,
+		        BTN_H2U_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H2D,
+		        BTN_H2D_UP_IN,
+		        BTN_H2D_UP_OUT,
+		        BTN_H2D_MIDDLE_IN,
+		        BTN_H2D_MIDDLE_OUT,
+		        BTN_H2D_DOWN_IN,
+		        BTN_H2D_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H2L,
+		        BTN_H2L_UP_IN,
+		        BTN_H2L_UP_OUT,
+		        BTN_H2L_MIDDLE_IN,
+		        BTN_H2L_MIDDLE_OUT,
+		        BTN_H2L_DOWN_IN,
+		        BTN_H2L_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H2R,
+		        BTN_H2R_UP_IN,
+		        BTN_H2R_UP_OUT,
+		        BTN_H2R_MIDDLE_IN,
+		        BTN_H2R_MIDDLE_OUT,
+		        BTN_H2R_DOWN_IN,
+		        BTN_H2R_DOWN_OUT);
+
 	// **** DMS HAT **********************************************************
 
+	MapKeyIOUMD(&Joystick,
+		        H3U,
+		        BTN_H3U_UP_IN,
+		        BTN_H3U_UP_OUT,
+		        BTN_H3U_MIDDLE_IN,
+		        BTN_H3U_MIDDLE_OUT,
+		        BTN_H3U_DOWN_IN,
+		        BTN_H3U_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H3D,
+		        BTN_H3D_UP_IN,
+		        BTN_H3D_UP_OUT,
+		        BTN_H3D_MIDDLE_IN,
+		        BTN_H3D_MIDDLE_OUT,
+		        BTN_H3D_DOWN_IN,
+		        BTN_H3D_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H3L,
+		        BTN_H3L_UP_IN,
+		        BTN_H3L_UP_OUT,
+		        BTN_H3L_MIDDLE_IN,
+		        BTN_H3L_MIDDLE_OUT,
+		        BTN_H3L_DOWN_IN,
+		        BTN_H3L_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H3R,
+		        BTN_H3R_UP_IN,
+		        BTN_H3R_UP_OUT,
+		        BTN_H3R_MIDDLE_IN,
+		        BTN_H3R_MIDDLE_OUT,
+		        BTN_H3R_DOWN_IN,
+		        BTN_H3R_DOWN_OUT);
+
 	// **** CMS HAT **********************************************************
+
+	MapKeyIOUMD(&Joystick,
+		        H4U,
+		        BTN_H4U_UP_IN,
+		        BTN_H4U_UP_OUT,
+		        BTN_H4U_MIDDLE_IN,
+		        BTN_H4U_MIDDLE_OUT,
+		        BTN_H4U_DOWN_IN,
+		        BTN_H4U_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H4D,
+		        BTN_H4D_UP_IN,
+		        BTN_H4D_UP_OUT,
+		        BTN_H4D_MIDDLE_IN,
+		        BTN_H4D_MIDDLE_OUT,
+		        BTN_H4D_DOWN_IN,
+		        BTN_H4D_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H4L,
+		        BTN_H4L_UP_IN,
+		        BTN_H4L_UP_OUT,
+		        BTN_H4L_MIDDLE_IN,
+		        BTN_H4L_MIDDLE_OUT,
+		        BTN_H4L_DOWN_IN,
+		        BTN_H4L_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H4R,
+		        BTN_H4R_UP_IN,
+		        BTN_H4R_UP_OUT,
+		        BTN_H4R_MIDDLE_IN,
+		        BTN_H4R_MIDDLE_OUT,
+		        BTN_H4R_DOWN_IN,
+		        BTN_H4R_DOWN_OUT);
+
+	MapKeyIOUMD(&Joystick,
+		        H4P,
+		        BTN_H4P_UP_IN,
+		        BTN_H4P_UP_OUT,
+		        BTN_H4P_MIDDLE_IN,
+		        BTN_H4P_MIDDLE_OUT,
+		        BTN_H4P_DOWN_IN,
+		        BTN_H4P_DOWN_OUT);
 }

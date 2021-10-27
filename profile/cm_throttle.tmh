@@ -30,6 +30,190 @@ int MapWarthogThrottleGrip()
 	// Maps the controls on the Warthog throttle grip.
 
 	debug("Mapping controls on the Warthog throttle grip.");
+
+	// **** MIC SWITCH *******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        MSU,
+		        BTN_MSU_UP_IN,
+		        BTN_MSU_UP_OUT,
+		        BTN_MSU_MIDDLE_IN,
+		        BTN_MSU_MIDDLE_OUT,
+		        BTN_MSU_DOWN_IN,
+		        BTN_MSU_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        MSD,
+		        BTN_MSD_UP_IN,
+		        BTN_MSD_UP_OUT,
+		        BTN_MSD_MIDDLE_IN,
+		        BTN_MSD_MIDDLE_OUT,
+		        BTN_MSD_DOWN_IN,
+		        BTN_MSD_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        MSL,
+		        BTN_MSL_UP_IN,
+		        BTN_MSL_UP_OUT,
+		        BTN_MSL_MIDDLE_IN,
+		        BTN_MSL_MIDDLE_OUT,
+		        BTN_MSL_DOWN_IN,
+		        BTN_MSL_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        MSR,
+		        BTN_MSR_UP_IN,
+		        BTN_MSR_UP_OUT,
+		        BTN_MSR_MIDDLE_IN,
+		        BTN_MSR_MIDDLE_OUT,
+		        BTN_MSR_DOWN_IN,
+		        BTN_MSR_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        MSP,
+		        BTN_MSP_UP_IN,
+		        BTN_MSP_UP_OUT,
+		        BTN_MSP_MIDDLE_IN,
+		        BTN_MSP_MIDDLE_OUT,
+		        BTN_MSP_DOWN_IN,
+		        BTN_MSP_DOWN_OUT);
+
+	// **** SPEEDBRAKE SWITCH ************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        SPDB,
+		        BTN_SPDB_UP_IN,
+		        BTN_SPDB_UP_OUT,
+		        BTN_SPDB_MIDDLE_IN,
+		        BTN_SPDB_MIDDLE_OUT,
+		        BTN_SPDB_DOWN_IN,
+		        BTN_SPDB_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        SPDM,
+		        BTN_SPDM_UP_IN,
+		        BTN_SPDM_UP_OUT,
+		        BTN_SPDM_MIDDLE_IN,
+		        BTN_SPDM_MIDDLE_OUT,
+		        BTN_SPDM_DOWN_IN,
+		        BTN_SPDM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        SPDF,
+		        BTN_SPDF_UP_IN,
+		        BTN_SPDF_UP_OUT,
+		        BTN_SPDF_MIDDLE_IN,
+		        BTN_SPDF_MIDDLE_OUT,
+		        BTN_SPDF_DOWN_IN,
+		        BTN_SPDF_DOWN_OUT);
+
+	// **** BOAT SWITCH ******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        BSB,
+		        BTN_BSB_UP_IN,
+		        BTN_BSB_UP_OUT,
+		        BTN_BSB_MIDDLE_IN,
+		        BTN_BSB_MIDDLE_OUT,
+		        BTN_BSB_DOWN_IN,
+		        BTN_BSB_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        BSM,
+		        BTN_BSM_UP_IN,
+		        BTN_BSM_UP_OUT,
+		        BTN_BSM_MIDDLE_IN,
+		        BTN_BSM_MIDDLE_OUT,
+		        BTN_BSM_DOWN_IN,
+		        BTN_BSM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        BSF,
+		        BTN_BSF_UP_IN,
+		        BTN_BSF_UP_OUT,
+		        BTN_BSF_MIDDLE_IN,
+		        BTN_BSF_MIDDLE_OUT,
+		        BTN_BSF_DOWN_IN,
+		        BTN_BSF_DOWN_OUT);
+
+	// **** CHINA HAT ********************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        CHB,
+		        BTN_CHB_UP_IN,
+		        BTN_CHB_UP_OUT,
+		        BTN_CHB_MIDDLE_IN,
+		        BTN_CHB_MIDDLE_OUT,
+		        BTN_CHB_DOWN_IN,
+		        BTN_CHB_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        CHM,
+		        BTN_CHM_UP_IN,
+		        BTN_CHM_UP_OUT,
+		        BTN_CHM_MIDDLE_IN,
+		        BTN_CHM_MIDDLE_OUT,
+		        BTN_CHM_DOWN_IN,
+		        BTN_CHM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        CHF,
+		        BTN_CHF_UP_IN,
+		        BTN_CHF_UP_OUT,
+		        BTN_CHF_MIDDLE_IN,
+		        BTN_CHF_MIDDLE_OUT,
+		        BTN_CHF_DOWN_IN,
+		        BTN_CHF_DOWN_OUT);
+
+	// **** LEFT THROTTLE BUTTON *********************************************
+
+	MapKeyIOUMD(&Throttle,
+		        LTB,
+		        BTN_LTB_UP_IN,
+		        BTN_LTB_UP_OUT,
+		        BTN_LTB_MIDDLE_IN,
+		        BTN_LTB_MIDDLE_OUT,
+		        BTN_LTB_DOWN_IN,
+		        BTN_LTB_DOWN_OUT);
+
+	// **** COOLIE HAT *******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        CSU,
+		        BTN_CSU_UP_IN,
+		        BTN_CSU_UP_OUT,
+		        BTN_CSU_MIDDLE_IN,
+		        BTN_CSU_MIDDLE_OUT,
+		        BTN_CSU_DOWN_IN,
+		        BTN_CSU_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        CSD,
+		        BTN_CSD_UP_IN,
+		        BTN_CSD_UP_OUT,
+		        BTN_CSD_MIDDLE_IN,
+		        BTN_CSD_MIDDLE_OUT,
+		        BTN_CSD_DOWN_IN,
+		        BTN_CSD_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        CSL,
+		        BTN_CSL_UP_IN,
+		        BTN_CSL_UP_OUT,
+		        BTN_CSL_MIDDLE_IN,
+		        BTN_CSL_MIDDLE_OUT,
+		        BTN_CSL_DOWN_IN,
+		        BTN_CSL_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        CSR,
+		        BTN_CSR_UP_IN,
+		        BTN_CSR_UP_OUT,
+		        BTN_CSR_MIDDLE_IN,
+		        BTN_CSR_MIDDLE_OUT,
+		        BTN_CSR_DOWN_IN,
+		        BTN_CSR_DOWN_OUT);
+
 }
 
 int MapWarthogThrottleBase()
@@ -37,4 +221,263 @@ int MapWarthogThrottleBase()
 	// Maps the controls on the Warthog throttle base.
 
 	debug("Mapping controls on the Warthog throttle base.");
+
+	// **** ENGINE FUEL FLOW SWITCHES ****************************************
+
+	MapKeyIOUMD(&Throttle,
+		        EFLNORM,
+		        BTN_EFLNORM_UP_IN,
+		        BTN_EFLNORM_UP_OUT,
+		        BTN_EFLNORM_MIDDLE_IN,
+		        BTN_EFLNORM_MIDDLE_OUT,
+		        BTN_EFLNORM_DOWN_IN,
+		        BTN_EFLNORM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EFLOVER,
+		        BTN_EFLOVER_UP_IN,
+		        BTN_EFLOVER_UP_OUT,
+		        BTN_EFLOVER_MIDDLE_IN,
+		        BTN_EFLOVER_MIDDLE_OUT,
+		        BTN_EFLOVER_DOWN_IN,
+		        BTN_EFLOVER_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EFRNORM,
+		        BTN_EFRNORM_UP_IN,
+		        BTN_EFRNORM_UP_OUT,
+		        BTN_EFRNORM_MIDDLE_IN,
+		        BTN_EFRNORM_MIDDLE_OUT,
+		        BTN_EFRNORM_DOWN_IN,
+		        BTN_EFRNORM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EFROVER,
+		        BTN_EFROVER_UP_IN,
+		        BTN_EFROVER_UP_OUT,
+		        BTN_EFROVER_MIDDLE_IN,
+		        BTN_EFROVER_MIDDLE_OUT,
+		        BTN_EFROVER_DOWN_IN,
+		        BTN_EFROVER_DOWN_OUT);
+
+	// **** ENGINE OPERATE SWITCHES ******************************************
+
+	MapKeyIOUMD(&Throttle,
+		        EOLIGN,
+		        BTN_EOLIGN_UP_IN,
+		        BTN_EOLIGN_UP_OUT,
+		        BTN_EOLIGN_MIDDLE_IN,
+		        BTN_EOLIGN_MIDDLE_OUT,
+		        BTN_EOLIGN_DOWN_IN,
+		        BTN_EOLIGN_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EORIGN,
+		        BTN_EORIGN_UP_IN,
+		        BTN_EORIGN_UP_OUT,
+		        BTN_EORIGN_MIDDLE_IN,
+		        BTN_EORIGN_MIDDLE_OUT,
+		        BTN_EORIGN_DOWN_IN,
+		        BTN_EORIGN_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EOLNORM,
+		        BTN_EOLNORM_UP_IN,
+		        BTN_EOLNORM_UP_OUT,
+		        BTN_EOLNORM_MIDDLE_IN,
+		        BTN_EOLNORM_MIDDLE_OUT,
+		        BTN_EOLNORM_DOWN_IN,
+		        BTN_EOLNORM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EORNORM,
+		        BTN_EORNORM_UP_IN,
+		        BTN_EORNORM_UP_OUT,
+		        BTN_EORNORM_MIDDLE_IN,
+		        BTN_EORNORM_MIDDLE_OUT,
+		        BTN_EORNORM_DOWN_IN,
+		        BTN_EORNORM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EOLMOTOR,
+		        BTN_EOLMOTOR_UP_IN,
+		        BTN_EOLMOTOR_UP_OUT,
+		        BTN_EOLMOTOR_MIDDLE_IN,
+		        BTN_EOLMOTOR_MIDDLE_OUT,
+		        BTN_EOLMOTOR_DOWN_IN,
+		        BTN_EOLMOTOR_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EORMOTOR,
+		        BTN_EORMOTOR_UP_IN,
+		        BTN_EORMOTOR_UP_OUT,
+		        BTN_EORMOTOR_MIDDLE_IN,
+		        BTN_EORMOTOR_MIDDLE_OUT,
+		        BTN_EORMOTOR_DOWN_IN,
+		        BTN_EORMOTOR_DOWN_OUT);
+
+	// **** APU SWITCH *******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        APUON,
+		        BTN_APUON_UP_IN,
+		        BTN_APUON_UP_OUT,
+		        BTN_APUON_MIDDLE_IN,
+		        BTN_APUON_MIDDLE_OUT,
+		        BTN_APUON_DOWN_IN,
+		        BTN_APUON_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        APUOFF,
+		        BTN_APUOFF_UP_IN,
+		        BTN_APUOFF_UP_OUT,
+		        BTN_APUOFF_MIDDLE_IN,
+		        BTN_APUOFF_MIDDLE_OUT,
+		        BTN_APUOFF_DOWN_IN,
+		        BTN_APUOFF_DOWN_OUT);
+
+	// **** FLAPS SWITCH *****************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        FLAPU,
+		        BTN_FLAPU_UP_IN,
+		        BTN_FLAPU_UP_OUT,
+		        BTN_FLAPU_MIDDLE_IN,
+		        BTN_FLAPU_MIDDLE_OUT,
+		        BTN_FLAPU_DOWN_IN,
+		        BTN_FLAPU_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        FLAPM,
+		        BTN_FLAPM_UP_IN,
+		        BTN_FLAPM_UP_OUT,
+		        BTN_FLAPM_MIDDLE_IN,
+		        BTN_FLAPM_MIDDLE_OUT,
+		        BTN_FLAPM_DOWN_IN,
+		        BTN_FLAPM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        FLAPD,
+		        BTN_FLAPD_UP_IN,
+		        BTN_FLAPD_UP_OUT,
+		        BTN_FLAPD_MIDDLE_IN,
+		        BTN_FLAPD_MIDDLE_OUT,
+		        BTN_FLAPD_DOWN_IN,
+		        BTN_FLAPD_DOWN_OUT);
+
+	// **** LANDING GEAR HORN BUTTON *****************************************
+
+	MapKeyIOUMD(&Throttle,
+		        LDGH,
+		        BTN_LDGH_UP_IN,
+		        BTN_LDGH_UP_OUT,
+		        BTN_LDGH_MIDDLE_IN,
+		        BTN_LDGH_MIDDLE_OUT,
+		        BTN_LDGH_DOWN_IN,
+		        BTN_LDGH_DOWN_OUT);
+
+	// **** EAC SWITCH *******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        EACON,
+		        BTN_EACON_UP_IN,
+		        BTN_EACON_UP_OUT,
+		        BTN_EACON_MIDDLE_IN,
+		        BTN_EACON_MIDDLE_OUT,
+		        BTN_EACON_DOWN_IN,
+		        BTN_EACON_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        EACOFF,
+		        BTN_EACOFF_UP_IN,
+		        BTN_EACOFF_UP_OUT,
+		        BTN_EACOFF_MIDDLE_IN,
+		        BTN_EACOFF_MIDDLE_OUT,
+		        BTN_EACOFF_DOWN_IN,
+		        BTN_EACOFF_DOWN_OUT);
+
+	// **** RDR SWITCH *******************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        RDRNRM,
+		        BTN_RDRNRM_UP_IN,
+		        BTN_RDRNRM_UP_OUT,
+		        BTN_RDRNRM_MIDDLE_IN,
+		        BTN_RDRNRM_MIDDLE_OUT,
+		        BTN_RDRNRM_DOWN_IN,
+		        BTN_RDRNRM_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        RDRDIS,
+		        BTN_RDRDIS_UP_IN,
+		        BTN_RDRDIS_UP_OUT,
+		        BTN_RDRDIS_MIDDLE_IN,
+		        BTN_RDRDIS_MIDDLE_OUT,
+		        BTN_RDRDIS_DOWN_IN,
+		        BTN_RDRDIS_DOWN_OUT);
+
+	// **** AUTOPILOT BUTTON *************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        APENG,
+		        BTN_APENG_UP_IN,
+		        BTN_APENG_UP_OUT,
+		        BTN_APENG_MIDDLE_IN,
+		        BTN_APENG_MIDDLE_OUT,
+		        BTN_APENG_DOWN_IN,
+		        BTN_APENG_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        APDIS,
+		        BTN_APDIS_UP_IN,
+		        BTN_APDIS_UP_OUT,
+		        BTN_APDIS_MIDDLE_IN,
+		        BTN_APDIS_MIDDLE_OUT,
+		        BTN_APDIS_DOWN_IN,
+		        BTN_APDIS_DOWN_OUT);
+
+	// **** AUTOPILOT SWITCH *************************************************
+
+	MapKeyIOUMD(&Throttle,
+		        APPAT,
+		        BTN_APPAT_UP_IN,
+		        BTN_APPAT_UP_OUT,
+		        BTN_APPAT_MIDDLE_IN,
+		        BTN_APPAT_MIDDLE_OUT,
+		        BTN_APPAT_DOWN_IN,
+		        BTN_APPAT_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        APAH,
+		        BTN_APAH_UP_IN,
+		        BTN_APAH_UP_OUT,
+		        BTN_APAH_MIDDLE_IN,
+		        BTN_APAH_MIDDLE_OUT,
+		        BTN_APAH_DOWN_IN,
+		        BTN_APAH_DOWN_OUT);
+
+	MapKeyIOUMD(&Throttle,
+		        APALT,
+		        BTN_APALT_UP_IN,
+		        BTN_APALT_UP_OUT,
+		        BTN_APALT_MIDDLE_IN,
+		        BTN_APALT_MIDDLE_OUT,
+		        BTN_APALT_DOWN_IN,
+		        BTN_APALT_DOWN_OUT);
+
+	// **** THROTTLE IDLE/OFF ************************************************
+
+	// Mapping the throttle idler detent function is a bit different than the
+	// other mappings to replicate the idler functionality as close as
+	// possible to a real aircraft.
+	//
+	// The way idler works in this case is that the throttle is moved to the
+	// idle position when the IDLELON or IDLERON buttons are released. When
+	// these buttons are pressed, the corresponding throttles are moved to
+	// the OFF position.
+
+	MapKeyR(&Throttle, IDLELON, BTN_IDLELON_IDLE);
+	MapKeyR(&Throttle, IDLERON, BTN_IDLERON_IDLE);
+	MapKey(&Throttle, IDLELON, BTN_IDLELON_OFF);
+	MapKey(&Throttle, IDLERON, BTN_IDLERON_OFF);
 }

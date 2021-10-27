@@ -555,6 +555,13 @@ int BTN_APALT_MIDDLE_OUT		= 0;
 int BTN_APALT_DOWN_IN			= 0;
 int BTN_APALT_DOWN_OUT			= 0;
 
+// **** THROTTLE IDLE/OFF ****************************************************
+
+int BTN_IDLELON_IDLE 			= 0;
+int BTN_IDLERON_IDLE 			= 0;
+int BTN_IDLELON_OFF 			= 0;
+int BTN_IDLERON_OFF 			= 0;
+
 // ===========================================================================
 //		Right MFD
 // ===========================================================================

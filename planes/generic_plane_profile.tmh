@@ -23,12 +23,12 @@
 // DEALINGS IN THE SOFTWARE.
 // ===========================================================================
 
-// Contains control mapping definitions for the F/A-18C.
+// Contains control mapping definitions for the <plane_name>.
 
 
-int SpecifyFA18ControlMap()
+int Specify<plane_name>ControlMap()
 {
-	debug("Setting control map for the F/A-18C Hornet.");
+	debug("Setting control map for the <plane_name> .");
 
 	if(JOYSTICK_TYPE == JOYSTICK_TYPE_WARTHOG)
 	{
