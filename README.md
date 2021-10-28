@@ -60,3 +60,5 @@ This is the control layer and it is active when the Pinkie switch is in the
 BACKWARD position. It is meant to be used for control options that are not
 directly tied to the controls of the airplane but to controlling the game
 itself, or various external tools.
+
+The DOWN layer is common between all supported aircrafts.

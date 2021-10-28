@@ -45,7 +45,7 @@ int InitDevices()
 	if (JOYSTICK_GRIP != JOYSTICK_GRIP_FA18)
 	{
 		debug("Excluding the F/A-18C grip from the configuration.");
-		Configure(&Joystick, MODE_EXCLUDED);
+		Configure(&JoystickF18, MODE_EXCLUDED);
 	}
 
 	debug("Excluding T.16000 joysticks from the configuration...");

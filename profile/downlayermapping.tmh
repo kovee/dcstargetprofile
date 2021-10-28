@@ -1,0 +1,990 @@
+// ===========================================================================
+//					Thrustmaster T.A.R.G.E.T. profile for DCS
+//						Copyright (c) 2021 Attila Kovacs
+// ===========================================================================
+//
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+// ===========================================================================
+
+// Contains control mapping definitions for the DOWN layer.
+
+
+int SpecifyDownLayerControlMap()
+{
+	debug("Setting control map for the DOWN layer.");
+
+	if(JOYSTICK_TYPE == JOYSTICK_TYPE_WARTHOG)
+	{
+		if(JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
+		{
+			// ===============================================================
+			//	Warthog A-10 Grip
+			// ===============================================================
+
+			// **** TRIGGER - STAGE 1 ****************************************
+
+			// DOWN Layer
+			BTN_TG1_DOWN_IN				= 0;
+			BTN_TG1_DOWN_OUT			= 0;
+
+			// **** TRIGGER - STAGE 2 ****************************************
+
+			// DOWN Layer
+			BTN_TG2_DOWN_IN				= 0;
+			BTN_TG2_DOWN_OUT			= 0;
+
+			// **** S1 BUTTON ************************************************
+
+			// DOWN Layer
+			BTN_S1_DOWN_IN				= 0;
+			BTN_S1_DOWN_OUT				= 0;
+
+			// **** S2 BUTTON ************************************************
+
+			// DOWN Layer
+			BTN_S2_DOWN_IN				= 0;
+			BTN_S2_DOWN_OUT				= 0;
+
+			// **** S3 BUTTON ************************************************
+
+			// DOWN Layer
+			BTN_S3_DOWN_IN				= 0;
+			BTN_S3_DOWN_OUT				= 0;
+
+			// **** TRIM HAT *************************************************
+
+			// ---- UP -------------------------------------------------------
+
+			// DOWN Layer
+			BTN_H1U_DOWN_IN				= 0;
+			BTN_H1U_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H1D_DOWN_IN				= 0;
+			BTN_H1D_DOWN_OUT			= 0;
+
+			// ---- LEFT -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H1L_DOWN_IN				= 0;
+			BTN_H1L_DOWN_OUT			= 0;
+
+			// ---- RIGHT ----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H1R_DOWN_IN				= 0;
+			BTN_H1R_DOWN_OUT			= 0;
+
+			// **** TMS HAT **************************************************
+
+			// ---- UP -------------------------------------------------------
+
+			// DOWN Layer
+			BTN_H2U_DOWN_IN				= 0;
+			BTN_H2U_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H2D_DOWN_IN				= 0;
+			BTN_H2D_DOWN_OUT			= 0;
+
+			// ---- LEFT -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H2L_DOWN_IN				= 0;
+			BTN_H2L_DOWN_OUT			= 0;
+
+			// ---- RIGHT ----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H2R_DOWN_IN				= 0;
+			BTN_H2R_DOWN_OUT			= 0;
+
+			// **** DMS HAT **************************************************
+
+			// ---- UP -------------------------------------------------------
+
+			// DOWN Layer
+			BTN_H3U_DOWN_IN				= 0;
+			BTN_H3U_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H3D_DOWN_IN				= 0;
+			BTN_H3D_DOWN_OUT			= 0;
+
+			// ---- LEFT -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H3L_DOWN_IN				= 0;
+			BTN_H3L_DOWN_OUT			= 0;
+
+			// ---- RIGHT ----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H3R_DOWN_IN				= 0;
+			BTN_H3R_DOWN_OUT			= 0;
+
+			// **** CMS HAT **************************************************
+
+			// DOWN Layer
+			BTN_H4U_DOWN_IN				= 0;
+			BTN_H4U_DOWN_OUT			= 0;
+
+			// ---- UP -------------------------------------------------------
+
+			// DOWN Layer
+			BTN_H4D_DOWN_IN				= 0;
+			BTN_H4D_DOWN_OUT			= 0;
+
+			// ---- LEFT -----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H4L_DOWN_IN				= 0;
+			BTN_H4L_DOWN_OUT			= 0;
+
+			// ---- RIGHT ----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H4R_DOWN_IN				= 0;
+			BTN_H4R_DOWN_OUT			= 0;
+
+			// ---- PRESS ----------------------------------------------------
+
+			// DOWN Layer
+			BTN_H4P_DOWN_IN				= 0;
+			BTN_H4P_DOWN_OUT			= 0;
+		}
+		else if (JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
+		{
+			// ===============================================================
+			//	Warthog F/A-18 Grip
+			// ===============================================================
+		}
+		else if (JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
+		{
+			// ===============================================================
+			//	Warthog Cougar Grip
+			// ===============================================================
+		}
+		else
+		{
+			error("Unsupported Warthog grip type.");
+		}
+	}
+	else
+	{
+		error("Unsupported joystick type.");
+	}
+
+	if(THROTTLE_TYPE == THROTTLE_TYPE_WARTHOG)
+	{
+		// ===================================================================
+		//	Warthog Throttle Grip
+		// ===================================================================
+
+		// **** MIC SWITCH ***************************************************
+
+		// ---- UP -----------------------------------------------------------
+
+		// DOWN Layer
+		BTN_MSU_DOWN_IN				= 0;
+		BTN_MSU_DOWN_OUT			= 0;
+
+		// ---- DOWN ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_MSD_DOWN_IN				= 0;
+		BTN_MSD_DOWN_OUT			= 0;
+
+		// ---- LEFT ---------------------------------------------------------
+
+		// UP Layer
+		BTN_MSL_UP_IN				= 0;
+		BTN_MSL_UP_OUT				= 0;
+
+		// MIDDLE Layer
+		BTN_MSL_MIDDLE_IN			= 0;
+		BTN_MSL_MIDDLE_OUT			= 0;
+
+		// DOWN Layer
+		BTN_MSL_DOWN_IN				= 0;
+		BTN_MSL_DOWN_OUT			= 0;
+
+		// ---- RIGHT --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_MSR_DOWN_IN				= 0;
+		BTN_MSR_DOWN_OUT			= 0;
+
+		// ---- PRESS --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_MSP_DOWN_IN				= 0;
+		BTN_MSP_DOWN_OUT			= 0;
+
+		// **** SPEEDBRAKE SWITCH ********************************************
+
+		// ---- BACK ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_SPDB_DOWN_IN			= 0;
+		BTN_SPDB_DOWN_OUT			= 0;
+
+		// ---- MIDDLE -------------------------------------------------------
+
+		// DOWN Layer
+		BTN_SPDM_DOWN_IN			= 0;
+		BTN_SPDM_DOWN_OUT			= 0;
+
+		// ---- FRONT --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_SPDF_DOWN_IN			= 0;
+		BTN_SPDF_DOWN_OUT			= 0;
+
+		// **** BOAT SWITCH **************************************************
+
+		// ---- BACK ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_BSB_DOWN_IN				= 0;
+		BTN_BSB_DOWN_OUT			= 0;
+
+		// ---- MIDDLE -------------------------------------------------------
+
+		// DOWN Layer
+		BTN_BSM_DOWN_IN				= 0;
+		BTN_BSM_DOWN_OUT			= 0;
+
+		// ---- FRONT --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_BSF_DOWN_IN				= 0;
+		BTN_BSF_DOWN_OUT			= 0;
+
+		// **** CHINA HAT ****************************************************
+
+		// ---- BACK ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CHB_DOWN_IN				= 0;
+		BTN_CHB_DOWN_OUT			= 0;
+
+		// ---- MIDDLE -------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CHM_DOWN_IN				= 0;
+		BTN_CHM_DOWN_OUT			= 0;
+
+		// ---- FRONT --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CHF_DOWN_IN				= 0;
+		BTN_CHF_DOWN_OUT			= 0;
+
+		// **** LEFT THROTTLE BUTTON *****************************************
+
+		// DOWN Layer
+		BTN_LTB_DOWN_IN				= 0;
+		BTN_LTB_DOWN_OUT			= 0;
+
+		// **** COOLIE HAT ***************************************************
+
+		// ---- UP -----------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CSU_DOWN_IN				= 0;
+		BTN_CSU_DOWN_OUT			= 0;
+
+		// ---- DOWN ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CSD_DOWN_IN				= 0;
+		BTN_CSD_DOWN_OUT			= 0;
+
+		// ---- LEFT ---------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CSL_DOWN_IN				= 0;
+		BTN_CSL_DOWN_OUT			= 0;
+
+		// ---- RIGHT --------------------------------------------------------
+
+		// DOWN Layer
+		BTN_CSR_DOWN_IN				= 0;
+		BTN_CSR_DOWN_OUT			= 0;
+
+		// ===================================================================
+		//	Warthog Throttle Base
+		// ===================================================================
+
+		// **** ENGINE FUEL FLOW SWITCHES ************************************
+
+		// ---- LEFT - NORM --------------------------------------------------
+
+		// DOWN Layer
+		BTN_EFLNORM_DOWN_IN			= 0;
+		BTN_EFLNORM_DOWN_OUT		= 0;
+
+		// ---- LEFT - OVER --------------------------------------------------
+
+		// DOWN Layer
+		BTN_EFLOVER_DOWN_IN			= 0;
+		BTN_EFLOVER_DOWN_OUT		= 0;
+
+		// ---- RIGHT - NORM -------------------------------------------------
+
+		// DOWN Layer
+		BTN_EFRNORM_DOWN_IN			= 0;
+		BTN_EFRNORM_DOWN_OUT		= 0;
+
+		// ---- RIGHT - OVER -------------------------------------------------
+
+		// DOWN Layer
+		BTN_EFROVER_DOWN_IN			= 0;
+		BTN_EFROVER_DOWN_OUT		= 0;
+
+		// **** ENGINE OPERATE SWITCHES **************************************
+
+		// ---- LEFT - IGN ---------------------------------------------------
+
+		// DOWN Layer
+		BTN_EOLIGN_DOWN_IN			= 0;
+		BTN_EOLIGN_DOWN_OUT			= 0;
+
+		// ---- LEFT - NORM --------------------------------------------------
+
+		// DOWN Layer
+		BTN_EOLNORM_DOWN_IN			= 0;
+		BTN_EOLNORM_DOWN_OUT		= 0;
+
+		// ---- LEFT - MOTOR -------------------------------------------------
+
+		// DOWN Layer
+		BTN_EOLMOTOR_DOWN_IN		= 0;
+		BTN_EOLMOTOR_DOWN_OUT		= 0;
+
+		// ---- RIGHT - IGN --------------------------------------------------
+
+		// DOWN Layer
+		BTN_EORIGN_DOWN_IN			= 0;
+		BTN_EORIGN_DOWN_OUT			= 0;
+
+		// ---- RIGHT - NORM -------------------------------------------------
+
+		// DOWN Layer
+		BTN_EORNORM_DOWN_IN			= 0;
+		BTN_EORNORM_DOWN_OUT		= 0;
+
+		// ---- RIGHT - MOTOR ------------------------------------------------
+
+		// DOWN Layer
+		BTN_EORMOTOR_DOWN_IN		= 0;
+		BTN_EORMOTOR_DOWN_OUT		= 0;
+
+		// **** APU SWITCH ***************************************************
+
+		// ---- ON -----------------------------------------------------------
+
+		BTN_APUON_DOWN_IN			= 0;
+		BTN_APUON_DOWN_OUT			= 0;
+
+		// ---- OFF -----------------------------------------------------------
+
+		BTN_APUOFF_DOWN_IN			= 0;
+		BTN_APUOFF_DOWN_OUT			= 0;
+
+		// **** FLAPS SWITCH *************************************************
+
+		// ---- UP -----------------------------------------------------------
+
+		BTN_FLAPU_DOWN_IN			= 0;
+		BTN_FLAPU_DOWN_OUT			= 0;
+
+		// ---- MIDDLE -------------------------------------------------------
+
+		BTN_FLAPM_DOWN_IN			= 0;
+		BTN_FLAPM_DOWN_OUT			= 0;
+
+		// ---- DOWN ---------------------------------------------------------
+
+		BTN_FLAPD_DOWN_IN			= 0;
+		BTN_FLAPD_DOWN_OUT			= 0;
+
+		// **** LANDING GEAR HORN BUTTON *************************************
+
+		BTN_LDGH_DOWN_IN			= 0;
+		BTN_LDGH_DOWN_OUT			= 0;
+
+		// **** EAC SWITCH ***************************************************
+
+		// ---- ON -----------------------------------------------------------
+
+		BTN_EACON_DOWN_IN			= 0;
+		BTN_EACON_DOWN_OUT			= 0;
+
+		// ---- OFF ----------------------------------------------------------
+
+		BTN_EACOFF_DOWN_IN			= 0;
+		BTN_EACOFF_DOWN_OUT			= 0;
+
+		// **** RDR SWITCH ***************************************************
+
+		// ---- NRM ----------------------------------------------------------
+
+		BTN_RDRNRM_DOWN_IN			= 0;
+		BTN_RDRNRM_DOWN_OUT			= 0;
+
+		// ---- DIS ----------------------------------------------------------
+
+		BTN_RDRDIS_DOWN_IN			= 0;
+		BTN_RDRDIS_DOWN_OUT			= 0;
+
+		// **** AUTOPILOT BUTTON *********************************************
+
+		// ---- ENG ----------------------------------------------------------
+
+		BTN_APENG_DOWN_IN			= 0;
+		BTN_APENG_DOWN_OUT			= 0;
+
+		// ---- DIS ----------------------------------------------------------
+
+		BTN_APDIS_DOWN_IN			= 0;
+		BTN_APDIS_DOWN_OUT			= 0;
+
+		// **** AUTOPILOT SWITCH *********************************************
+
+		// ---- PATH ---------------------------------------------------------
+
+		BTN_APPAT_DOWN_IN			= 0;
+		BTN_APPAT_DOWN_OUT			= 0;
+
+		// ---- ALT/HDG ------------------------------------------------------
+
+		BTN_APAH_DOWN_IN			= 0;
+		BTN_APAH_DOWN_OUT			= 0;
+
+		// ---- ALT ----------------------------------------------------------
+
+		BTN_APALT_DOWN_IN			= 0;
+		BTN_APALT_DOWN_OUT			= 0;
+	}
+	else
+	{
+		error("Unsupported throttle type.");
+	}
+
+	if(USE_MFD == YES)
+	{
+		if(NUM_MFDS >= 1)
+		{
+			// ===============================================================
+			//	Right Cougar MFD
+			// ===============================================================
+
+			// **** TOP BUTTONS **********************************************
+
+			// ---- BUTTON #1 ------------------------------------------------
+
+			BTN_RMFD_OSB01_DOWN_IN			= 0;
+			BTN_RMFD_OSB01_DOWN_OUT			= 0;
+
+			// ---- BUTTON #2 ------------------------------------------------
+
+			BTN_RMFD_OSB02_DOWN_IN			= 0;
+			BTN_RMFD_OSB02_DOWN_OUT			= 0;
+
+			// ---- BUTTON #3 ------------------------------------------------
+
+			BTN_RMFD_OSB03_DOWN_IN			= 0;
+			BTN_RMFD_OSB03_DOWN_OUT			= 0;
+
+			// ---- BUTTON #4 ------------------------------------------------
+
+			BTN_RMFD_OSB04_DOWN_IN			= 0;
+			BTN_RMFD_OSB04_DOWN_OUT			= 0;
+
+			// ---- BUTTON #5 ------------------------------------------------
+
+			BTN_RMFD_OSB05_DOWN_IN			= 0;
+			BTN_RMFD_OSB05_DOWN_OUT			= 0;
+
+			// **** RIGHT SIDE BUTTONS ***************************************
+
+			// ---- BUTTON #6 ------------------------------------------------
+
+			BTN_RMFD_OSB06_DOWN_IN			= 0;
+			BTN_RMFD_OSB06_DOWN_OUT			= 0;
+
+			// ---- BUTTON #7 ------------------------------------------------
+
+			BTN_RMFD_OSB07_DOWN_IN			= 0;
+			BTN_RMFD_OSB07_DOWN_OUT			= 0;
+
+			// ---- BUTTON #8 ------------------------------------------------
+
+			BTN_RMFD_OSB08_DOWN_IN			= 0;
+			BTN_RMFD_OSB08_DOWN_OUT			= 0;
+
+			// ---- BUTTON #9 ------------------------------------------------
+
+			BTN_RMFD_OSB09_DOWN_IN			= 0;
+			BTN_RMFD_OSB09_DOWN_OUT			= 0;
+
+			// ---- BUTTON #10 -----------------------------------------------
+
+			BTN_RMFD_OSB10_DOWN_IN			= 0;
+			BTN_RMFD_OSB10_DOWN_OUT			= 0;
+
+			// **** BOTTOM BUTTONS *******************************************
+
+			// ---- BUTTON #11 -----------------------------------------------
+
+			BTN_RMFD_OSB11_DOWN_IN			= 0;
+			BTN_RMFD_OSB11_DOWN_OUT			= 0;
+
+			// ---- BUTTON #12 -----------------------------------------------
+
+			BTN_RMFD_OSB12_DOWN_IN			= 0;
+			BTN_RMFD_OSB12_DOWN_OUT			= 0;
+
+			// ---- BUTTON #13 -----------------------------------------------
+
+			BTN_RMFD_OSB13_DOWN_IN			= 0;
+			BTN_RMFD_OSB13_DOWN_OUT			= 0;
+
+			// ---- BUTTON #14 -----------------------------------------------
+
+			BTN_RMFD_OSB14_DOWN_IN			= 0;
+			BTN_RMFD_OSB14_DOWN_OUT			= 0;
+
+			// ---- BUTTON #15 -----------------------------------------------
+
+			BTN_RMFD_OSB15_DOWN_IN			= 0;
+			BTN_RMFD_OSB15_DOWN_OUT			= 0;
+
+			// **** LEFT SIDE BUTTONS ****************************************
+
+			// ---- BUTTON #16 -----------------------------------------------
+
+			BTN_RMFD_OSB16_DOWN_IN			= 0;
+			BTN_RMFD_OSB16_DOWN_OUT			= 0;
+
+			// ---- BUTTON #17 -----------------------------------------------
+
+			BTN_RMFD_OSB17_DOWN_IN			= 0;
+			BTN_RMFD_OSB17_DOWN_OUT			= 0;
+
+			// ---- BUTTON #18 -----------------------------------------------
+
+			BTN_RMFD_OSB18_DOWN_IN			= 0;
+			BTN_RMFD_OSB18_DOWN_OUT			= 0;
+
+			// ---- BUTTON #19 -----------------------------------------------
+
+			BTN_RMFD_OSB19_DOWN_IN			= 0;
+			BTN_RMFD_OSB19_DOWN_OUT			= 0;
+
+			// ---- BUTTON #20 -----------------------------------------------
+
+			BTN_RMFD_OSB20_DOWN_IN			= 0;
+			BTN_RMFD_OSB20_DOWN_OUT			= 0;
+
+			// **** SYM SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_RMFD_SYMU_DOWN_IN			= 0;
+			BTN_RMFD_SYMU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_RMFD_SYMD_DOWN_IN			= 0;
+			BTN_RMFD_SYMD_DOWN_OUT			= 0;
+
+			// **** CON SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_RMFD_CONU_DOWN_IN			= 0;
+			BTN_RMFD_CONU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_RMFD_COND_DOWN_IN			= 0;
+			BTN_RMFD_COND_DOWN_OUT			= 0;
+
+			// **** BRT SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_RMFD_BRTU_DOWN_IN			= 0;
+			BTN_RMFD_BRTU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_RMFD_BRTD_DOWN_IN			= 0;
+			BTN_RMFD_BRTD_DOWN_OUT			= 0;
+
+			// **** GAIN SWITCH **********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_RMFD_GAINU_DOWN_IN			= 0;
+			BTN_RMFD_GAINU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_RMFD_GAIND_DOWN_IN			= 0;
+			BTN_RMFD_GAIND_DOWN_OUT			= 0;
+		}
+
+		if(NUM_MFDS >= 2)
+		{
+			// ===============================================================
+			//	Left Cougar MFD
+			// ===============================================================
+
+			// **** TOP BUTTONS **********************************************
+
+			// ---- BUTTON #1 ------------------------------------------------
+
+			BTN_LMFD_OSB01_DOWN_IN			= 0;
+			BTN_LMFD_OSB01_DOWN_OUT			= 0;
+
+			// ---- BUTTON #2 ------------------------------------------------
+
+			BTN_LMFD_OSB02_DOWN_IN			= 0;
+			BTN_LMFD_OSB02_DOWN_OUT			= 0;
+
+			// ---- BUTTON #3 ------------------------------------------------
+
+			BTN_LMFD_OSB03_DOWN_IN			= 0;
+			BTN_LMFD_OSB03_DOWN_OUT			= 0;
+
+			// ---- BUTTON #4 ------------------------------------------------
+
+			BTN_LMFD_OSB04_DOWN_IN			= 0;
+			BTN_LMFD_OSB04_DOWN_OUT			= 0;
+
+			// ---- BUTTON #5 ------------------------------------------------
+
+			BTN_LMFD_OSB05_DOWN_IN			= 0;
+			BTN_LMFD_OSB05_DOWN_OUT			= 0;
+
+			// **** RIGHT SIDE BUTTONS ***************************************
+
+			// ---- BUTTON #6 ------------------------------------------------
+
+			BTN_LMFD_OSB06_DOWN_IN			= 0;
+			BTN_LMFD_OSB06_DOWN_OUT			= 0;
+
+			// ---- BUTTON #7 ------------------------------------------------
+
+			BTN_LMFD_OSB07_DOWN_IN			= 0;
+			BTN_LMFD_OSB07_DOWN_OUT			= 0;
+
+			// ---- BUTTON #8 ------------------------------------------------
+
+			BTN_LMFD_OSB08_DOWN_IN			= 0;
+			BTN_LMFD_OSB08_DOWN_OUT			= 0;
+
+			// ---- BUTTON #9 ------------------------------------------------
+
+			BTN_LMFD_OSB09_DOWN_IN			= 0;
+			BTN_LMFD_OSB09_DOWN_OUT			= 0;
+
+			// ---- BUTTON #10 -----------------------------------------------
+
+			BTN_LMFD_OSB10_DOWN_IN			= 0;
+			BTN_LMFD_OSB10_DOWN_OUT			= 0;
+
+			// **** BOTTOM BUTTONS *******************************************
+
+			// ---- BUTTON #11 -----------------------------------------------
+
+			BTN_LMFD_OSB11_DOWN_IN			= 0;
+			BTN_LMFD_OSB11_DOWN_OUT			= 0;
+
+			// ---- BUTTON #12 -----------------------------------------------
+
+			BTN_LMFD_OSB12_DOWN_IN			= 0;
+			BTN_LMFD_OSB12_DOWN_OUT			= 0;
+
+			// ---- BUTTON #13 -----------------------------------------------
+
+			BTN_LMFD_OSB13_DOWN_IN			= 0;
+			BTN_LMFD_OSB13_DOWN_OUT			= 0;
+
+			// ---- BUTTON #14 -----------------------------------------------
+
+			BTN_LMFD_OSB14_DOWN_IN			= 0;
+			BTN_LMFD_OSB14_DOWN_OUT			= 0;
+
+			// ---- BUTTON #15 -----------------------------------------------
+
+			BTN_LMFD_OSB15_DOWN_IN			= 0;
+			BTN_LMFD_OSB15_DOWN_OUT			= 0;
+
+			// **** LEFT SIDE BUTTONS ****************************************
+
+			// ---- BUTTON #16 -----------------------------------------------
+
+			BTN_LMFD_OSB16_DOWN_IN			= 0;
+			BTN_LMFD_OSB16_DOWN_OUT			= 0;
+
+			// ---- BUTTON #17 -----------------------------------------------
+
+			BTN_LMFD_OSB17_DOWN_IN			= 0;
+			BTN_LMFD_OSB17_DOWN_OUT			= 0;
+
+			// ---- BUTTON #18 -----------------------------------------------
+
+			BTN_LMFD_OSB18_DOWN_IN			= 0;
+			BTN_LMFD_OSB18_DOWN_OUT			= 0;
+
+			// ---- BUTTON #19 -----------------------------------------------
+
+			BTN_LMFD_OSB19_DOWN_IN			= 0;
+			BTN_LMFD_OSB19_DOWN_OUT			= 0;
+
+			// ---- BUTTON #20 -----------------------------------------------
+
+			BTN_LMFD_OSB20_DOWN_IN			= 0;
+			BTN_LMFD_OSB20_DOWN_OUT			= 0;
+
+			// **** SYM SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_LMFD_SYMU_DOWN_IN			= 0;
+			BTN_LMFD_SYMU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_LMFD_SYMD_DOWN_IN			= 0;
+			BTN_LMFD_SYMD_DOWN_OUT			= 0;
+
+			// **** CON SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_LMFD_CONU_DOWN_IN			= 0;
+			BTN_LMFD_CONU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_LMFD_COND_DOWN_IN			= 0;
+			BTN_LMFD_COND_DOWN_OUT			= 0;
+
+			// **** BRT SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_LMFD_BRTU_DOWN_IN			= 0;
+			BTN_LMFD_BRTU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_LMFD_BRTD_DOWN_IN			= 0;
+			BTN_LMFD_BRTD_DOWN_OUT			= 0;
+
+			// **** GAIN SWITCH **********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_LMFD_GAINU_DOWN_IN			= 0;
+			BTN_LMFD_GAINU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_LMFD_GAIND_DOWN_IN			= 0;
+			BTN_LMFD_GAIND_DOWN_OUT			= 0;
+		}
+
+		if(NUM_MFDS == 3)
+		{
+			// ===============================================================
+			//	Middle Cougar MFD
+			// ===============================================================
+
+			// **** TOP BUTTONS **********************************************
+
+			// ---- BUTTON #1 ------------------------------------------------
+
+			BTN_MMFD_OSB01_DOWN_IN			= 0;
+			BTN_MMFD_OSB01_DOWN_OUT			= 0;
+
+			// ---- BUTTON #2 ------------------------------------------------
+
+			BTN_MMFD_OSB02_DOWN_IN			= 0;
+			BTN_MMFD_OSB02_DOWN_OUT			= 0;
+
+			// ---- BUTTON #3 ------------------------------------------------
+
+			BTN_MMFD_OSB03_DOWN_IN			= 0;
+			BTN_MMFD_OSB03_DOWN_OUT			= 0;
+
+			// ---- BUTTON #4 ------------------------------------------------
+
+			BTN_MMFD_OSB04_DOWN_IN			= 0;
+			BTN_MMFD_OSB04_DOWN_OUT			= 0;
+
+			// ---- BUTTON #5 ------------------------------------------------
+
+			BTN_MMFD_OSB05_DOWN_IN			= 0;
+			BTN_MMFD_OSB05_DOWN_OUT			= 0;
+
+			// **** RIGHT SIDE BUTTONS ***************************************
+
+			// ---- BUTTON #6 ------------------------------------------------
+
+			BTN_MMFD_OSB06_DOWN_IN			= 0;
+			BTN_MMFD_OSB06_DOWN_OUT			= 0;
+
+			// ---- BUTTON #7 ------------------------------------------------
+
+			BTN_MMFD_OSB07_DOWN_IN			= 0;
+			BTN_MMFD_OSB07_DOWN_OUT			= 0;
+
+			// ---- BUTTON #8 ------------------------------------------------
+
+			BTN_MMFD_OSB08_DOWN_IN			= 0;
+			BTN_MMFD_OSB08_DOWN_OUT			= 0;
+
+			// ---- BUTTON #9 ------------------------------------------------
+
+			BTN_MMFD_OSB09_DOWN_IN			= 0;
+			BTN_MMFD_OSB09_DOWN_OUT			= 0;
+
+			// ---- BUTTON #10 -----------------------------------------------
+
+			BTN_MMFD_OSB10_DOWN_IN			= 0;
+			BTN_MMFD_OSB10_DOWN_OUT			= 0;
+
+			// **** BOTTOM BUTTONS *******************************************
+
+			// ---- BUTTON #11 -----------------------------------------------
+
+			BTN_MMFD_OSB11_DOWN_IN			= 0;
+			BTN_MMFD_OSB11_DOWN_OUT			= 0;
+
+			// ---- BUTTON #12 -----------------------------------------------
+
+			BTN_MMFD_OSB12_DOWN_IN			= 0;
+			BTN_MMFD_OSB12_DOWN_OUT			= 0;
+
+			// ---- BUTTON #13 -----------------------------------------------
+
+			BTN_MMFD_OSB13_DOWN_IN			= 0;
+			BTN_MMFD_OSB13_DOWN_OUT			= 0;
+
+			// ---- BUTTON #14 -----------------------------------------------
+
+			BTN_MMFD_OSB14_DOWN_IN			= 0;
+			BTN_MMFD_OSB14_DOWN_OUT			= 0;
+
+			// ---- BUTTON #15 -----------------------------------------------
+
+			BTN_MMFD_OSB15_DOWN_IN			= 0;
+			BTN_MMFD_OSB15_DOWN_OUT			= 0;
+
+			// **** LEFT SIDE BUTTONS ****************************************
+
+			// ---- BUTTON #16 -----------------------------------------------
+
+			BTN_MMFD_OSB16_DOWN_IN			= 0;
+			BTN_MMFD_OSB16_DOWN_OUT			= 0;
+
+			// ---- BUTTON #17 -----------------------------------------------
+
+			BTN_MMFD_OSB17_DOWN_IN			= 0;
+			BTN_MMFD_OSB17_DOWN_OUT			= 0;
+
+			// ---- BUTTON #18 -----------------------------------------------
+
+			BTN_MMFD_OSB18_DOWN_IN			= 0;
+			BTN_MMFD_OSB18_DOWN_OUT			= 0;
+
+			// ---- BUTTON #19 -----------------------------------------------
+
+			BTN_MMFD_OSB19_DOWN_IN			= 0;
+			BTN_MMFD_OSB19_DOWN_OUT			= 0;
+
+			// ---- BUTTON #20 -----------------------------------------------
+
+			BTN_MMFD_OSB20_DOWN_IN			= 0;
+			BTN_MMFD_OSB20_DOWN_OUT			= 0;
+
+			// **** SYM SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_MMFD_SYMU_DOWN_IN			= 0;
+			BTN_MMFD_SYMU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_MMFD_SYMD_DOWN_IN			= 0;
+			BTN_MMFD_SYMD_DOWN_OUT			= 0;
+
+			// **** CON SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_MMFD_CONU_DOWN_IN			= 0;
+			BTN_MMFD_CONU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_MMFD_COND_DOWN_IN			= 0;
+			BTN_MMFD_COND_DOWN_OUT			= 0;
+
+			// **** BRT SWITCH ***********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_MMFD_BRTU_DOWN_IN			= 0;
+			BTN_MMFD_BRTU_DOWN_OUT			= 0;
+
+			// ---- DOWN -----------------------------------------------------
+
+			BTN_MMFD_BRTD_DOWN_IN			= 0;
+			BTN_MMFD_BRTD_DOWN_OUT			= 0;
+
+			// **** GAIN SWITCH **********************************************
+
+			// ---- UP -------------------------------------------------------
+
+			BTN_MMFD_GAINU_DOWN_IN			= 0;
+			BTN_MMFD_GAINU_DOWN_OUT			= 0;
+
+			// ---- DOWN -------------------------------------------------------
+
+			BTN_MMFD_GAIND_DOWN_IN			= 0;
+			BTN_MMFD_GAIND_DOWN_OUT			= 0;
+		}
+	}
+}

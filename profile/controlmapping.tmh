@@ -31,6 +31,7 @@ include "profile/cm_fa18grip.tmh"
 include "profile/cm_mfds.tmh"
 include "profile/cm_rudder.tmh"
 include "profile/cm_throttle.tmh"
+include "profile/downlayermapping.tmh"
 
 int MapJoystick()
 {
@@ -135,6 +136,8 @@ int MapControls()
 	{
 		error("Unsupported plane type specified.");
 	}
+
+	SpecifyDownLayerControlMap();
 
 	MapJoystick();
 	MapThrottle();

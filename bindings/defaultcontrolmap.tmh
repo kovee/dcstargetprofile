@@ -31,46 +31,46 @@
 
 // **** TRIGGER - STAGE 1 ****************************************************
 
-int BTN_TG1_MIDDLE_IN			= 0;
-int BTN_TG1_MIDDLE_OUT			= 0;
 int BTN_TG1_UP_IN				= 0;
 int BTN_TG1_UP_OUT				= 0;
+int BTN_TG1_MIDDLE_IN			= 0;
+int BTN_TG1_MIDDLE_OUT			= 0;
 int BTN_TG1_DOWN_IN				= 0;
 int BTN_TG1_DOWN_OUT			= 0;
 
 // **** TRIGGER - STAGE 2 ****************************************************
 
-int BTN_TG2_MIDDLE_IN			= 0;
-int BTN_TG2_MIDDLE_OUT			= 0;
 int BTN_TG2_UP_IN				= 0;
 int BTN_TG2_UP_OUT				= 0;
+int BTN_TG2_MIDDLE_IN			= 0;
+int BTN_TG2_MIDDLE_OUT			= 0;
 int BTN_TG2_DOWN_IN				= 0;
 int BTN_TG2_DOWN_OUT			= 0;
 
 // **** S1 *******************************************************************
 
-int BTN_S1_MIDDLE_IN			= 0;
-int BTN_S1_MIDDLE_OUT			= 0;
 int BTN_S1_UP_IN				= 0;
 int BTN_S1_UP_OUT				= 0;
+int BTN_S1_MIDDLE_IN			= 0;
+int BTN_S1_MIDDLE_OUT			= 0;
 int BTN_S1_DOWN_IN				= 0;
 int BTN_S1_DOWN_OUT				= 0;
 
 // **** S2 *******************************************************************
 
-int BTN_S2_MIDDLE_IN			= 0;
-int BTN_S2_MIDDLE_OUT			= 0;
 int BTN_S2_UP_IN				= 0;
 int BTN_S2_UP_OUT				= 0;
+int BTN_S2_MIDDLE_IN			= 0;
+int BTN_S2_MIDDLE_OUT			= 0;
 int BTN_S2_DOWN_IN				= 0;
 int BTN_S2_DOWN_OUT				= 0;
 
 // **** S3 *******************************************************************
 
-int BTN_S3_MIDDLE_IN			= 0;
-int BTN_S3_MIDDLE_OUT			= 0;
 int BTN_S3_UP_IN				= 0;
 int BTN_S3_UP_OUT				= 0;
+int BTN_S3_MIDDLE_IN			= 0;
+int BTN_S3_MIDDLE_OUT			= 0;
 int BTN_S3_DOWN_IN				= 0;
 int BTN_S3_DOWN_OUT				= 0;
 

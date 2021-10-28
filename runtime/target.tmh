@@ -7,8 +7,8 @@
 //  original code has been marked.
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-include "hid.tmh"
-include "defines.tmh"
+include "runtime/hid.tmh"
+include "runtime/defines.tmh"
 alias Throttle		= "VID_044F&PID_0404";
 alias Joystick		= "VID_044F&PID_0402";
 alias LMFD			= "VID_044F&PID_b351";
