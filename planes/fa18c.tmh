@@ -25,6 +25,7 @@
 
 // Contains control mapping definitions for the F/A-18C Hornet.
 
+int EjectScript;
 
 int SpecifyFA18ControlMap()
 {
@@ -66,7 +67,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_S1_MIDDLE_IN			= 0;
-			BTN_S1_MIDDLE_OUT			= 0;
+			BTN_S1_MIDDLE_OUT			= USB_I; // RAID/FLIR FOV select
 
 			// **** S2 BUTTON ************************************************
 
@@ -99,7 +100,7 @@ int SpecifyFA18ControlMap()
 			BTN_H1U_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H1U_MIDDLE_IN			= 0;
+			BTN_H1U_MIDDLE_IN			= L_ALT+L_CTL+USB_RIGHTARROW; // Formation lights CW
 			BTN_H1U_MIDDLE_OUT			= R_CTL+USB_SEMICOLON; // Nose Down
 
 			// ---- DOWN -----------------------------------------------------
@@ -109,7 +110,7 @@ int SpecifyFA18ControlMap()
 			BTN_H1D_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H1D_MIDDLE_IN			= 0;
+			BTN_H1D_MIDDLE_IN			= L_ALT+L_CTL+USB_LEFTARROW; // Formation lights CCW
 			BTN_H1D_MIDDLE_OUT			= R_CTL+USB_PERIOD; // Nose Up
 
 			// ---- LEFT -----------------------------------------------------
@@ -119,7 +120,7 @@ int SpecifyFA18ControlMap()
 			BTN_H1L_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H1L_MIDDLE_IN			= 0;
+			BTN_H1L_MIDDLE_IN			= L_CTL+L_SHIFT+USB_LEFTARROW; // Position Lights CCW
 			BTN_H1L_MIDDLE_OUT			= R_CTL+USB_COMMA; // Left Wing Down
 
 			// ---- RIGHT ----------------------------------------------------
@@ -129,7 +130,7 @@ int SpecifyFA18ControlMap()
 			BTN_H1R_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H1R_MIDDLE_IN			= 0;
+			BTN_H1R_MIDDLE_IN			= L_CTL+L_SHIFT+USB_RIGHTARROW; // Position Lights CW
 			BTN_H1R_MIDDLE_OUT			= R_CTL+USB_SLASH; // Right Wing Down
 
 			// **** TMS HAT **************************************************
@@ -141,7 +142,7 @@ int SpecifyFA18ControlMap()
 			BTN_H2U_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H2U_MIDDLE_IN			= 0;
+			BTN_H2U_MIDDLE_IN			= R_ALT+USB_P; // Parking Brake Stow
 			BTN_H2U_MIDDLE_OUT			= L_SHIFT+USB_X; // Select Gun
 
 			// ---- DOWN -----------------------------------------------------
@@ -151,7 +152,7 @@ int SpecifyFA18ControlMap()
 			BTN_H2D_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H2D_MIDDLE_IN			= 0;
+			BTN_H2D_MIDDLE_IN			= R_CTL+USB_P; // Parking Brake Pull
 			BTN_H2D_MIDDLE_OUT			= L_SHIFT+USB_W ; // Select Sparrow
 
 			// ---- LEFT -----------------------------------------------------
@@ -161,7 +162,7 @@ int SpecifyFA18ControlMap()
 			BTN_H2L_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H2L_MIDDLE_IN			= 0;
+			BTN_H2L_MIDDLE_IN			= L_CTL+USB_P; // Parking Brake CCW
 			BTN_H2L_MIDDLE_OUT			= L_SHIFT+USB_S; // Select Sidewinder
 
 			// ---- RIGHT ----------------------------------------------------
@@ -171,7 +172,7 @@ int SpecifyFA18ControlMap()
 			BTN_H2R_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H2R_MIDDLE_IN			= 0;
+			BTN_H2R_MIDDLE_IN			= L_ALT+USB_P; // Parking Brake CW
 			BTN_H2R_MIDDLE_OUT			= L_SHIFT+USB_D; // Select AMRAAM
 
 			// **** DMS HAT **************************************************
@@ -193,7 +194,7 @@ int SpecifyFA18ControlMap()
 			BTN_H3D_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H3D_MIDDLE_IN			= 0; // Dispenser Switch Off
+			BTN_H3D_MIDDLE_IN			= L_CTL+USB_D; // Dispenser Switch Off
 			BTN_H3D_MIDDLE_OUT			= USB_D; // Flare
 
 			// ---- LEFT -----------------------------------------------------
@@ -203,7 +204,7 @@ int SpecifyFA18ControlMap()
 			BTN_H3L_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H3L_MIDDLE_IN			= 0; // Dispenser Switch Bypass
+			BTN_H3L_MIDDLE_IN			= L_CTL+L_ALT+USB_D; // Dispenser Switch Bypass
 			BTN_H3L_MIDDLE_OUT			= 0;
 
 			// ---- RIGHT ----------------------------------------------------
@@ -213,7 +214,7 @@ int SpecifyFA18ControlMap()
 			BTN_H3R_UP_OUT				= 0;
 
 			// MIDDLE Layer
-			BTN_H3R_MIDDLE_IN			= 0; // Dispenser Switch On
+			BTN_H3R_MIDDLE_IN			= L_CTL+L_SHIFT+USB_D; // Dispenser Switch On
 			BTN_H3R_MIDDLE_OUT			= 0;
 
 			// **** CMS HAT **************************************************
@@ -266,7 +267,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_H4P_MIDDLE_IN			= 0;
-			BTN_H4P_MIDDLE_OUT			= 0; // SCS Depress
+			BTN_H4P_MIDDLE_OUT			= R_ALT+USB_EQUAL; // SCS Depress
 
 		}
 		else if (JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
@@ -316,7 +317,7 @@ int SpecifyFA18ControlMap()
 		BTN_MSD_UP_OUT				= 0;
 
 		// MIDDLE Layer
-		BTN_MSD_MIDDLE_IN			= L_SHIFT+USB_BACKSLASH // Switch Dialog
+		BTN_MSD_MIDDLE_IN			= L_SHIFT+USB_BACKSLASH; // Switch Dialog
 		BTN_MSD_MIDDLE_OUT			= 0;
 
 		// ---- LEFT ---------------------------------------------------------
@@ -391,7 +392,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_BSB_MIDDLE_IN			= 0;
-		BTN_BSB_MIDDLE_OUT			= 0;
+		BTN_BSB_MIDDLE_OUT			= CHAIN(PULSE+R_ALT+USB_OPENBRACKET,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT-LED5)); // Exterior Lights Off
 
 		// ---- MIDDLE -------------------------------------------------------
 
@@ -411,7 +415,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_BSF_MIDDLE_IN			= 0;
-		BTN_BSF_MIDDLE_OUT			= 0;
+		BTN_BSF_MIDDLE_OUT			= CHAIN(PULSE+R_ALT+USB_CLOSEBRACKET,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED5)); // Exterior Lights On
 
 		// **** CHINA HAT ****************************************************
 
@@ -422,8 +429,8 @@ int SpecifyFA18ControlMap()
 		BTN_CHB_UP_OUT				= 0;
 
 		// MIDDLE Layer
-		BTN_CHB_MIDDLE_IN			= 0;
-		BTN_CHB_MIDDLE_OUT			= 0;
+		BTN_CHB_MIDDLE_IN			= L_CTL+L_SHIFT+USB_W; // Master Mode AG
+		BTN_CHB_MIDDLE_OUT			= USB_EQUAL; // Radar elevation up
 
 		// ---- MIDDLE -------------------------------------------------------
 
@@ -442,8 +449,8 @@ int SpecifyFA18ControlMap()
 		BTN_CHF_UP_OUT				= 0;
 
 		// MIDDLE Layer
-		BTN_CHF_MIDDLE_IN			= 0;
-		BTN_CHF_MIDDLE_OUT			= 0;
+		BTN_CHF_MIDDLE_IN			= L_CTL+L_SHIFT+USB_Q; // Master Mode AA
+		BTN_CHF_MIDDLE_OUT			= USB_MINUS; // Radar elevation down
 
 		// **** LEFT THROTTLE BUTTON *****************************************
 
@@ -543,7 +550,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EFLNORM_MIDDLE_IN		= 0;
-		BTN_EFLNORM_MIDDLE_OUT		= 0;
+		BTN_EFLNORM_MIDDLE_OUT		= CHAIN(PULSE+L_ALT+USB_H ,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT-LED4)); // Hook Up
 
 		// ---- LEFT - OVER --------------------------------------------------
 
@@ -553,7 +563,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EFLOVER_MIDDLE_IN		= 0;
-		BTN_EFLOVER_MIDDLE_OUT		= 0;
+		BTN_EFLOVER_MIDDLE_OUT		= CHAIN(PULSE+L_CTL+USB_H ,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED4)); // Hook Down
 
 		// ---- RIGHT - NORM -------------------------------------------------
 
@@ -563,7 +576,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EFRNORM_MIDDLE_IN		= 0;
-		BTN_EFRNORM_MIDDLE_OUT		= 0;
+		BTN_EFRNORM_MIDDLE_OUT		= CHAIN(PULSE+L_CTL+USB_G,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT-LED2)); // Gear Up
 
 		// ---- RIGHT - OVER -------------------------------------------------
 
@@ -573,7 +589,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EFROVER_MIDDLE_IN		= 0;
-		BTN_EFROVER_MIDDLE_OUT		= 0;
+		BTN_EFROVER_MIDDLE_OUT		= CHAIN(PULSE+L_SHIFT+USB_G,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED2)); // Gear Down
 
 		// **** ENGINE OPERATE SWITCHES **************************************
 
@@ -595,7 +614,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EOLNORM_MIDDLE_IN		= 0;
-		BTN_EOLNORM_MIDDLE_OUT		= 0;
+		BTN_EOLNORM_MIDDLE_OUT		= CHAIN(PULSE+R_CTL+USB_B,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED1)); // Battery ON
 
 		// ---- LEFT - MOTOR -------------------------------------------------
 
@@ -605,7 +627,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EOLMOTOR_MIDDLE_IN		= 0;
-		BTN_EOLMOTOR_MIDDLE_OUT		= 0;
+		BTN_EOLMOTOR_MIDDLE_OUT		= CHAIN(PULSE+R_ALT+USB_B,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT-LED1)); // Battery OFF
 
 		// ---- RIGHT - IGN --------------------------------------------------
 
@@ -625,7 +650,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EORNORM_MIDDLE_IN		= 0;
-		BTN_EORNORM_MIDDLE_OUT		= 0;
+		BTN_EORNORM_MIDDLE_OUT		= PULSE+L_CTL+L_SHIFT+USB_A; // APU ON
 
 		// ---- RIGHT - MOTOR ------------------------------------------------
 
@@ -635,7 +660,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EORMOTOR_MIDDLE_IN		= 0;
-		BTN_EORMOTOR_MIDDLE_OUT		= 0;
+		BTN_EORMOTOR_MIDDLE_OUT		= PULSE+L_CTL+L_SHIFT+USB_A; // APU OFF
 
 		// **** APU SWITCH ***************************************************
 
@@ -647,7 +672,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APUON_MIDDLE_IN			= 0;
-		BTN_APUON_MIDDLE_OUT		= 0;
+		BTN_APUON_MIDDLE_OUT		= PULSE+L_CTL+USB_A; // Master Arm ARM
 
 		// ---- OFF -----------------------------------------------------------
 
@@ -657,7 +682,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APUOFF_MIDDLE_IN		= 0;
-		BTN_APUOFF_MIDDLE_OUT		= 0;
+		BTN_APUOFF_MIDDLE_OUT		= PULSE+L_ALT+USB_A; // Mater Arm SAFE
 
 		// **** FLAPS SWITCH *************************************************
 
@@ -669,7 +694,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_FLAPU_MIDDLE_IN			= 0;
-		BTN_FLAPU_MIDDLE_OUT		= 0;
+		BTN_FLAPU_MIDDLE_OUT		= CHAIN(PULSE+USB_F,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT-LED3)); // Flaps - AUTO
 
 		// ---- MIDDLE -------------------------------------------------------
 
@@ -679,7 +707,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_FLAPM_MIDDLE_IN			= 0;
-		BTN_FLAPM_MIDDLE_OUT		= 0;
+		BTN_FLAPM_MIDDLE_OUT		= CHAIN(PULSE+L_SHIFT+USB_F,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED3)); // Flaps - HALF
 
 		// ---- DOWN ---------------------------------------------------------
 
@@ -689,7 +720,10 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_FLAPD_MIDDLE_IN			= 0;
-		BTN_FLAPD_MIDDLE_OUT		= 0;
+		BTN_FLAPD_MIDDLE_OUT		= CHAIN(PULSE+L_CTL+USB_F,
+											LED(&Throttle,
+												LED_ONOFF,
+												LED_CURRENT+LED3)); // Flaps - FULL
 
 		// **** LANDING GEAR HORN BUTTON *************************************
 
@@ -697,9 +731,16 @@ int SpecifyFA18ControlMap()
 		BTN_LDGH_UP_IN				= 0;
 		BTN_LDGH_UP_OUT				= 0;
 
+		EjectScript = CHAIN(PULSE+LED(&Throttle, LED_ONOFF, LED_CURRENT^LED0),
+						    PULSE+USB_E);
+
 		// MIDDLE Layer
-		BTN_LDGH_MIDDLE_IN			= 0;
-		BTN_LDGH_MIDDLE_OUT			= 0;
+		BTN_LDGH_MIDDLE_IN			= TEMPO(0, // FCS reset
+											CHAIN(KEYON+L_CTL,
+												  REXEC(0,90, "ActKey(KEYON+EjectScript);", 1000),
+												  D(1000),
+												  PULSE+L_CTL)); // Eject (press and hold)
+		BTN_LDGH_MIDDLE_OUT			= USB_N; // MASTER CAUTION reset
 
 		// **** EAC SWITCH ***************************************************
 
@@ -711,7 +752,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EACON_MIDDLE_IN			= 0;
-		BTN_EACON_MIDDLE_OUT		= 0;
+		BTN_EACON_MIDDLE_OUT		= PULSE+R_ALT+USB_F; // Fuel probe extend
 
 		// ---- OFF ----------------------------------------------------------
 
@@ -721,7 +762,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_EACOFF_MIDDLE_IN		= 0;
-		BTN_EACOFF_MIDDLE_OUT		= 0;
+		BTN_EACOFF_MIDDLE_OUT		= PULSE+R_CTL+USB_F; // Fuel probe retract
 
 		// **** RDR SWITCH ***************************************************
 
@@ -755,7 +796,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APENG_MIDDLE_IN			= 0;
-		BTN_APENG_MIDDLE_OUT		= 0;
+		BTN_APENG_MIDDLE_OUT		= PULSE+L_CTL+USB_L; // Launch bar
 
 		// ---- DIS ----------------------------------------------------------
 
@@ -777,7 +818,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APPAT_MIDDLE_IN			= 0;
-		BTN_APPAT_MIDDLE_OUT		= 0;
+		BTN_APPAT_MIDDLE_OUT		= PULSE+L_CTL+USB_C; // Canopy open
 
 		// ---- ALT/HDG ------------------------------------------------------
 
@@ -797,14 +838,14 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APALT_MIDDLE_IN			= 0;
-		BTN_APALT_MIDDLE_OUT		= 0;
+		BTN_APALT_MIDDLE_OUT		= PULSE+L_SHIFT+USB_C; // Canopy close
 
 		// **** THROTTLE IDLE/OFF ********************************************
 
-		BTN_IDLELON_IDLE 			= 0;
-		BTN_IDLERON_IDLE 			= 0;
-		BTN_IDLELON_OFF 			= 0;
-		BTN_IDLERON_OFF 			= 0;
+		BTN_IDLELON_IDLE 			= PULSE+R_ALT+USB_HOME;
+		BTN_IDLERON_IDLE 			= PULSE+R_SHIFT+USB_HOME;
+		BTN_IDLELON_OFF 			= PULSE+R_ALT+USB_END;
+		BTN_IDLERON_OFF 			= PULSE+R_SHIFT+USB_END;
 
 	}
 	else
@@ -829,8 +870,17 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB01_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB01_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB01_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB01_MIDDLE_IN		= L_CTL+USB_6; // LMFD BTN #6
+				BTN_RMFD_OSB01_MIDDLE_OUT		= R_CTL+USB_6; // RMFD BTN #6
+			}
+			else
+			{
+				BTN_RMFD_OSB01_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB01_MIDDLE_OUT		= R_CTL+USB_6; // BTN #6
+			}
+
 
 			// ---- BUTTON #2 ------------------------------------------------
 
@@ -839,8 +889,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB02_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB02_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB02_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB02_MIDDLE_IN		= L_CTL+USB_7; // LMFD BTN #7
+				BTN_RMFD_OSB02_MIDDLE_OUT		= R_CTL+USB_7; // RMFD BTN #7
+			}
+			else
+			{
+				BTN_RMFD_OSB02_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB02_MIDDLE_OUT		= R_CTL+USB_7; // BTN #7
+			}
 
 			// ---- BUTTON #3 ------------------------------------------------
 
@@ -849,8 +907,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB03_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB03_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB03_MIDDLE_OUT		= 0;
+			if (NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB03_MIDDLE_IN		= L_CTL+USB_8; // LMFD BTN #8
+				BTN_RMFD_OSB03_MIDDLE_OUT		= R_CTL+USB_8; // RMFD BTN #8
+			}
+			else
+			{
+				BTN_RMFD_OSB03_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB03_MIDDLE_OUT		= R_CTL+USB_8; // BTN #8
+			}
 
 			// ---- BUTTON #4 ------------------------------------------------
 
@@ -859,8 +925,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB04_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB04_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB04_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB04_MIDDLE_IN		= L_CTL+USB_9; // LMFD BTN #9
+				BTN_RMFD_OSB04_MIDDLE_OUT		= R_CTL+USB_9; // RMFD BTN #9
+			}
+			else
+			{
+				BTN_RMFD_OSB04_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB04_MIDDLE_OUT		= R_CTL+USB_9; // BTN #9
+			}
 
 			// ---- BUTTON #5 ------------------------------------------------
 
@@ -869,8 +943,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB05_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB05_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB05_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB05_MIDDLE_IN		= L_CTL+USB_0; // LMFD BTN #10
+				BTN_RMFD_OSB05_MIDDLE_OUT		= R_CTL+USB_0; // RMFD BTN #10
+			}
+			else
+			{
+				BTN_RMFD_OSB05_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB05_MIDDLE_OUT		= R_CTL+USB_0; // BTN #10
+			}
 
 			// **** RIGHT SIDE BUTTONS ***************************************
 
@@ -881,8 +963,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB06_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB06_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB06_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB06_MIDDLE_IN		= L_ALT+USB_1; // LMFD BTN #11
+				BTN_RMFD_OSB06_MIDDLE_OUT		= R_ALT+USB_1; // RMFD BTN #11
+			}
+			else
+			{
+				BTN_RMFD_OSB06_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB06_MIDDLE_OUT		= R_ALT+USB_1; // BTN #11
+			}
 
 			// ---- BUTTON #7 ------------------------------------------------
 
@@ -891,8 +981,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB07_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB07_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB07_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB07_MIDDLE_IN		= L_ALT+USB_2; // LMFD BTN #12
+				BTN_RMFD_OSB07_MIDDLE_OUT		= R_ALT+USB_2; // RMFD BTN #12
+			}
+			else
+			{
+				BTN_RMFD_OSB07_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB07_MIDDLE_OUT		= R_ALT+USB_2; // BTN #12
+			}
 
 			// ---- BUTTON #8 ------------------------------------------------
 
@@ -901,8 +999,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB08_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB08_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB08_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB08_MIDDLE_IN		= L_ALT+USB_3; // LMFD BTN #13
+				BTN_RMFD_OSB08_MIDDLE_OUT		= R_ALT+USB_3; // RMFD BTN #13
+			}
+			else
+			{
+				BTN_RMFD_OSB08_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB08_MIDDLE_OUT		= R_ALT+USB_3; // BTN #13
+			}
 
 			// ---- BUTTON #9 ------------------------------------------------
 
@@ -911,8 +1017,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB09_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB09_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB09_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB09_MIDDLE_IN		= L_ALT+USB_4; // LMFD BTN #14
+				BTN_RMFD_OSB09_MIDDLE_OUT		= R_ALT+USB_4; // RMFD BTN #14
+			}
+			else
+			{
+				BTN_RMFD_OSB09_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB09_MIDDLE_OUT		= R_ALT+USB_4; // BTN #14
+			}
 
 			// ---- BUTTON #10 -----------------------------------------------
 
@@ -921,8 +1035,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB10_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB10_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB10_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB10_MIDDLE_IN		= L_ALT+USB_5; // LMFD #BTN 15
+				BTN_RMFD_OSB10_MIDDLE_OUT		= R_ALT+USB_5; // RMFD #BTN 15
+			}
+			else
+			{
+				BTN_RMFD_OSB10_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB10_MIDDLE_OUT		= R_ALT+USB_5; // #BTN 15
+			}
 
 			// **** BOTTOM BUTTONS *******************************************
 
@@ -933,8 +1055,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB11_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB11_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB11_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB11_MIDDLE_IN		= L_ALT+USB_6; // LMFD BTN #16
+				BTN_RMFD_OSB11_MIDDLE_OUT		= R_ALT+USB_6; // RMFD BTN #16
+			}
+			else
+			{
+				BTN_RMFD_OSB11_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB11_MIDDLE_OUT		= R_ALT+USB_6; // BTN #16
+			}
 
 			// ---- BUTTON #12 -----------------------------------------------
 
@@ -943,8 +1073,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB12_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB12_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB12_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB12_MIDDLE_IN		= L_ALT+USB_7; // LMFD BTN #17
+				BTN_RMFD_OSB12_MIDDLE_OUT		= R_ALT+USB_7; // RMFD BTN #17
+			}
+			else
+			{
+				BTN_RMFD_OSB12_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB12_MIDDLE_OUT		= R_ALT+USB_7; // BTN #17
+			}
 
 			// ---- BUTTON #13 -----------------------------------------------
 
@@ -953,8 +1091,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB13_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB13_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB13_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB13_MIDDLE_IN		= L_ALT+USB_8; // LMFD BTN #18
+				BTN_RMFD_OSB13_MIDDLE_OUT		= R_ALT+USB_8; // RMFD BTN #18
+			}
+			else
+			{
+				BTN_RMFD_OSB13_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB13_MIDDLE_OUT		= R_ALT+USB_8; // BTN #18
+			}
 
 			// ---- BUTTON #14 -----------------------------------------------
 
@@ -963,8 +1109,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB14_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB14_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB14_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB14_MIDDLE_IN		= L_ALT+USB_9; // LMFD BTN #19
+				BTN_RMFD_OSB14_MIDDLE_OUT		= R_ALT+USB_9; // RMFD BTN #19
+			}
+			else
+			{
+				BTN_RMFD_OSB14_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB14_MIDDLE_OUT		= R_ALT+USB_9; // BTN #19
+			}
 
 			// ---- BUTTON #15 -----------------------------------------------
 
@@ -973,8 +1127,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB15_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB15_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB15_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB15_MIDDLE_IN		= L_ALT+USB_0; // LMFD BTN #20
+				BTN_RMFD_OSB15_MIDDLE_OUT		= R_ALT+USB_0; // RMFD BTN #20
+			}
+			else
+			{
+				BTN_RMFD_OSB15_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB15_MIDDLE_OUT		= R_ALT+USB_0; // BTN #20
+			}
 
 			// **** LEFT SIDE BUTTONS ****************************************
 
@@ -985,8 +1147,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB16_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB16_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB16_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB16_MIDDLE_IN		= L_CTL+USB_1; // LMFD BTN #1
+				BTN_RMFD_OSB16_MIDDLE_OUT		= R_CTL+USB_1; // RMFD BTN #1
+			}
+			else
+			{
+				BTN_RMFD_OSB16_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB16_MIDDLE_OUT		= R_CTL+USB_1; // BTN #1
+			}
 
 			// ---- BUTTON #17 -----------------------------------------------
 
@@ -995,8 +1165,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB17_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB17_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB17_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB17_MIDDLE_IN		= L_CTL+USB_2; // LMFD BTN #2
+				BTN_RMFD_OSB17_MIDDLE_OUT		= R_CTL+USB_2; // RMFD BTN #2
+			}
+			else
+			{
+				BTN_RMFD_OSB17_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB17_MIDDLE_OUT		= R_CTL+USB_2; // BTN #2
+			}
 
 			// ---- BUTTON #18 -----------------------------------------------
 
@@ -1005,8 +1183,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB18_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB18_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB18_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB18_MIDDLE_IN		= L_CTL+USB_3; // LMFD BTN #3
+				BTN_RMFD_OSB18_MIDDLE_OUT		= R_CTL+USB_3; // RMFD BTN #3
+			}
+			else
+			{
+				BTN_RMFD_OSB18_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB18_MIDDLE_OUT		= R_CTL+USB_3; // BTN #3
+			}
 
 			// ---- BUTTON #19 -----------------------------------------------
 
@@ -1015,8 +1201,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB19_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB19_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB19_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB19_MIDDLE_IN		= L_CTL+USB_4; // LMFD BTN #4
+				BTN_RMFD_OSB19_MIDDLE_OUT		= R_CTL+USB_4; // RMFD BTN #4
+			}
+			else
+			{
+				BTN_RMFD_OSB19_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB19_MIDDLE_OUT		= R_CTL+USB_4; // BTN #4
+			}
 
 			// ---- BUTTON #20 -----------------------------------------------
 
@@ -1025,8 +1219,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_OSB20_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_OSB20_MIDDLE_IN		= 0;
-			BTN_RMFD_OSB20_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_OSB20_MIDDLE_IN		= L_CTL+USB_5; // LMFD BTN #5
+				BTN_RMFD_OSB20_MIDDLE_OUT		= R_CTL+USB_5; // RMFD BTN #5
+			}
+			else
+			{
+				BTN_RMFD_OSB20_MIDDLE_IN		= 0;
+				BTN_RMFD_OSB20_MIDDLE_OUT		= R_CTL+USB_5; // BTN #5
+			}
 
 			// **** SYM SWITCH ***********************************************
 
@@ -1037,8 +1239,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_SYMU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_SYMU_MIDDLE_IN			= 0;
-			BTN_RMFD_SYMU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_SYMU_MIDDLE_IN			= L_SHIFT+USB_RIGHTARROW; // LMFD Mode CW
+				BTN_RMFD_SYMU_MIDDLE_OUT		= R_SHIFT+USB_RIGHTARROW; // RMFD Mode CW
+			}
+			else
+			{
+				BTN_RMFD_SYMU_MIDDLE_IN			= 0;
+				BTN_RMFD_SYMU_MIDDLE_OUT		= R_SHIFT+USB_RIGHTARROW; // Mode CW
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1047,8 +1257,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_SYMD_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_SYMD_MIDDLE_IN			= 0;
-			BTN_RMFD_SYMD_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_SYMD_MIDDLE_IN			= L_SHIFT+USB_LEFTARROW; // LMFD Mode CCW
+				BTN_RMFD_SYMD_MIDDLE_OUT		= R_SHIFT+USB_LEFTARROW; // RMFD Mode CCW
+			}
+			else
+			{
+				BTN_RMFD_SYMD_MIDDLE_IN			= 0;
+				BTN_RMFD_SYMD_MIDDLE_OUT		= R_SHIFT+USB_LEFTARROW; // Mode CCW
+			}
 
 			// **** CON SWITCH ***********************************************
 
@@ -1059,8 +1277,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_CONU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_CONU_MIDDLE_IN			= 0;
-			BTN_RMFD_CONU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_CONU_MIDDLE_IN			= L_CTL+USB_UPARROW; // LMFD Contrast CW
+				BTN_RMFD_CONU_MIDDLE_OUT		= R_CTL+USB_UPARROW; // RMFD Contrast CW
+			}
+			else
+			{
+				BTN_RMFD_CONU_MIDDLE_IN			= 0;
+				BTN_RMFD_CONU_MIDDLE_OUT		= R_CTL+USB_UPARROW; // Contrast CW
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1069,8 +1295,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_COND_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_COND_MIDDLE_IN			= 0;
-			BTN_RMFD_COND_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_COND_MIDDLE_IN			= L_CTL+USB_DOWNARROW; // LMFD Contrast CCW
+				BTN_RMFD_COND_MIDDLE_OUT		= R_CTL+USB_DOWNARROW; // RMFD Contrast CCW
+			}
+			else
+			{
+				BTN_RMFD_COND_MIDDLE_IN			= 0;
+				BTN_RMFD_COND_MIDDLE_OUT		= R_CTL+USB_DOWNARROW; // Contrast CCW
+			}
 
 			// **** BRT SWITCH ***********************************************
 
@@ -1081,8 +1315,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_BRTU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_BRTU_MIDDLE_IN			= 0;
-			BTN_RMFD_BRTU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_BRTU_MIDDLE_IN			= L_ALT+USB_UPARROW; // LMFD Brightness CW
+				BTN_RMFD_BRTU_MIDDLE_OUT		= R_ALT+USB_UPARROW; // RMFD Brightness CW
+			}
+			else
+			{
+				BTN_RMFD_BRTU_MIDDLE_IN			= 0;
+				BTN_RMFD_BRTU_MIDDLE_OUT		= R_ALT+USB_UPARROW; // Brightness CW
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1091,8 +1333,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_BRTD_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_BRTD_MIDDLE_IN			= 0;
-			BTN_RMFD_BRTD_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_BRTD_MIDDLE_IN			= L_ALT+USB_DOWNARROW; // LMFD Brightness CCW
+				BTN_RMFD_BRTD_MIDDLE_OUT		= R_ALT+USB_DOWNARROW; // RMFD Brightness CCW
+			}
+			else
+			{
+				BTN_RMFD_BRTD_MIDDLE_IN			= 0;
+				BTN_RMFD_BRTD_MIDDLE_OUT		= R_ALT+USB_DOWNARROW; // Brightness CCW
+			}
 
 			// **** GAIN SWITCH **********************************************
 
@@ -1103,8 +1353,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_GAINU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_GAINU_MIDDLE_IN		= 0;
-			BTN_RMFD_GAINU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_GAINU_MIDDLE_IN		= 0; // LMFD
+				BTN_RMFD_GAINU_MIDDLE_OUT		= 0; // RMFD
+			}
+			else
+			{
+				BTN_RMFD_GAINU_MIDDLE_IN		= 0;
+				BTN_RMFD_GAINU_MIDDLE_OUT		= 0;
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1113,9 +1371,16 @@ int SpecifyFA18ControlMap()
 			BTN_RMFD_GAIND_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_RMFD_GAIND_MIDDLE_IN		= 0;
-			BTN_RMFD_GAIND_MIDDLE_OUT		= 0;
-
+			if(NUM_MFDS == 1)
+			{
+				BTN_RMFD_GAIND_MIDDLE_IN		= 0; // LMFD
+				BTN_RMFD_GAIND_MIDDLE_OUT		= 0; // RMFD
+			}
+			else
+			{
+				BTN_RMFD_GAIND_MIDDLE_IN		= 0;
+				BTN_RMFD_GAIND_MIDDLE_OUT		= 0;
+			}
 		}
 
 		if(NUM_MFDS >= 2)
@@ -1133,8 +1398,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB01_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB01_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB01_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB01_MIDDLE_IN		= L_SHIFT+USB_6; // AMPCD BTN #6
+				BTN_LMFD_OSB01_MIDDLE_OUT		= L_CTL+USB_6; // LMFD BTN #6
+			}
+			else
+			{
+				BTN_LMFD_OSB01_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB01_MIDDLE_OUT		= L_CTL+USB_6; // BTN #6
+			}
 
 			// ---- BUTTON #2 ------------------------------------------------
 
@@ -1143,8 +1416,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB02_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB02_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB02_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB02_MIDDLE_IN		= L_SHIFT+USB_7; // AMPCD BTN #7
+				BTN_LMFD_OSB02_MIDDLE_OUT		= L_CTL+USB_7; // LMFD BTN #7
+			}
+			else
+			{
+				BTN_LMFD_OSB02_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB02_MIDDLE_OUT		= L_CTL+USB_7; // BTN #7
+			}
 
 			// ---- BUTTON #3 ------------------------------------------------
 
@@ -1153,8 +1434,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB03_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB03_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB03_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB03_MIDDLE_IN		= L_SHIFT+USB_8; // AMPCD BTN #8
+				BTN_LMFD_OSB03_MIDDLE_OUT		= L_CTL+USB_8; // LMFD BTN #8
+			}
+			else
+			{
+				BTN_LMFD_OSB03_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB03_MIDDLE_OUT		= L_CTL+USB_8; // BTN #8
+			}
 
 			// ---- BUTTON #4 ------------------------------------------------
 
@@ -1163,8 +1452,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB04_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB04_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB04_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB04_MIDDLE_IN		= L_SHIFT+USB_9; // AMPCD BTN #9
+				BTN_LMFD_OSB04_MIDDLE_OUT		= L_CTL+USB_9; // LMFD BTN #9
+			}
+			else
+			{
+				BTN_LMFD_OSB04_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB04_MIDDLE_OUT		= L_CTL+USB_9; // BTN #9
+			}
 
 			// ---- BUTTON #5 ------------------------------------------------
 
@@ -1173,8 +1470,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB05_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB05_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB05_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB05_MIDDLE_IN		= L_SHIFT+USB_0; // AMPCD BTN #10
+				BTN_LMFD_OSB05_MIDDLE_OUT		= L_CTL+USB_0; // LMFD BTN #10
+			}
+			else
+			{
+				BTN_LMFD_OSB05_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB05_MIDDLE_OUT		= L_CTL+USB_0; // BTN #10
+			}
 
 			// **** RIGHT SIDE BUTTONS ***************************************
 
@@ -1185,8 +1490,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB06_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB06_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB06_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB06_MIDDLE_IN		= R_SHIFT+USB_1; // AMPCD BTN #11
+				BTN_LMFD_OSB06_MIDDLE_OUT		= L_ALT+USB_1; // LMFD BTN #11
+			}
+			else
+			{
+				BTN_LMFD_OSB06_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB06_MIDDLE_OUT		= L_ALT+USB_1; // BTN #11
+			}
 
 			// ---- BUTTON #7 ------------------------------------------------
 
@@ -1195,8 +1508,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB07_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB07_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB07_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB07_MIDDLE_IN		= R_SHIFT+USB_2; // AMPCD BTN #12
+				BTN_LMFD_OSB07_MIDDLE_OUT		= L_ALT+USB_2; // LMFD BTN #12
+			}
+			else
+			{
+				BTN_LMFD_OSB07_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB07_MIDDLE_OUT		= L_ALT+USB_2; // BTN #12
+			}
 
 			// ---- BUTTON #8 ------------------------------------------------
 
@@ -1205,8 +1526,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB08_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB08_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB08_MIDDLE_OUT		= 0;
+			if(NUM_MFDS)
+			{
+				BTN_LMFD_OSB08_MIDDLE_IN		= R_SHIFT+USB_3; // AMPCD BTN #13
+				BTN_LMFD_OSB08_MIDDLE_OUT		= L_ALT+USB_3; // LMFD BTN #13
+			}
+			else
+			{
+				BTN_LMFD_OSB08_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB08_MIDDLE_OUT		= L_ALT+USB_3; // BTN #13
+			}
 
 			// ---- BUTTON #9 ------------------------------------------------
 
@@ -1215,8 +1544,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB09_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB09_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB09_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB09_MIDDLE_IN		= R_SHIFT+USB_4; // AMPCD BTN #14
+				BTN_LMFD_OSB09_MIDDLE_OUT		= L_ALT+USB_4; // LMFD BTN #14
+			}
+			else
+			{
+				BTN_LMFD_OSB09_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB09_MIDDLE_OUT		= L_ALT+USB_4; // BTN #14
+			}
 
 			// ---- BUTTON #10 -----------------------------------------------
 
@@ -1225,8 +1562,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB10_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB10_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB10_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB10_MIDDLE_IN		= R_SHIFT+USB_5; // AMPCD BTN #15
+				BTN_LMFD_OSB10_MIDDLE_OUT		= L_ALT+USB_5; // LMFD BTN #15
+			}
+			else
+			{
+				BTN_LMFD_OSB10_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB10_MIDDLE_OUT		= L_ALT+USB_5; // BTN #15
+			}
 
 			// **** BOTTOM BUTTONS *******************************************
 
@@ -1237,8 +1582,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB11_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB11_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB11_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB11_MIDDLE_IN		= R_SHIFT+USB_6; // AMPCD BTN #16
+				BTN_LMFD_OSB11_MIDDLE_OUT		= L_ALT+USB_6; // LMFD BTN #16
+			}
+			else
+			{
+				BTN_LMFD_OSB11_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB11_MIDDLE_OUT		= L_ALT+USB_6; // BTN #16
+			}
 
 			// ---- BUTTON #12 -----------------------------------------------
 
@@ -1247,8 +1600,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB12_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB12_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB12_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB12_MIDDLE_IN		= R_SHIFT+USB_7; // AMPCD BTN #17
+				BTN_LMFD_OSB12_MIDDLE_OUT		= L_ALT+USB_7; // LMFD BTN #17
+			}
+			else
+			{
+				BTN_LMFD_OSB12_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB12_MIDDLE_OUT		= L_ALT+USB_7; // BTN #17
+			}
 
 			// ---- BUTTON #13 -----------------------------------------------
 
@@ -1257,8 +1618,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB13_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB13_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB13_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB13_MIDDLE_IN		= R_SHIFT+USB_8; // AMPCD BTN #18
+				BTN_LMFD_OSB13_MIDDLE_OUT		= L_ALT+USB_8; // LMFD BTN #18
+			}
+			else
+			{
+				BTN_LMFD_OSB13_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB13_MIDDLE_OUT		= L_ALT+USB_8; // BTN #18
+			}
 
 			// ---- BUTTON #14 -----------------------------------------------
 
@@ -1267,8 +1636,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB14_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB14_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB14_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB14_MIDDLE_IN		= R_SHIFT+USB_9; // AMPCD BTN #19
+				BTN_LMFD_OSB14_MIDDLE_OUT		= L_ALT+USB_9; // LMFD BTN #19
+			}
+			else
+			{
+				BTN_LMFD_OSB14_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB14_MIDDLE_OUT		= L_ALT+USB_9; // BTN #19
+			}
 
 			// ---- BUTTON #15 -----------------------------------------------
 
@@ -1277,8 +1654,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB15_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB15_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB15_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB15_MIDDLE_IN		= R_SHIFT+USB_0; // AMPCD BTN #20
+				BTN_LMFD_OSB15_MIDDLE_OUT		= L_ALT+USB_0; // LMFD BTN #20
+			}
+			else
+			{
+				BTN_LMFD_OSB15_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB15_MIDDLE_OUT		= L_ALT+USB_0; // BTN #20
+			}
 
 			// **** LEFT SIDE BUTTONS ****************************************
 
@@ -1289,8 +1674,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB16_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB16_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB16_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB16_MIDDLE_IN		= L_SHIFT+USB_1; // AMPCD BTN #1
+				BTN_LMFD_OSB16_MIDDLE_OUT		= L_CTL+USB_1; // LMFD BTN #1
+			}
+			else
+			{
+				BTN_LMFD_OSB16_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB16_MIDDLE_OUT		= L_CTL+USB_1; // BTN #1
+			}
 
 			// ---- BUTTON #17 -----------------------------------------------
 
@@ -1299,8 +1692,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB17_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB17_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB17_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB17_MIDDLE_IN		= L_SHIFT+USB_2; // AMPCD BTN #2
+				BTN_LMFD_OSB17_MIDDLE_OUT		= L_CTL+USB_2; // LMFD BTN #2
+			}
+			else
+			{
+				BTN_LMFD_OSB17_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB17_MIDDLE_OUT		= L_CTL+USB_2; // BTN #2
+			}
 
 			// ---- BUTTON #18 -----------------------------------------------
 
@@ -1309,8 +1710,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB18_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB18_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB18_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB18_MIDDLE_IN		= L_SHIFT+USB_3; // AMPCD BTN #3
+				BTN_LMFD_OSB18_MIDDLE_OUT		= L_CTL+USB_3; // LMFD BTN #3
+			}
+			else
+			{
+				BTN_LMFD_OSB18_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB18_MIDDLE_OUT		= L_CTL+USB_3; // BTN #3
+			}
 
 			// ---- BUTTON #19 -----------------------------------------------
 
@@ -1319,8 +1728,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB19_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB19_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB19_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB19_MIDDLE_IN		= L_SHIFT+USB_4; // AMPCD BTN #4
+				BTN_LMFD_OSB19_MIDDLE_OUT		= L_CTL+USB_4; // LMFD BTN #4
+			}
+			else
+			{
+				BTN_LMFD_OSB19_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB19_MIDDLE_OUT		= L_CTL+USB_4; // BTN #4
+			}
 
 			// ---- BUTTON #20 -----------------------------------------------
 
@@ -1329,8 +1746,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_OSB20_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_OSB20_MIDDLE_IN		= 0;
-			BTN_LMFD_OSB20_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_OSB20_MIDDLE_IN		= L_SHIFT+USB_5; // AMPCD BTN #5
+				BTN_LMFD_OSB20_MIDDLE_OUT		= L_CTL+USB_5; // LMFD BTN #5
+			}
+			else
+			{
+				BTN_LMFD_OSB20_MIDDLE_IN		= 0;
+				BTN_LMFD_OSB20_MIDDLE_OUT		= L_CTL+USB_5; // BTN #5
+			}
 
 			// **** SYM SWITCH ***********************************************
 
@@ -1341,8 +1766,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_SYMU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_SYMU_MIDDLE_IN			= 0;
-			BTN_LMFD_SYMU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_SYMU_MIDDLE_IN			= L_ALT+L_SHIFT+USB_S; // AMPCD SYM UP
+				BTN_LMFD_SYMU_MIDDLE_OUT		= L_SHIFT+USB_RIGHTARROW; // LMFD Mode CW
+			}
+			else
+			{
+				BTN_LMFD_SYMU_MIDDLE_IN			= 0;
+				BTN_LMFD_SYMU_MIDDLE_OUT		= L_SHIFT+USB_RIGHTARROW; // Mode CW
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1351,8 +1784,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_SYMD_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_SYMD_MIDDLE_IN			= 0;
-			BTN_LMFD_SYMD_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_SYMD_MIDDLE_IN			= L_ALT+L_CTL+USB_S; // AMPCD SYM DOWN
+				BTN_LMFD_SYMD_MIDDLE_OUT		= L_SHIFT+USB_LEFTARROW; // LMFD Mode CCW
+			}
+			else
+			{
+				BTN_LMFD_SYMD_MIDDLE_IN			= 0;
+				BTN_LMFD_SYMD_MIDDLE_OUT		= L_SHIFT+USB_LEFTARROW; // Mode CCW
+			}
 
 			// **** CON SWITCH ***********************************************
 
@@ -1363,8 +1804,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_CONU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_CONU_MIDDLE_IN			= 0;
-			BTN_LMFD_CONU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_CONU_MIDDLE_IN			= R_CTL+R_SHIFT+USB_C; // AMPCD CON UP
+				BTN_LMFD_CONU_MIDDLE_OUT		= L_CTL+USB_UPARROW; // LMFD Contrast CW
+			}
+			else
+			{
+				BTN_LMFD_CONU_MIDDLE_IN			= 0;
+				BTN_LMFD_CONU_MIDDLE_OUT		= L_CTL+USB_UPARROW; // Contrast CW
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1373,8 +1822,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_COND_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_COND_MIDDLE_IN			= 0;
-			BTN_LMFD_COND_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_COND_MIDDLE_IN			= R_ALT+R_CTL+USB_C; // AMPCD CON DOWN
+				BTN_LMFD_COND_MIDDLE_OUT		= L_CTL+USB_DOWNARROW; // LMFD Contrast CCW
+			}
+			else
+			{
+				BTN_LMFD_COND_MIDDLE_IN			= 0;
+				BTN_LMFD_COND_MIDDLE_OUT		= L_CTL+USB_DOWNARROW; // Contrast CCW
+			}
 
 			// **** BRT SWITCH ***********************************************
 
@@ -1385,8 +1842,17 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_BRTU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_BRTU_MIDDLE_IN			= 0;
-			BTN_LMFD_BRTU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_BRTU_MIDDLE_IN			= R_ALT+R_CTL+USB_G; // AMPCD GAIN UP
+				BTN_LMFD_BRTU_MIDDLE_OUT		= L_ALT+USB_UPARROW; // LMFD Brightness CW
+			}
+			else
+			{
+				BTN_LMFD_BRTU_MIDDLE_IN			= 0;
+				BTN_LMFD_BRTU_MIDDLE_OUT		= L_ALT+USB_UPARROW; // Brightness CW
+			}
+
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1395,8 +1861,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_BRTD_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_BRTD_MIDDLE_IN			= 0;
-			BTN_LMFD_BRTD_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_BRTD_MIDDLE_IN			= L_ALT+L_CTL+USB_G; // AMPCD GAIN DOWN
+				BTN_LMFD_BRTD_MIDDLE_OUT		= L_ALT+USB_DOWNARROW; // LMFD Brightness CCW
+			}
+			else
+			{
+				BTN_LMFD_BRTD_MIDDLE_IN			= 0;
+				BTN_LMFD_BRTD_MIDDLE_OUT		= L_ALT+USB_DOWNARROW; // Brightness CCW
+			}
 
 			// **** GAIN SWITCH **********************************************
 
@@ -1407,8 +1881,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_GAINU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_GAINU_MIDDLE_IN		= 0;
-			BTN_LMFD_GAINU_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_GAINU_MIDDLE_IN		= L_ALT+L_CTL+USB_UPARROW; // AMPCD DAY
+				BTN_LMFD_GAINU_MIDDLE_OUT		= 0;
+			}
+			else
+			{
+				BTN_LMFD_GAINU_MIDDLE_IN		= 0;
+				BTN_LMFD_GAINU_MIDDLE_OUT		= 0;
+			}
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1417,8 +1899,16 @@ int SpecifyFA18ControlMap()
 			BTN_LMFD_GAIND_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_LMFD_GAIND_MIDDLE_IN		= 0;
-			BTN_LMFD_GAIND_MIDDLE_OUT		= 0;
+			if(NUM_MFDS == 2)
+			{
+				BTN_LMFD_GAIND_MIDDLE_IN		= L_ALT+L_CTL+USB_DOWNARROW; // AMPCD NIGHT
+				BTN_LMFD_GAIND_MIDDLE_OUT		= 0;
+			}
+			else
+			{
+				BTN_LMFD_GAIND_MIDDLE_IN		= 0;
+				BTN_LMFD_GAIND_MIDDLE_OUT		= 0;
+			}
 		}
 
 		if(NUM_MFDS == 3)
@@ -1437,7 +1927,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB01_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB01_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB01_MIDDLE_OUT		= L_SHIFT+USB_6; // BTN #6
 
 			// ---- BUTTON #2 ------------------------------------------------
 
@@ -1447,7 +1937,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB02_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB02_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB02_MIDDLE_OUT		= L_SHIFT+USB_7; // BTN #7
 
 			// ---- BUTTON #3 ------------------------------------------------
 
@@ -1457,7 +1947,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB03_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB03_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB03_MIDDLE_OUT		= L_SHIFT+USB_8; // BTN #8
 
 			// ---- BUTTON #4 ------------------------------------------------
 
@@ -1467,7 +1957,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB04_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB04_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB04_MIDDLE_OUT		= L_SHIFT+USB_9; // BTN #9
 
 			// ---- BUTTON #5 ------------------------------------------------
 
@@ -1477,7 +1967,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB05_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB05_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB05_MIDDLE_OUT		= L_SHIFT+USB_0; // BTN #10
 
 			// **** RIGHT SIDE BUTTONS ***************************************
 
@@ -1489,7 +1979,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB06_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB06_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB06_MIDDLE_OUT		= R_SHIFT+USB_1; // BTN #11
 
 			// ---- BUTTON #7 ------------------------------------------------
 
@@ -1499,7 +1989,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB07_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB07_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB07_MIDDLE_OUT		= R_SHIFT+USB_2; // BTN #12
 
 			// ---- BUTTON #8 ------------------------------------------------
 
@@ -1509,7 +1999,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB08_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB08_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB08_MIDDLE_OUT		= R_SHIFT+USB_3; // BTN #13
 
 			// ---- BUTTON #9 ------------------------------------------------
 
@@ -1519,7 +2009,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB09_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB09_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB09_MIDDLE_OUT		= R_SHIFT+USB_4; // BTN #14
 
 			// ---- BUTTON #10 -----------------------------------------------
 
@@ -1529,7 +2019,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB10_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB10_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB10_MIDDLE_OUT		= R_SHIFT+USB_5; // BTN #15
 
 			// **** BOTTOM BUTTONS *******************************************
 
@@ -1541,7 +2031,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB11_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB11_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB11_MIDDLE_OUT		= R_SHIFT+USB_6; // BTN #16
 
 			// ---- BUTTON #12 -----------------------------------------------
 
@@ -1551,7 +2041,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB12_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB12_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB12_MIDDLE_OUT		= R_SHIFT+USB_7; // BTN #17
 
 			// ---- BUTTON #13 -----------------------------------------------
 
@@ -1561,7 +2051,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB13_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB13_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB13_MIDDLE_OUT		= R_SHIFT+USB_8; // BTN #18
 
 			// ---- BUTTON #14 -----------------------------------------------
 
@@ -1571,7 +2061,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB14_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB14_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB14_MIDDLE_OUT		= R_SHIFT+USB_9; // BTN #19
 
 			// ---- BUTTON #15 -----------------------------------------------
 
@@ -1581,7 +2071,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB15_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB15_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB15_MIDDLE_OUT		= R_SHIFT+USB_0; // BTN #20
 
 			// **** LEFT SIDE BUTTONS ****************************************
 
@@ -1593,7 +2083,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB16_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB16_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB16_MIDDLE_OUT		= L_SHIFT+USB_1; // BTN #1
 
 			// ---- BUTTON #17 -----------------------------------------------
 
@@ -1603,7 +2093,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB17_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB17_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB17_MIDDLE_OUT		= L_SHIFT+USB_2; // BTN #2
 
 			// ---- BUTTON #18 -----------------------------------------------
 
@@ -1613,7 +2103,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB18_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB18_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB18_MIDDLE_OUT		= L_SHIFT+USB_3; // BTN #3
 
 			// ---- BUTTON #19 -----------------------------------------------
 
@@ -1623,7 +2113,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB19_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB19_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB19_MIDDLE_OUT		= L_SHIFT+USB_4; // BTN #4
 
 			// ---- BUTTON #20 -----------------------------------------------
 
@@ -1633,7 +2123,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_OSB20_MIDDLE_IN		= 0;
-			BTN_MMFD_OSB20_MIDDLE_OUT		= 0;
+			BTN_MMFD_OSB20_MIDDLE_OUT		= L_SHIFT+USB_5; // BTN #5
 
 			// **** SYM SWITCH ***********************************************
 
@@ -1645,7 +2135,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_SYMU_MIDDLE_IN			= 0;
-			BTN_MMFD_SYMU_MIDDLE_OUT		= 0;
+			BTN_MMFD_SYMU_MIDDLE_OUT		= L_ALT+L_SHIFT+USB_S; // SYM UP
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1655,7 +2145,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_SYMD_MIDDLE_IN			= 0;
-			BTN_MMFD_SYMD_MIDDLE_OUT		= 0;
+			BTN_MMFD_SYMD_MIDDLE_OUT		= L_ALT+L_CTL+USB_S; // SYM DOWN
 
 			// **** CON SWITCH ***********************************************
 
@@ -1667,7 +2157,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_CONU_MIDDLE_IN			= 0;
-			BTN_MMFD_CONU_MIDDLE_OUT		= 0;
+			BTN_MMFD_CONU_MIDDLE_OUT		= R_CTL+R_SHIFT+USB_C; // CON UP
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1677,7 +2167,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_COND_MIDDLE_IN			= 0;
-			BTN_MMFD_COND_MIDDLE_OUT		= 0;
+			BTN_MMFD_COND_MIDDLE_OUT		= R_ALT+R_SHIFT+USB_C; // CON DOWN
 
 			// **** BRT SWITCH ***********************************************
 
@@ -1689,7 +2179,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_BRTU_MIDDLE_IN			= 0;
-			BTN_MMFD_BRTU_MIDDLE_OUT		= 0;
+			BTN_MMFD_BRTU_MIDDLE_OUT		= R_ALT+R_CTL+USB_G; // GAIN UP
 
 			// ---- DOWN -----------------------------------------------------
 
@@ -1699,7 +2189,7 @@ int SpecifyFA18ControlMap()
 
 			// MIDDLE Layer
 			BTN_MMFD_BRTD_MIDDLE_IN			= 0;
-			BTN_MMFD_BRTD_MIDDLE_OUT		= 0;
+			BTN_MMFD_BRTD_MIDDLE_OUT		= L_ALT+L_CTL+USB_G; // GAIN DOWN
 
 			// **** GAIN SWITCH **********************************************
 
@@ -1710,8 +2200,8 @@ int SpecifyFA18ControlMap()
 			BTN_MMFD_GAINU_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_MMFD_GAINU_MIDDLE_IN		= 0;
-			BTN_MMFD_GAINU_MIDDLE_OUT		= 0;
+			BTN_MMFD_GAINU_MIDDLE_IN		= R_ALT+R_CTL+USB_RIGHTARROW; // BRT CW
+			BTN_MMFD_GAINU_MIDDLE_OUT		= L_ALT+L_CTL+USB_UPARROW; // DAY
 
 			// ---- DOWN -------------------------------------------------------
 
@@ -1720,8 +2210,8 @@ int SpecifyFA18ControlMap()
 			BTN_MMFD_GAIND_UP_OUT			= 0;
 
 			// MIDDLE Layer
-			BTN_MMFD_GAIND_MIDDLE_IN		= 0;
-			BTN_MMFD_GAIND_MIDDLE_OUT		= 0;
+			BTN_MMFD_GAIND_MIDDLE_IN		= R_ALT+R_CTL+USB_LEFTARROW; // BRT CCW
+			BTN_MMFD_GAIND_MIDDLE_OUT		= L_ALT+L_CTL+USB_DOWNARROW; // NIGHT
 		}
 	}
 }

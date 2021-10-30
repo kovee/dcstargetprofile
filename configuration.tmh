@@ -48,10 +48,10 @@ define DCS_PLANE				DCS_PLANE_FA18C
 // **** JOYSTICK CONFIGURATION ***********************************************
 
 // The X and Y axis deadzone to configure for the joystick.
-define  JOYSTICK_DEADZONE       3
+define  JOYSTICK_DEADZONE       0
 
 // The X and Y axis sensitivity curve to configure for the joystick.
-define JOYSTICK_CURVE			25
+define JOYSTICK_CURVE			0
 
 // The joystick type to use.
 // Possible values:
@@ -140,16 +140,16 @@ define THROTTLE_ENABLE_REAL_BACKLIGHT 	NO
 define USE_RUDDER				YES
 
 // The deadzone to set for the rudder axis
-define RUDDER_DEADZONE			5
+define RUDDER_DEADZONE			0
 
 // The curve to set for the rudder axis
-define RUDDER_CURVE				25
+define RUDDER_CURVE				0
 
 // The deadzone to set for the wheelbrake axes
-define WHEELBRAKE_DEADZONE		10
+define WHEELBRAKE_DEADZONE		0
 
 // The curve to set for the wheelbrake axes
-define WHEELBRAKE_CURVE			20
+define WHEELBRAKE_CURVE			0
 
 // The type of rudder to configure
 // Possible values:

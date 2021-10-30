@@ -6,9 +6,20 @@ be used with the Thrustmaster Warthog HOTAS.
 ## Features
 
 Complete control mapping profile for the following DCS modules:
-- FC3
-- F/A-18C Hornet
-- T-45 Goshawk
+- [PLANNED] A-10A Thunderbolt II
+- [PLANNED] A-10C Thunderbolt II
+- [PLANNED] F-14A Tomcat
+- [PLANNED] F-14B Tomcat
+- [PLANNED] F-15C Eagle
+- [PLANNED] F-16C Viper
+- [WORK IN PROGRESS] F/A-18C Hornet
+- [PLANNED] MiG-21BiS Fishbed
+- [PLANNED] MiG-29A Fulcrum
+- [PLANNED] MiG 29S Fulcrum
+- [PLANNED] Su-25 Frogfoot
+- [PLANNED] Su-27 Flanker B
+- [PLANNED] Su-33 Flanker D
+- [PLANNED] T-45 Goshawk
 
 Beside the Thrustmaster Warthog HOTAS it is possible to use the Thrustmaster
 T.Flight or Pendular rudders as flight controllers. For additional buttons
