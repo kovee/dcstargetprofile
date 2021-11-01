@@ -193,3 +193,45 @@ int InitLEDs()
 		}
 	}
 }
+
+int UpdateLEDState()
+{
+    // Updates the state of LEDs according to the current key states.
+
+    if(THROTTLE_TYPE == THROTTLE_TYPE_WARTHOG)
+    {
+        // Battery Indicator
+        if(Throttle[EOLMOTOR])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED1);
+        }
+
+        // Gear Indicator
+        if(Throttle[EFROVER])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED2);
+        }
+
+        // Flaps Indicator
+        if(Throttle[FLAPM])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED3);
+        }
+        else if(Throttle[FLAPD])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED3);
+        }
+
+        // Hook Indicator
+        if(Throttle[EFLOVER])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED4);
+        }
+
+        // Exterior Lights Indicator
+        if(Throttle[BSF])
+        {
+            LED(&Throttle, LED_ONOFF, LED_CURRENT+LED5);
+        }
+    }
+}
