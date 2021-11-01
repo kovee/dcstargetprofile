@@ -477,7 +477,7 @@ int MapLMFD()
 		        BTN_LMFD_OSB18_DOWN_IN,
 		        BTN_LMFD_OSB18_DOWN_OUT);
 
-	MapKeyIOUMD(&RMFD,
+	MapKeyIOUMD(&LMFD,
 		        OSB19,
 		        BTN_RMFD_OSB19_UP_IN,
 		        BTN_RMFD_OSB19_UP_OUT,

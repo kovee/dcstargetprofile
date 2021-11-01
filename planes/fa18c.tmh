@@ -820,7 +820,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APPAT_MIDDLE_IN			= 0;
-		BTN_APPAT_MIDDLE_OUT		= PULSE+L_CTL+USB_C; // Canopy open
+		BTN_APPAT_MIDDLE_OUT		= L_CTL+USB_C; // Canopy open
 
 		// ---- ALT/HDG ------------------------------------------------------
 
@@ -840,7 +840,7 @@ int SpecifyFA18ControlMap()
 
 		// MIDDLE Layer
 		BTN_APALT_MIDDLE_IN			= 0;
-		BTN_APALT_MIDDLE_OUT		= PULSE+L_SHIFT+USB_C; // Canopy close
+		BTN_APALT_MIDDLE_OUT		= L_SHIFT+USB_C; // Canopy close
 
 		// **** THROTTLE IDLE/OFF ********************************************
 
