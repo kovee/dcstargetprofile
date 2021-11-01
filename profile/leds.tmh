@@ -25,6 +25,9 @@
 
 // Contains the configuration of the LEDs.
 
+int ThrottleLightIntensity;
+int MFDLightIntensity;
+
 int ConfigureWarthogLEDs()
 {
 	// Configures the LEDs of the Warthog throttle base.
@@ -59,6 +62,7 @@ int ConfigureWarthogLEDs()
     {
     	// Turn off backlight LEDs
         ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED0));
+        ThrottleLightIntensity = LED_INTENSITY_0;
     }
 }
 
@@ -90,9 +94,10 @@ int ConfigureRMFDLEDs()
         ActKey(PULSE+KEYON+LED(&RMFD, LED_ONOFF, LED_CURRENT-LED0));
     }
 
-    if(MFD_USE_REAL_BACKLIGHT == YES)
+    if(MFD_ENABLE_REAL_BACKLIGHT == YES)
     {
     	ActKey(PULSE+KEYON+LED(&RMFD, LED_INTENSITY, 0));
+        MFDLightIntensity = LED_INTENSITY_0;
     }
 }
 
@@ -124,9 +129,10 @@ int ConfigureLMFDLEDs()
         ActKey(PULSE+KEYON+LED(&LMFD, LED_ONOFF, LED_CURRENT-LED0));
     }
 
-    if(MFD_USE_REAL_BACKLIGHT == YES)
+    if(MFD_ENABLE_REAL_BACKLIGHT == YES)
     {
     	ActKey(PULSE+KEYON+LED(&LMFD, LED_INTENSITY, 0));
+        MFDLightIntensity = LED_INTENSITY_0;
     }
 }
 
@@ -158,9 +164,10 @@ int ConfigureMMFDLEDs()
         ActKey(PULSE+KEYON+LED(&MMFD, LED_ONOFF, LED_CURRENT-LED0));
     }
 
-    if(MFD_USE_REAL_BACKLIGHT == YES)
+    if(MFD_ENABLE_REAL_BACKLIGHT == YES)
     {
     	ActKey(PULSE+KEYON+LED(&MMFD, LED_INTENSITY, 0));
+        MFDLightIntensity = LED_INTENSITY_0;
     }
 }
 
@@ -232,6 +239,190 @@ int UpdateLEDState()
         if(Throttle[BSF])
         {
             LED(&Throttle, LED_ONOFF, LED_CURRENT+LED5);
+        }
+    }
+}
+
+int ConsoleLightsIncrease()
+{
+    // Increases intensity of the console lights.
+
+    debug("Increasing LED intensity...");
+
+    if(THROTTLE_ENABLE_REAL_BACKLIGHT == YES)
+    {
+        if(ThrottleLightIntensity == LED_INTENSITY_0)
+        {
+            debug("Setting throttle light intensity to 1...");
+            ThrottleLightIntensity = LED_INTENSITY_1;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_1)
+        {
+            debug("Setting throttle light intensity to 2...");
+            ThrottleLightIntensity = LED_INTENSITY_2;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_2)
+        {
+            debug("Setting throttle light intensity to 3...");
+            ThrottleLightIntensity = LED_INTENSITY_3;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_3)
+        {
+            debug("Setting throttle light intensity to 4...");
+            ThrottleLightIntensity = LED_INTENSITY_4;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_4)
+        {
+            debug("Setting throttle light intensity to 5...");
+            ThrottleLightIntensity = LED_INTENSITY_5;
+        }
+        else
+        {
+            debug("Throttle light intensity is already at maximum.");
+        }
+
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED0));
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, ThrottleLightIntensity));
+    }
+
+    if(MFD_ENABLE_REAL_BACKLIGHT == YES)
+    {
+        if(MFDLightIntensity == LED_INTENSITY_0)
+        {
+            debug("Setting MFD light intensity to 1...");
+            MFDLightIntensity = LED_INTENSITY_1;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_1)
+        {
+            debug("Setting MFD light intensity to 2...");
+            MFDLightIntensity = LED_INTENSITY_2;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_2)
+        {
+            debug("Setting MFD light intensity to 3...");
+            MFDLightIntensity = LED_INTENSITY_3;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_3)
+        {
+            debug("Setting MFD light intensity to 4...");
+            MFDLightIntensity = LED_INTENSITY_4;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_4)
+        {
+            debug("Setting MFD light intensity to 5...");
+            MFDLightIntensity = LED_INTENSITY_5;
+        }
+        else
+        {
+            debug("MFD light intensity is already at maximum.");
+        }
+
+        if(NUM_MFDS >= 1)
+        {
+            ActKey(PULSE+KEYON+LED(&RMFD, LED_ONOFF, LED_CURRENT+LED0));
+            ActKey(PULSE+KEYON+LED(&RMFD, LED_INTENSITY, MFDLightIntensity));
+        }
+
+        if (NUM_MFDS >= 2)
+        {
+            ActKey(PULSE+KEYON+LED(&LMFD, LED_ONOFF, LED_CURRENT+LED0));
+            ActKey(PULSE+KEYON+LED(&LMFD, LED_INTENSITY, MFDLightIntensity));
+        }
+
+        if(NUM_MFDS == 3)
+        {
+            ActKey(PULSE+KEYON+LED(&MMFD, LED_ONOFF, LED_CURRENT+LED0));
+            ActKey(PULSE+KEYON+LED(&MMFD, LED_INTENSITY, MFDLightIntensity));
+        }
+    }
+}
+
+int ConsoleLightsDecrease()
+{
+    // Decreases intensity of the console lights.
+
+    debug("Decreasing LED intensity...");
+
+    if(THROTTLE_ENABLE_REAL_BACKLIGHT == YES)
+    {
+        if(ThrottleLightIntensity == LED_INTENSITY_5)
+        {
+            debug("Setting throttle light intensity to 4...");
+            ThrottleLightIntensity = LED_INTENSITY_4;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_4)
+        {
+            debug("Setting throttle light intensity to 3...");
+            ThrottleLightIntensity = LED_INTENSITY_3;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_3)
+        {
+            debug("Setting throttle light intensity to 2...");
+            ThrottleLightIntensity = LED_INTENSITY_2;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_2)
+        {
+            debug("Setting throttle light intensity to 1...");
+            ThrottleLightIntensity = LED_INTENSITY_1;
+        }
+        else if(ThrottleLightIntensity == LED_INTENSITY_1)
+        {
+            debug("Setting throttle light intensity to 0...");
+            ThrottleLightIntensity = LED_INTENSITY_0;
+        }
+        else
+        {
+            debug("Throttle light intensity is already at minimum.");
+        }
+
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, ThrottleLightIntensity));
+    }
+
+    if(MFD_ENABLE_REAL_BACKLIGHT == YES)
+    {
+        if(MFDLightIntensity == LED_INTENSITY_5)
+        {
+            debug("Setting MFD light intensity to 4...");
+            MFDLightIntensity = LED_INTENSITY_4;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_4)
+        {
+            debug("Setting MFD light intensity to 3...");
+            MFDLightIntensity = LED_INTENSITY_3;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_3)
+        {
+            debug("Setting MFD light intensity to 2...");
+            MFDLightIntensity = LED_INTENSITY_2;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_2)
+        {
+            debug("Setting MFD light intensity to 1...");
+            MFDLightIntensity = LED_INTENSITY_1;
+        }
+        else if(MFDLightIntensity == LED_INTENSITY_1)
+        {
+            debug("Setting MFD light intensity to 0...");
+            MFDLightIntensity = LED_INTENSITY_0;
+        }
+        else
+        {
+            debug("MFD light intensity is already at minimum.");
+        }
+
+        if(NUM_MFDS >= 1)
+        {
+            ActKey(PULSE+KEYON+LED(&RMFD, LED_INTENSITY, MFDLightIntensity));
+        }
+
+        if (NUM_MFDS >= 2)
+        {
+            ActKey(PULSE+KEYON+LED(&LMFD, LED_INTENSITY, MFDLightIntensity));
+        }
+
+        if(NUM_MFDS == 3)
+        {
+            ActKey(PULSE+KEYON+LED(&MMFD, LED_INTENSITY, MFDLightIntensity));
         }
     }
 }

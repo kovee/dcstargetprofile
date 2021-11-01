@@ -39,6 +39,7 @@ define      RUDDER_PENDULAR         1   // Represents the Thrustmaster Pendular
 										// Rudder
 
 // LED cosntants
+define		LED_INTENSITY_0			0	// Intensity level 0 - off
 define      LED_INTENSITY_1         85  // Intensity level 1 - lowest
 define      LED_INTENSITY_2         123 // Intensity level 2
 define      LED_INTENSITY_3         171 // Intensity level 3

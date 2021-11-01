@@ -129,7 +129,7 @@ define THROTTLE_LED_INTENSITY	LED_INTENSITY_3
 // Enables realistic backlight where the LED intensity on the Warthog
 // throttle base follows the level set in the game.
 // Possible values: YES, NO
-define THROTTLE_ENABLE_REAL_BACKLIGHT 	NO
+define THROTTLE_ENABLE_REAL_BACKLIGHT 	YES
 
 // **** RUDDER CONFIGURATION *************************************************
 
@@ -192,6 +192,6 @@ define MFD_LED_INTENSITY		LED_INTENSITY_3
 // Enables realistic backlight where the LED intensitiy on the MFDs
 // follow the level set in the game.
 // Possible values: YES, NO
-define MFD_USE_REAL_BACKLIGHT	NO
+define MFD_ENABLE_REAL_BACKLIGHT	YES
 
 // **** TOOLS CONFIGURATION **************************************************
